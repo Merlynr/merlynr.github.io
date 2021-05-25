@@ -42,10 +42,14 @@
         <content type="html"><![CDATA[<h2 id="本周安排"><a href="#本周安排" class="headerlink" title="本周安排"></a>本周安排</h2><ul><li>[ ] 重新梳理研究方向</li><li>[ ] 寻找并阅读相关文章两篇</li><li>[ ] 坚持英语学习20mis/everyday</li><li>[ ] 沙盒搭建</li></ul><h2 id="完成情况"><a href="#完成情况" class="headerlink" title="完成情况"></a>完成情况</h2><ol><li>将docker有关的操作过了一遍</li><li></li></ol>]]></content>
       
       
+      <categories>
+          
+          <category> weekly </category>
+          
+      </categories>
+      
       
         <tags>
-            
-            <tag> study </tag>
             
             <tag> weekly </tag>
             
@@ -90,14 +94,20 @@
         <content type="html"><![CDATA[<h2 id="相关文章"><a href="#相关文章" class="headerlink" title="相关文章"></a>相关文章</h2><p><a href="https://developer.aliyun.com/group/rpa?spm=a2c6h.12873639.0.0.65b05d65mS6OlC#/?_k=agnoe0">阿里云RPA社区</a></p><p><a href="https://zhuanlan.zhihu.com/p/59034887?utm_oi=786717341600858112">阿里云RPA（机器人流程自动化）系列</a></p><p><a href="https://www.yuque.com/aliyun_rpa">阿里云RPA文档</a></p><p><a href="https://github.com/rpabotsworld/awesome-rpa">资源</a></p><h2 id="阅读记录"><a href="#阅读记录" class="headerlink" title="阅读记录"></a>阅读记录</h2><h3 id="记录"><a href="#记录" class="headerlink" title="记录"></a>记录</h3><h4 id="阿里云RPA系列"><a href="#阿里云RPA系列" class="headerlink" title="阿里云RPA系列"></a>阿里云RPA系列</h4><ol><li>文件信息的处理—提取和处理结构和半结构化数据</li><li>异常处理—宕机、流程回滚、中断后的流程接续等问题</li><li>业务流程从明确化变为高适配的—-智能处理【制定与运行过程中】</li><li>各类场景—大量重复【基本配置通用性高】、可贴合各类场景【规则灵活，外附组件可灵活配置】</li></ol><h4 id="S公司智能财务机器人共享中心建设与实践"><a href="#S公司智能财务机器人共享中心建设与实践" class="headerlink" title="S公司智能财务机器人共享中心建设与实践"></a>S公司智能财务机器人共享中心建设与实践</h4><p><a href="https://m.hanspub.org/journal/paper/34237">URL</a></p><ol><li>分布式部署时，对于资源无法实时有效判断其是否有效可用</li><li>将robot集中到资源池中，供全公司使用，打破单元机器人的壁垒—-无法有效的共享数据，但是安全受到了极大威胁</li></ol><h4 id="一种基于RPA机器人共享中心的自动审批的方法【专利】"><a href="#一种基于RPA机器人共享中心的自动审批的方法【专利】" class="headerlink" title="一种基于RPA机器人共享中心的自动审批的方法【专利】"></a>一种基于RPA机器人共享中心的自动审批的方法【专利】</h4><p><a href="http://www10.drugfuture.com/pdfview/generic/web/viewer.html?file=/cnpat/package/%E5%8F%91%E6%98%8E%E4%B8%93%E5%88%A9%E7%94%B3%E8%AF%B7%E8%AF%B4%E6%98%8E%E4%B9%A6CN201911335237.4.pdf">PDF</a></p><ol><li>没有实际创新点，就是为用户提供了访问权限，根据用户自己提交的内容，进行过滤分类，然后由robot进行访问对应的资源进行处理，专利只是讲了研究内容，具体算法和实践没有提到，所以它所涉及到的对机器人共享中心进行分级调度没有表现出来。</li></ol><h3 id="建议"><a href="#建议" class="headerlink" title="建议"></a>建议</h3><blockquote><p>阿里云版本迭代</p></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021517/1621238642819.png" alt="阿里云版本迭代方案"></p><h3 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h3><ol><li>流程处理未知问题的智能化</li><li>中间通信安全</li><li>重新定义RPA，目前RPA，只是一个外接的控制工具，而不能替代人工</li><li>==* #F44336==挖掘业务流程，结合机器学习进行业务预测</li><li></li></ol><h2 id="难点"><a href="#难点" class="headerlink" title="难点"></a>难点</h2><ol><li>无数据比对，无证明方式，用数据证明有效改进</li></ol><p><a href="https://wap.cnki.net/touch/web/Dissertation/Article/10013-1019047248.nh.html">https://wap.cnki.net/touch/web/Dissertation/Article/10013-1019047248.nh.html</a></p><p><a href="https://www.touqikan.com/jsjj/660421.html">https://www.touqikan.com/jsjj/660421.html</a></p>]]></content>
       
       
+      <categories>
+          
+          <category> RPA </category>
+          
+      </categories>
+      
       
         <tags>
             
-            <tag> study </tag>
-            
-            <tag> Graduate Student </tag>
-            
             <tag> RPA </tag>
+            
+            <tag> graduate student </tag>
+            
+            <tag> AI </tag>
             
         </tags>
       
