@@ -8,7 +8,7 @@
       <link href="2021/05/25/%E6%8C%96%E6%8E%98%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%EF%BC%8C%E7%BB%93%E5%90%88%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E8%A1%8C%E4%B8%9A%E5%8A%A1%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90/"/>
       <url>2021/05/25/%E6%8C%96%E6%8E%98%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%EF%BC%8C%E7%BB%93%E5%90%88%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E8%A1%8C%E4%B8%9A%E5%8A%A1%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90/</url>
       
-        <content type="html"><![CDATA[<h2 id="基于机器学习的流程异常预测行为"><a href="#基于机器学习的流程异常预测行为" class="headerlink" title="基于机器学习的流程异常预测行为"></a>基于机器学习的流程异常预测行为</h2><p><img src="./attachments/基于机器学习的流程异常预测方法_魏懿.pdf" alt="基于机器学习的流程异常预测方法_魏懿"></p><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><blockquote><p>通过挖掘流程执行的==日志记录 #F44336==和活动执行==时间信息 #F44336==，基于机器学习方法的异常检测方法，实现实时预测业务流程中的超 期 异 常 和 流 程 行 为 异 常。</p></blockquote><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><blockquote><p>异常(预期的，完全意外的)</p></blockquote><ol><li>流程超期、资源不可用、活动执行失败等和完全意外的异常</li></ol><blockquote><p>现有的流程异常检测方法</p></blockquote><ol><li>主动 的 设 置 时 间 检 查点、动态检查，或 被动地基于异常发生后捕捉异常、处理异常的机制</li><li>主动设置时间检查点的方法有两个弊端，第一个设置点的位置无法精确判断，第二个是系统状态是动态的，受生产环境等诸多条件影响，所以主动i设置会造成很多新的问题</li><li>被动处理超期异常的方法，失去了对业务流程管理的主动性，从而将导致工作流期望的目标延迟或付出更大的开销。【即失去对于流程预测的主动性】</li></ol><h3 id="目前国内外研究动态"><a href="#目前国内外研究动态" class="headerlink" title="目前国内外研究动态"></a>目前国内外研究动态</h3><ol><li>几个小的分页的处理</li><li>百度，谷歌可搜索</li></ol><h3 id="本文方法"><a href="#本文方法" class="headerlink" title="本文方法"></a>本文方法</h3><blockquote><p>提出一种基于活动执行时间和比例关系的方法，通过学习历史流程执行日志中活动时间信息，根据正在执行的待预测流程的日志及状态，预测其是否为异常流程以及异常的类型。并且，本文提出通过计算活动执行时间之间的比例关系作为流程特征加入机器学习算法，运用机器学习中监督学习的分类器以预测流程是否会发生超期异常（流程执行总时间超过预设最终期限），同时使用非监督学习的离群点检测算法根据历史数据中活动执行时间比例关系判定流程行为异常。结合两种算法的结果对流程异常预测做出进一步的分类和分析。</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h2 id="基于机器学习的流程异常预测行为"><a href="#基于机器学习的流程异常预测行为" class="headerlink" title="基于机器学习的流程异常预测行为"></a>基于机器学习的流程异常预测行为</h2><p><img src="./attachments/%E5%9F%BA%E4%BA%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E6%B5%81%E7%A8%8B%E5%BC%82%E5%B8%B8%E9%A2%84%E6%B5%8B%E6%96%B9%E6%B3%95_%E9%AD%8F%E6%87%BF.pdf" alt="基于机器学习的流程异常预测方法_魏懿"></p><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><blockquote><p>通过挖掘流程执行的==日志记录 #F44336==和活动执行==时间信息 #F44336==，基于机器学习方法的异常检测方法，实现实时预测业务流程中的超 期 异 常 和 流 程 行 为 异 常。</p></blockquote><h3 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h3><blockquote><p>异常(预期的，完全意外的)</p></blockquote><ol><li>流程超期、资源不可用、活动执行失败等和完全意外的异常</li></ol><blockquote><p>现有的流程异常检测方法</p></blockquote><ul><li>主动 的 设 置 时 间 检 查点、动态检查，或 被动地基于异常发生后捕捉异常、处理异常的机制<ol><li>主动设置时间检查点的方法有两个弊端，第一个设置点的位置无法精确判断，第二个是系统状态是动态的，受生产环境等诸多条件影响，所以主动i设置会造成很多新的问题</li><li>被动处理超期异常的方法，失去了对业务流程管理的主动性，从而将导致工作流期望的目标延迟或付出更大的开销。【即失去对于流程预测的主动性】</li></ol></li></ul><h3 id="目前国内外研究动态"><a href="#目前国内外研究动态" class="headerlink" title="目前国内外研究动态"></a>目前国内外研究动态</h3><h4 id="基于时间边界的时间异常检测"><a href="#基于时间边界的时间异常检测" class="headerlink" title="基于时间边界的时间异常检测"></a>基于时间边界的时间异常检测</h4><ol><li>基于时间边界的时间异常检测–Eder</li></ol><p><font size=1>the fifth and sixth document of this paper </font></p><pre><code>    首先要明确每个任务节点执行时间的上下边界， 基于这两个时限， 计算起始节点到当前节点的最佳（ 最短） 执行时间和最坏（ 最长） 执行时间。当流程执行时， 如果当前时间在区间内， 则判断为没有时间异常</code></pre><ol start="2"><li>基于关键路径</li></ol><p><font size=1>the seventh document of this paper </font></p><pre><code>    在工作流执行前，会根据模型先找出关键路径， 并在流程执行时检查最佳完成时间与最终时限， 如果最佳完成时间大于最终时限， 则预测为异常</code></pre><h4 id="时间统计模型建立"><a href="#时间统计模型建立" class="headerlink" title="时间统计模型建立"></a>时间统计模型建立</h4><ol><li>执行时间建模方法</li></ol><p><font size=1>the eighth document of this paper </font></p><pre><code>    该方法利用历史日志生成涵盖所有活动持续时间直方图来表示当前节点和末端节点之间的剩余执行时间的概率，用于捕获有关工作流执行的时间信息，定义计算工作流执行时间的必要操作</code></pre><ol start="2"><li>综合时间模型和流程步骤分析</li></ol><p><font size=1>the ninth document of this paper </font></p><pre><code>    综合运用时间统计模型和通过多个步骤分析方法生成运行时间概率分布、计算异常概率、与阈值比较的方法，提出一种基于运行的异常预测算法来预测工作流中的时间异常，该算法分为即设计时段和运行时段两个阶段，在设计时段，生成该模型所有可能产生的运行轨迹，并计算它们的预计执行时间的概率分布；在运行时段，通过分析计算流程超时的可能性与预设的阈值做比较来判断是否预测为异常    </code></pre><ol start="3"><li>结合积极语义模型</li></ol><p><font size=1>the tenth document of this paper </font></p><pre><code>    采用积极语义模型来捕捉各种工作流情形下的 语 义 特 征，并 且 检 测 和 处 理 异 常    </code></pre><ol start="4"><li>提出受启发与传染病模型的时间延迟传播模型</li></ol><p><font size=1>the eleventh document of this paper </font></p><pre><code>    着眼于并行云工作流中的时间延迟，提出受启发与传染病模型的时间延迟传播模型，预测使云工作流中达到一定完成率的最大时间异常数目</code></pre><h3 id="离群点检测的算法"><a href="#离群点检测的算法" class="headerlink" title="离群点检测的算法"></a>离群点检测的算法</h3><h3 id="本文方法"><a href="#本文方法" class="headerlink" title="本文方法"></a>本文方法</h3><blockquote><p>提出一种基于活动执行时间和比例关系的方法，通过学习历史流程执行日志中活动时间信息，根据正在执行的待预测流程的日志及状态，预测其是否为异常流程以及异常的类型。并且，本文提出通过计算活动执行时间之间的比例关系作为流程特征加入机器学习算法，运用机器学习中监督学习的分类器以预测流程是否会发生超期异常（流程执行总时间超过预设最终期限），同时使用非监督学习的离群点检测算法根据历史数据中活动执行时间比例关系判定流程行为异常。结合两种算法的结果对流程异常预测做出进一步的分类和分析。</p></blockquote>]]></content>
       
       
       <categories>
@@ -27,6 +27,33 @@
             <tag> paper </tag>
             
             <tag> AI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>离群点检测</title>
+      <link href="2021/05/25/%E7%A6%BB%E7%BE%A4%E7%82%B9%E6%A3%80%E6%B5%8B/"/>
+      <url>2021/05/25/%E7%A6%BB%E7%BE%A4%E7%82%B9%E6%A3%80%E6%B5%8B/</url>
+      
+        <content type="html"><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><p>离群点检测（==异常检测 #009688==）是找出其行为不同于预期对象的过程，这种对象称为离群点或异常。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> study </tag>
+            
+            <tag> algorithm </tag>
             
         </tags>
       

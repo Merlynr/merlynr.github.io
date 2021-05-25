@@ -198,6 +198,13 @@
   </url>
   
   <url>
+    <loc>https://merlynr.github.io/2021/05/25/%E7%A6%BB%E7%BE%A4%E7%82%B9%E6%A3%80%E6%B5%8B/</loc>
+    
+    <lastmod>2021-05-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://merlynr.github.io/link/index.html</loc>
     
     <lastmod>2021-05-24</lastmod>
@@ -409,6 +416,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://merlynr.github.io/tags/algorithm/</loc>
+    <lastmod>2021-05-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -483,6 +497,13 @@
   
   <url>
     <loc>https://merlynr.github.io/categories/AI/</loc>
+    <lastmod>2021-05-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/categories/algorithm/</loc>
     <lastmod>2021-05-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
