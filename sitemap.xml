@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://merlynr.github.io/about/index.html</loc>
+    
+    <lastmod>2021-05-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://merlynr.github.io/tags/index.html</loc>
     
     <lastmod>2021-05-25</lastmod>
