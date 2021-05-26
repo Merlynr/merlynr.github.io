@@ -114,7 +114,7 @@
     
     
     
-    <category term="weekly" scheme="https://merlynr.github.io/categories/weekly/"/>
+    <category term="weekly report" scheme="https://merlynr.github.io/categories/weekly-report/"/>
     
     
     <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
@@ -123,7 +123,7 @@
     
     <category term="weekly" scheme="https://merlynr.github.io/tags/weekly/"/>
     
-    <category term="plane" scheme="https://merlynr.github.io/tags/plane/"/>
+    <category term="plan" scheme="https://merlynr.github.io/tags/plan/"/>
     
   </entry>
   
@@ -248,7 +248,7 @@
     
     
     
-    <category term="weekly" scheme="https://merlynr.github.io/categories/weekly/"/>
+    <category term="weekly report" scheme="https://merlynr.github.io/categories/weekly-report/"/>
     
     
     <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
@@ -512,28 +512,28 @@
     <link href="https://merlynr.github.io/2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/"/>
     <id>https://merlynr.github.io/2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/</id>
     <published>2020-11-10T02:00:00.000Z</published>
-    <updated>2021-05-26T11:19:36.782Z</updated>
+    <updated>2021-05-26T11:42:31.013Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>Plane</p></blockquote><hr><ul><li><input checked="" disabled="" type="checkbox"> 提出信息安全理论项目初步计划</li><li><input checked="" disabled="" type="checkbox"> 14:00-16:00 读身份加密的材料</li><li><input checked="" disabled="" type="checkbox"> 16:10-17:20 完成医院系统项目日志集成</li></ul><p><em>- [ ]  18:50-20:50 数据库的系统学习</em></p><ul><li><input disabled="" type="checkbox"> 21:00-22:30 springmvc学习</li><li><input disabled="" type="checkbox"> 22:30-23:30 总结</li></ul><hr><h3 id="信息安全理论项目安排"><a href="#信息安全理论项目安排" class="headerlink" title="信息安全理论项目安排"></a>信息安全理论项目安排</h3><ol><li>李完成基本项目搭建及核心抓包功能实现</li><li>陈完成数据库表完成【先将需要的表构思一下发群里看一下】</li><li>邹完成规则及书写功能需求</li><li>郑和邹书写功能需求，及将规则写入后端</li><li>郑艺根据功能需求完成基本的框架搭建和样式</li></ol><h3 id="身份认证相关论文"><a href="#身份认证相关论文" class="headerlink" title="身份认证相关论文"></a>身份认证相关论文</h3><h4 id="A-Survey-of-Zero-Trust-Research"><a href="#A-Survey-of-Zero-Trust-Research" class="headerlink" title="A Survey of Zero Trust Research"></a>A Survey of Zero Trust Research</h4><p>@author 张宇 张妍【北京数字认证股份有限公司】</p><h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><ol><li>“边界防护”</li></ol><ol start="2"><li>何为无边界趋势下的网络安全问题</li><li></li><li>何为基于网络位置的隐式信任</li><li>何为静态防御</li><li>了解“ Google基于零信任构建的BeyondCorp项目”</li><li>了解“提出了软件定义边界（software defined perimeter,SDP)网络安全模型”</li><li>计算机专业词汇</li></ol><ul><li><strong>策略引擎（Policy Engine）：</strong> 该组件负责最终决定是否授予指定访问主体对资源（访问客体）的访问权限。策略引擎使用企业安全策略以及来自外部源（例如IP黑名单，威胁情报服务）的输入作为“信任算法”的输入，以决定授予或拒绝对该资源的访问，策略引擎的核心作用是信任评估。</li><li><strong>策略管理器（Policy Administrator）：</strong> 组件负责建立客户端与资源之间的连接。它将生成客户端用于访问企业资源的任何身份验证令牌或凭据。它与策略引擎紧密相关并依赖于其决定最终允许或拒绝连接，策略管理器的核心作用是策略判定点，是零信任动态权限的判定组件。</li><li><strong>策略执行点（Policy Enforcement Point）：</strong> 这实际上是一个组件系统，负责开始，持续监控、并最终结束访问主体与访问客体之间的连接。策略执行点实际可分为两个不同的组件：客户端组件（如用户笔记本电脑上的agent）与资源端组件（如资源前控制访问的网关），策略执行点的核心作用是确保业务的安全访问。</li><li><ul><li><strong>持续诊断和缓解计划系统（CDM System）：</strong> 该系统收集关于企业系统当前状态的信息，并将更新应用到配置和软件组件中。企业CDM系统还提供给策略引擎关于系统访问请求的信息。</li></ul></li><li><ul><li><strong>行业合规系统（Industry Compliance System）：</strong> 该系统确保企业与当前政府管理的一致性。包括企业开发的所有策略规则来确保合规。</li></ul></li><li><ul><li><strong>威胁情报流（Threat Intelligence）：</strong> 该系统提供帮助策略引擎进行访问决策的信息。</li></ul></li><li><ul><li><strong>数据访问策略（Data Access Policy）：</strong> 数据访问策略是企业为企业资源创建的关于数据访问的属性、规则和策略的集合。策略规则集可以编码在策略引擎中或有PE动态生成。</li></ul></li><li><ul><li><strong>企业公钥基础设施（PKI）：</strong> 该系统负责生成和记录企业对资源、应用等发布的证书。既包括全局CA生态系统和联邦PKI。</li></ul></li><li><ul><li><strong>ID管理系统（ID Management）：</strong> 系统负责创建、保存和管理企业用户帐户和身份记录。系统中既含有必要的用户信息，也含有其他企业特征，比如角色、访问属性、或分配的系统。</li></ul></li><li><ul><li><strong>安全应急和事件管理系统（SIEM System）：</strong> 集合了系统日志、网络流量、资源权利和其他信息的企业系统为企业信息系统体佛那个安全态势的反馈。</li></ul></li></ul><ol start="8"><li>何为分配基于二元决策的策略</li><li>了解RADIUS协议</li><li>了解SSO方式认证</li></ol><h5 id="梳理"><a href="#梳理" class="headerlink" title="梳理"></a>梳理</h5><h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>如何进行动态认证？如何有效进行动态认证？</p><p><a href="https://www.secrss.com/articles/14045">引用</a><br><a href="chrome-extension://gfbliohnnapiefjpjlpjnehglfpaknnc/pages/pdf_viewer.html?r=https://www.gartner.com/teamsiteanalytics/servePDF?g=/imagesrv/media-products/pdf/Qi-An-Xin/Qianxin-1-1XXWAXWM.pdf">引用</a></p><h3 id="对于数据库的详细学习"><a href="#对于数据库的详细学习" class="headerlink" title="对于数据库的详细学习"></a>对于数据库的详细学习</h3>]]></content>
+    <content type="html"><![CDATA[<h2 id="gt-Plane"><a href="#gt-Plane" class="headerlink" title="&gt; Plane"></a>&gt; Plane</h2><ul><li>[x] 提出信息安全理论项目初步计划</li><li>[x] 14:00-16:00 读身份加密的材料</li><li>[x] 16:10-17:20 完成医院系统项目日志集成<br><em>- [ ]  18:50-20:50 数据库的系统学习</em></li><li>[ ]  21:00-22:30 springmvc学习</li><li>[ ]  22:30-23:30 总结</li></ul><hr><h3 id="信息安全理论项目安排"><a href="#信息安全理论项目安排" class="headerlink" title="信息安全理论项目安排"></a>信息安全理论项目安排</h3><ol><li>李完成基本项目搭建及核心抓包功能实现</li><li>陈完成数据库表完成【先将需要的表构思一下发群里看一下】</li><li>邹完成规则及书写功能需求</li><li>郑和邹书写功能需求，及将规则写入后端</li><li>郑艺根据功能需求完成基本的框架搭建和样式</li></ol><h3 id="身份认证相关论文"><a href="#身份认证相关论文" class="headerlink" title="身份认证相关论文"></a>身份认证相关论文</h3><h4 id="A-Survey-of-Zero-Trust-Research"><a href="#A-Survey-of-Zero-Trust-Research" class="headerlink" title="A Survey of Zero Trust Research"></a>A Survey of Zero Trust Research</h4><p>@author 张宇 张妍【北京数字认证股份有限公司】</p><h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><ol><li>“边界防护”</li></ol><ol><li>何为无边界趋势下的网络安全问题</li><li></li><li>何为基于网络位置的隐式信任</li><li>何为静态防御</li><li>了解“ Google基于零信任构建的BeyondCorp项目”</li><li>了解“提出了软件定义边界（software defined perimeter,SDP)网络安全模型”</li><li>计算机专业词汇</li></ol><ul><li><strong>策略引擎（Policy Engine）：</strong> 该组件负责最终决定是否授予指定访问主体对资源（访问客体）的访问权限。策略引擎使用企业安全策略以及来自外部源（例如IP黑名单，威胁情报服务）的输入作为“信任算法”的输入，以决定授予或拒绝对该资源的访问，策略引擎的核心作用是信任评估。</li><li><strong>策略管理器（Policy Administrator）：</strong> 组件负责建立客户端与资源之间的连接。它将生成客户端用于访问企业资源的任何身份验证令牌或凭据。它与策略引擎紧密相关并依赖于其决定最终允许或拒绝连接，策略管理器的核心作用是策略判定点，是零信任动态权限的判定组件。</li><li><strong>策略执行点（Policy Enforcement Point）：</strong> 这实际上是一个组件系统，负责开始，持续监控、并最终结束访问主体与访问客体之间的连接。策略执行点实际可分为两个不同的组件：客户端组件（如用户笔记本电脑上的agent）与资源端组件（如资源前控制访问的网关），策略执行点的核心作用是确保业务的安全访问。</li><li><ul><li><strong>持续诊断和缓解计划系统（CDM System）：</strong> 该系统收集关于企业系统当前状态的信息，并将更新应用到配置和软件组件中。企业CDM系统还提供给策略引擎关于系统访问请求的信息。</li></ul></li><li><ul><li><strong>行业合规系统（Industry Compliance System）：</strong> 该系统确保企业与当前政府管理的一致性。包括企业开发的所有策略规则来确保合规。</li></ul></li><li><ul><li><strong>威胁情报流（Threat Intelligence）：</strong> 该系统提供帮助策略引擎进行访问决策的信息。</li></ul></li><li><ul><li><strong>数据访问策略（Data Access Policy）：</strong> 数据访问策略是企业为企业资源创建的关于数据访问的属性、规则和策略的集合。策略规则集可以编码在策略引擎中或有PE动态生成。</li></ul></li><li><ul><li><strong>企业公钥基础设施（PKI）：</strong> 该系统负责生成和记录企业对资源、应用等发布的证书。既包括全局CA生态系统和联邦PKI。</li></ul></li><li><ul><li><strong>ID管理系统（ID Management）：</strong> 系统负责创建、保存和管理企业用户帐户和身份记录。系统中既含有必要的用户信息，也含有其他企业特征，比如角色、访问属性、或分配的系统。</li></ul></li><li><ul><li><strong>安全应急和事件管理系统（SIEM System）：</strong> 集合了系统日志、网络流量、资源权利和其他信息的企业系统为企业信息系统体佛那个安全态势的反馈。</li></ul></li></ul><ol><li>何为分配基于二元决策的策略</li><li>了解RADIUS协议</li><li>了解SSO方式认证</li></ol><h5 id="梳理"><a href="#梳理" class="headerlink" title="梳理"></a>梳理</h5><h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>如何进行动态认证？如何有效进行动态认证？</p><p><a href="https://www.secrss.com/articles/14045">引用</a><br><a href="chrome-extension://gfbliohnnapiefjpjlpjnehglfpaknnc/pages/pdf_viewer.html?r=https://www.gartner.com/teamsiteanalytics/servePDF?g=/imagesrv/media-products/pdf/Qi-An-Xin/Qianxin-1-1XXWAXWM.pdf">引用</a></p><h3 id="对于数据库的详细学习"><a href="#对于数据库的详细学习" class="headerlink" title="对于数据库的详细学习"></a>对于数据库的详细学习</h3>]]></content>
     
     
       
       
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Plane&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;hr&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input checked=&quot;&quot; disabled=&quot;&quot; type=&quot;checkbox&quot;&gt; 提出信息安全理论项目初步计划&lt;/li&gt;
-&lt;li&gt;&lt;input checked=</summary>
+    <summary type="html">&lt;h2 id=&quot;gt-Plane&quot;&gt;&lt;a href=&quot;#gt-Plane&quot; class=&quot;headerlink&quot; title=&quot;&amp;gt; Plane&quot;&gt;&lt;/a&gt;&amp;gt; Plane&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;[x] 提出信息安全理论项目初步计划&lt;/li&gt;
+&lt;li&gt;[x] 14:0</summary>
       
     
     
     
+    <category term="daily report" scheme="https://merlynr.github.io/categories/daily-report/"/>
+    
+    
+    <category term="daily" scheme="https://merlynr.github.io/tags/daily/"/>
     
     <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
     
-    <category term="Daily" scheme="https://merlynr.github.io/tags/Daily/"/>
+    <category term="plan" scheme="https://merlynr.github.io/tags/plan/"/>
     
   </entry>
   
