@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://merlynr.github.io/2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/</loc>
+    
+    <lastmod>2021-05-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://merlynr.github.io/2021/05/25/%E7%A6%BB%E7%BE%A4%E7%82%B9%E6%A3%80%E6%B5%8B/</loc>
     
     <lastmod>2021-05-25</lastmod>
@@ -219,13 +226,6 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/</loc>
-    
-    <lastmod>2020-11-26</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://merlynr.github.io/2020/10/19/lesslessqiu-tu-greatergreater-pu-xi-jin/</loc>
     
     <lastmod>2020-10-19</lastmod>
@@ -376,13 +376,6 @@
   
   <url>
     <loc>https://merlynr.github.io/tags/blokchain/</loc>
-    <lastmod>2021-05-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/tags/Study/</loc>
     <lastmod>2021-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
