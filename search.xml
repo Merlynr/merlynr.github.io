@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="2021/05/25/2020-10-13daily/"/>
+      <url>2021/05/25/2020-10-13daily/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>挖掘业务流程，结合机器学习进行业务预测分析</title>
       <link href="2021/05/25/%E6%8C%96%E6%8E%98%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%EF%BC%8C%E7%BB%93%E5%90%88%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E8%A1%8C%E4%B8%9A%E5%8A%A1%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90/"/>
       <url>2021/05/25/%E6%8C%96%E6%8E%98%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%EF%BC%8C%E7%BB%93%E5%90%88%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E8%A1%8C%E4%B8%9A%E5%8A%A1%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90/</url>
@@ -747,39 +760,6 @@
             <tag> daily </tag>
             
             <tag> study </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>2020-10-13【Daily】</title>
-      <link href="2020/10/13/2020-10-13daily/"/>
-      <url>2020/10/13/2020-10-13daily/</url>
-      
-        <content type="html"><![CDATA[<h2 id="社会工程"><a href="#社会工程" class="headerlink" title="社会工程"></a>社会工程</h2><ol><li>个人在网上需要另一套身份,吾即吾，吴非吾！-！</li><li>与陌生人聊天，一定要冷静，避免任何信息【任何，甚至爱好】走漏</li><li>可以通过一些快讯订阅来丰富自己的知识，例如：<a href="https://www.google.com/alerts">谷歌资讯</a></li><li>门户网站：国内个人信息泄露的源点。即通过筛选新浪，qq社区，网易，百度贴吧。。。。便可以查到一个人的生</li></ol><h2 id="Spring-Boot-IOC容器管理bean"><a href="#Spring-Boot-IOC容器管理bean" class="headerlink" title="Spring Boot IOC容器管理bean"></a>Spring Boot IOC容器管理bean</h2><p><a href="https://blog.csdn.net/javazejian/article/details/54561302#ioc%E5%AE%B9%E5%99%A8%E7%AE%A1%E7%90%86-bean">Bean的命名以及实例化方法</a></p><ol><li>Bean的命名</li></ol><ul><li>基于xml配置文件中的<bean/>存在属性id，name，其中一个bean在一个xml中的id只能唯一，但是它的name可以有多个，当对一个bean进行配置的时候可以通过别名来区别</li><li>基于Java注解的配置方式：使用org.springframework.stereotype.Service（@Service）和org.springframework.stereotype.Repository（@Repository）声明AccountServiceImpl和AccountDaoImpl类，使用@Autowired注解注入accountDao（需要在xml声明注解驱动）<b>有了注解声明，我们就不需要在xml中声明以上两个Bean,但是需要告诉Spring注解的Bean在那些包下，因此需要添加包扫描机制，此时需要启用Spring的context命名空间</b></li></ul><p><img src="http://Merlynr.github.io/post-images/1602599093551.png" alt=""></p><p><img src="http://Merlynr.github.io/post-images/1602599101037.png" alt=""></p><ol><li>Bean的实例化方法</li></ol><ul><li>Spring容器可以通过构造方法创建bean【通用】，然后可以在xml中注入</li></ul><p><img src="http://Merlynr.github.io/post-images/1602599339693.png" alt=""></p><ul><li>静态方法构造</li></ul><p><img src="http://Merlynr.github.io/post-images/1602599442231.png" alt=""></p><ul><li>实例工厂构造</li></ul><p><img src="http://Merlynr.github.io/post-images/1602599448947.png" alt=""></p><ol><li>Bean的重写机制</li></ol><ul><li>Bean的重写机制即：通过设置优先级有序的给同一个bean注入数值，这样就形成重写了</li></ul><ol><li>分层管理方式</li></ol><p><img src="http://Merlynr.github.io/post-images/1602599622741.png" alt=""></p><p><img src="http://Merlynr.github.io/post-images/1602599629963.png" alt=""></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> daily report </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> daily </tag>
-            
-            <tag> graduate student </tag>
-            
-            <tag> report </tag>
-            
-            <tag> study </tag>
-            
-            <tag> safety </tag>
             
         </tags>
       

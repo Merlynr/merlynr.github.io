@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://merlynr.github.io/2021/05/25/2020-10-13daily/</loc>
+    
+    <lastmod>2021-05-26</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://merlynr.github.io/2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/</loc>
     
     <lastmod>2021-05-26</lastmod>
@@ -52,13 +59,6 @@
   
   <url>
     <loc>https://merlynr.github.io/2020/10/09/2020-10-09/</loc>
-    
-    <lastmod>2021-05-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/2020/10/13/2020-10-13daily/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -285,13 +285,6 @@
   
   <url>
     <loc>https://merlynr.github.io/tags/study/</loc>
-    <lastmod>2021-05-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/tags/safety/</loc>
     <lastmod>2021-05-26</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
