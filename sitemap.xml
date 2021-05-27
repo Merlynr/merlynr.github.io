@@ -58,13 +58,6 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/10/12/2020-10-12daiily/</loc>
-    
-    <lastmod>2021-05-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://merlynr.github.io/2020/10/09/2020-10-09/</loc>
     
     <lastmod>2021-05-24</lastmod>
@@ -72,7 +65,7 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/10/17/2020-10-17daily/</loc>
+    <loc>https://merlynr.github.io/2020/10/12/2020-10-12daiily/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -86,7 +79,7 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/03/24/2021-03-24%E3%80%90Week%E3%80%91/</loc>
+    <loc>https://merlynr.github.io/2020/10/17/2020-10-17daily/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -94,6 +87,13 @@
   
   <url>
     <loc>https://merlynr.github.io/2020/10/24/2020-10-24daily/</loc>
+    
+    <lastmod>2021-05-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/2021/03/24/2021-03-24%E3%80%90Week%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/03/19/2021-3-19%E3%80%90%E5%91%A8%E6%80%BB%E7%BB%93%E3%80%91/</loc>
+    <loc>https://merlynr.github.io/2020/11/10/Block%20chain%20transaction%20privacy%20protection%20method%20and%20system/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/11/10/Block%20chain%20transaction%20privacy%20protection%20method%20and%20system/</loc>
+    <loc>https://merlynr.github.io/2021/03/19/2021-3-19%E3%80%90%E5%91%A8%E6%80%BB%E7%BB%93%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -277,14 +277,7 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/tags/summarize/</loc>
-    <lastmod>2021-05-27</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/tags/Java/</loc>
+    <loc>https://merlynr.github.io/tags/security/</loc>
     <lastmod>2021-05-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -298,7 +291,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/tags/security/</loc>
+    <loc>https://merlynr.github.io/tags/Java/</loc>
+    <lastmod>2021-05-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/tags/summarize/</loc>
     <lastmod>2021-05-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
