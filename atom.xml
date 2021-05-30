@@ -6,7 +6,7 @@
   <link href="https://merlynr.github.io/atom.xml" rel="self"/>
   
   <link href="https://merlynr.github.io/"/>
-  <updated>2021-05-26T16:00:00.000Z</updated>
+  <updated>2021-05-29T16:00:00.000Z</updated>
   <id>https://merlynr.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>核函数</title>
+    <link href="https://merlynr.github.io/2021/05/30/%E6%A0%B8%E5%87%BD%E6%95%B0/"/>
+    <id>https://merlynr.github.io/2021/05/30/%E6%A0%B8%E5%87%BD%E6%95%B0/</id>
+    <published>2021-05-29T16:00:00.000Z</published>
+    <updated>2021-05-29T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><h2 id="区分核函数和映射"><a href="#区分核函数和映射" class="headerlink" title="区分核函数和映射"></a>区分核函数和映射</h2><h2 id="核函数真实的作用"><a href="#核函数真实的作用" class="headerlink" title="核函数真实的作用"></a>核函数真实的作用</h2>]]></content>
+    
+    
+    <summary type="html">核函数的笔记</summary>
+    
+    
+    
+    <category term="algorithm" scheme="https://merlynr.github.io/categories/algorithm/"/>
+    
+    
+    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
+    
+    <category term="algorithm" scheme="https://merlynr.github.io/tags/algorithm/"/>
+    
+    <category term="data mining" scheme="https://merlynr.github.io/tags/data-mining/"/>
+    
+  </entry>
   
   <entry>
     <title>协方差矩阵</title>
@@ -234,7 +259,7 @@
     <published>2021-05-05T16:00:00.000Z</published>
     <updated>2021-05-24T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：<a href="mailto:&#x6e;&#x69;&#x63;&#x68;&#x6f;&#108;&#97;&#x73;&#x5f;&#98;&#x75;&#114;&#110;&#115;&#x40;&#x68;&#107;&#x73;&#x2e;&#x68;&#x61;&#x72;&#118;&#x61;&#x72;&#x64;&#46;&#x65;&#x64;&#117;">&#x6e;&#x69;&#x63;&#x68;&#x6f;&#108;&#97;&#x73;&#x5f;&#98;&#x75;&#114;&#110;&#115;&#x40;&#x68;&#107;&#x73;&#x2e;&#x68;&#x61;&#x72;&#118;&#x61;&#x72;&#x64;&#46;&#x65;&#x64;&#117;</a></li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：<a href="mailto:&#x61;&#108;&#105;&#x73;&#x6f;&#110;&#x5f;&#104;&#105;&#x6c;&#x6c;&#101;&#103;&#x65;&#105;&#115;&#x74;&#x40;&#x68;&#x6b;&#115;&#x2e;&#104;&#x61;&#114;&#118;&#97;&#114;&#100;&#x2e;&#x65;&#x64;&#x75;">&#x61;&#108;&#105;&#x73;&#x6f;&#110;&#x5f;&#104;&#105;&#x6c;&#x6c;&#101;&#103;&#x65;&#105;&#115;&#x74;&#x40;&#x68;&#x6b;&#115;&#x2e;&#104;&#x61;&#114;&#118;&#97;&#114;&#100;&#x2e;&#x65;&#x64;&#x75;</a></li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  –棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：<a href="mailto:&#110;&#x69;&#x63;&#x68;&#111;&#108;&#x61;&#115;&#x5f;&#98;&#117;&#x72;&#110;&#x73;&#x40;&#104;&#107;&#x73;&#46;&#104;&#97;&#x72;&#118;&#x61;&#114;&#x64;&#x2e;&#101;&#x64;&#x75;">&#110;&#x69;&#x63;&#x68;&#111;&#108;&#x61;&#115;&#x5f;&#98;&#117;&#x72;&#110;&#x73;&#x40;&#104;&#107;&#x73;&#46;&#104;&#97;&#x72;&#118;&#x61;&#114;&#x64;&#x2e;&#101;&#x64;&#x75;</a></li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：<a href="mailto:&#x61;&#x6c;&#x69;&#115;&#x6f;&#x6e;&#95;&#104;&#105;&#x6c;&#x6c;&#x65;&#x67;&#101;&#105;&#x73;&#116;&#64;&#104;&#x6b;&#x73;&#x2e;&#104;&#97;&#x72;&#x76;&#97;&#x72;&#100;&#46;&#101;&#x64;&#117;">&#x61;&#x6c;&#x69;&#115;&#x6f;&#x6e;&#95;&#104;&#105;&#x6c;&#x6c;&#x65;&#x67;&#101;&#105;&#x73;&#116;&#64;&#104;&#x6b;&#x73;&#x2e;&#104;&#97;&#x72;&#x76;&#97;&#x72;&#100;&#46;&#101;&#x64;&#117;</a></li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  –棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
     
     
     <summary type="html">社工</summary>
@@ -513,31 +538,6 @@
       
     <summary type="html">&lt;p&gt;&lt;a href=&quot;https://gitee.com/merlynr/img-store/blob/d1481813922e92a8e297194f2c8176aab822be66/resource/paper/%E8%87%B4%E5%8A%9B%E4%BA%8E%E5%</summary>
       
-    
-    
-    
-    <category term="paper" scheme="https://merlynr.github.io/categories/paper/"/>
-    
-    
-    <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
-    
-    <category term="paper" scheme="https://merlynr.github.io/tags/paper/"/>
-    
-    <category term="block chain" scheme="https://merlynr.github.io/tags/block-chain/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Block chain transaction privacy protection method and system</title>
-    <link href="https://merlynr.github.io/2020/11/10/Block%20chain%20transaction%20privacy%20protection%20method%20and%20system/"/>
-    <id>https://merlynr.github.io/2020/11/10/Block%20chain%20transaction%20privacy%20protection%20method%20and%20system/</id>
-    <published>2020-11-10T02:00:00.000Z</published>
-    <updated>2021-05-24T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://patents.google.com/patent/WO2019080933A1/zh">https://patents.google.com/patent/WO2019080933A1/zh</a></p><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ol><li>解决交易信息透明，造成隐私信息暴露</li><li>论文提出解决方案使用到了秘密共享方式，解决共谋问题</li><li>确保关键字安全性</li></ol><h4 id="预处理方法"><a href="#预处理方法" class="headerlink" title="预处理方法"></a>预处理方法</h4><ol><li>将层次属性加密与线性秘密共享相结合，提出了一种基于可搜索属性加密的区块链数据隐私保护控制方案，解决了传统区块链交易中的隐私暴露问题。</li><li>用户的访问控制由验证节点实现，避免了向区块链网络提交私钥和访问结构的安全风险。将私钥组件与区块链中用户节点的随机身份相关联可以解决共谋问题</li><li>授权用户可以通过可搜索的加密来快速搜索和监督交易信息。改进的算法确保了关键字的安全性。【算法应该看不懂】</li></ol><h3 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h3><ol><li><p>提出基于椭圆曲线加密算法m的更有效的盲签名混合方案—该方案简单易用，通常适用于各种数字货币，【但它是集中式货币方案】。</p><blockquote><p>传统公钥密码体制（密钥长度一般为512bit）随着计算机运算速度的提升，已经有被破解的趋势了，同时RSA运算效率较低。利用曲线上的有理点组成的Abel群《TODO》及其上离散对数问题求解的困难性构成一些公钥密码体制，即密钥的每个bit都具有最高的安全强度，椭圆曲线密码体制中160bit长的密钥所展示的安全强度相当于RSA的1024bit</p></blockquote></li><li><p>使用盲签名之类《TODO》的混合加密技术—区块链隐私保护机制【增加了技术成本，并且第三方实施令牌处理不可避免地增加了额外的服务开销】</p></li><li><p>提出了一种改进的基于环的秘密交易方案《TODO》</p><blockquote><p>在该方案中，大量的环签名被放置在可链接的自发匿名组签名的多层中，其解决方案可以保护身份隐私和交易隐私。尽管环签名提供了强大的匿名性，但它具有三个限制：产生交易数据较多，需要更多的记录的存储空间、签名的大小与参与者数量成正比，因此传统每个事务做了限制，每个事务有四个输出、隐藏的数量增加了检查的难度，即，它不仅验证交易期间是否生成了秘密加密货币，而且还确定了特定时刻的额外数量。</p></blockquote></li></ol><h3 id="初步知识"><a href="#初步知识" class="headerlink" title="初步知识"></a>初步知识</h3><h4 id="Bilinear-Mapping"><a href="#Bilinear-Mapping" class="headerlink" title="Bilinear Mapping"></a>Bilinear Mapping</h4><blockquote><p>双线性映射</p><blockquote><p>群</p><ol><li>封闭性——如果a和b都属于G，则a+b也属于G。</li><li>结合律——对于G中的任意元素a、b和c，都有（a+b）+c=a+（b+c）成立。</li><li>单位元——G中存在元素e，对于G中任意元素a，都有a+e=e+a=a成立。</li><li>逆元——对于G中任意元素a，G中都存在元素a’，使得a+a’=a’+a=e成立。G就叫作一个群，记为（G，+）</li><li>在群中定义求幂运算为重复使用群中的运算，如a^4 =a+a+a+a。规定a^0 =e为单位元。如果一个群的所有元素都是a的幂a^k，则称这个群是一个==循环群 #00BCD4==，这里的k是整数。a也被称为这个群的生成元。</li></ol></blockquote></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/20201223/1608734193371.png" alt="双线性映射"></p><p>设G1、G2都是阶为p的循环群，p是素数。如果映射e: G1 × G1 → G2 满足以下性质：</p><ol><li>双线性性。<br>对于任意a，b∈Z<sub>p</sub>和R，S∈G1，有e(R<sup>a</sup>, S<sup>b</sup>) = e(R, S)<sup>ab<sup>；</li><li>非退化性。<br>存在R，S∈G<sub>1</sub>，使得e(R, S) ≠ 1<sub>G2</sub>。这里1<sub>G2</sub>代表G2群的单位元；</li><li>可计算性。<br>存在有效的算法对任意的R，S∈G<sub>1</sub>，计算e(R, S)的值。<br>那么称<strong>e</strong>是一个<strong>双线性映射</strong>。</li></ol><h4 id="Determining-the-Bilinear-Diffie–"><a href="#Determining-the-Bilinear-Diffie–" class="headerlink" title="Determining the Bilinear Diffie–"></a>Determining the Bilinear Diffie–</h4><p>ellman Assumption (DBDH)</p><blockquote><p>确定双线性参数生产区的假设（DBDH）</p></blockquote><p>选择一个G1的生成器，设a,b,c,r属于（1，q-1）中任意质数，当g^a,g^b,g^c,g^r属于G1，e(g,g)<sup>abc</sup>和e(g,g)<sup>r</sup>属于G2,判断<strong>e(g,g)<sup>abc</sup>和e(g,g)<sup>r</sup>是否相等</strong></p><p><strong>判断条件：</strong><br>对于任意多项式概率时间算法的对手A，解决决策双线性Diffie-Hellman（DBDH）假设[i]的优势定义为</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/20201223/1608734247064.png" alt="DBDH判断条件"></p><p>如果确定的值Adv<sup>DBDH</sup><sub> A</sub>可忽略不计，则将建立决策双线性Diffie-Hellman假设。</p><h4 id="Lsss-Linear-Secret-Sharing-Scheme"><a href="#Lsss-Linear-Secret-Sharing-Scheme" class="headerlink" title="Lsss Linear Secret Sharing Scheme"></a>Lsss Linear Secret Sharing Scheme</h4><blockquote><p>Lsss线性秘密共享方案【是对密钥的管理策略】</p></blockquote><p><a href="https://zhuanlan.zhihu.com/p/95362628">有趣的栗子</a></p><p>在信息系统中使用的秘密共享，可以防止系统密钥的遗失、损坏和来自地方的攻击，减小秘密保存者的责任。在(t,n)秘密共享体制中，秘密分发者将一个秘密信息分成n个秘密份额，分发给n 个人，当需要恢复秘密信息时，任意少于t个的秘密保存者都得不到该秘密的任何信息。<br>现目前进行秘密共享的主流方案有基于访问控制树和秘密共享矩阵的。基于访问控制树进行秘密分享时，通过门限控制进行合理的多项式构造，最终将秘密分享给树的每一个子节点。</p><h3 id="模型"><a href="#模型" class="headerlink" title="模型"></a>模型</h3><h4 id="系统模型"><a href="#系统模型" class="headerlink" title="系统模型"></a>系统模型</h4><blockquote><p>基于可搜索属性加密的区块链数据隐私访问控制系统模型如图</p></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/20201223/1608734364209.png" alt="基于可搜索属性加密的区块链数据隐私访问控制系统模型"></p><blockquote><p>包含的四个实体</p></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/20201223/1608734388573.png" alt="四个实体"></p><ol><li>数据所有者：首先进行初始化，生成索引密钥和陷门密钥，提取交易的关键词，然后使用索引密钥对索引进行加密，形成索引密文；其次，对陷门密钥进行加密以形成陷门密钥密文并共享数据。最后，使用安全签名算法对交易进行签名并加密，同时，数据所有者将索引关键字附加到交易密文的密文文件中。最重要的是，数据所有者可以是区块链上进行比特币交易的用户或矿工。</li><li>用户：注册系统生成与真实身份相对应的身份标识符RID和与用户属性相对应的私钥。另外，用户解密陷门密文并使用 用户密钥以生成陷门，然后发送区块链以请求交易密文。</li><li>验证节点：验证用户身份和权限的正确性，并在属性集合中计算用户的属性和私钥参数以及权限参数，以分发陷密钥密文，并将用户密钥UK分发给合法用户。</li><li>矿工节点：矿工节点在此期间广播所有交易信息，每个节点执行验证并在验证后加入区块链。计算并匹配数据所有者发送的陷门和索引，然后在匹配成功后将交易密文发送到数据使用方。</li></ol><h4 id="威胁模式"><a href="#威胁模式" class="headerlink" title="威胁模式"></a>威胁模式</h4><p><strong>前提：</strong> 只有“验证节点”是完全可信的，私钥能正常生成和分发给用户。大多数矿工节点半诚实【不破坏协议，根据规则可以推测用户信息】。此外，用户可能会合谋解密他们无法访问的数据。</p><h4 id="安全模型"><a href="#安全模型" class="headerlink" title="安全模型"></a>安全模型</h4><p><strong>安全模型是指对手与挑战者之间的博弈。</strong></p><ol><li>IND-CPA security model【Indistinguishability under chosen-plaintext attack】</li></ol><blockquote><p>选择明文攻击。可理解为攻击者拥有加密机的使用权限，可以加密自己想加密的任何明文。攻击目的：由明文和对应的密文来分析和推断加密算法的信息，主要是加密密钥。</p></blockquote><ul><li>初始化：挑战者A使用初始化算法生成公共参数和主密钥【重复使用的密钥，对称密钥】，并将主密钥发送给对手C。—-<em>每次通信只使用一次的密钥称为会话密钥（session key）。相对于会话密钥，重复使用的密钥称为主密钥（master key）。</em></li><li>第一步：对手C重复尝试一组属性S1-Sq，但是没有属性满足访问</li><li>挑战：对手C选择两条消息M0; M1并将它们发送给挑战者A。挑战者A选择0或者1，和加密的访问结构的消息M，并将密文发送给对手C</li><li>第二步：</li></ul><ol start="2"><li>IND-CKA security model</li></ol><blockquote><p>关键字攻击</p></blockquote><h3 id="具体结构即功能实现"><a href="#具体结构即功能实现" class="headerlink" title="具体结构即功能实现"></a>具体结构即功能实现</h3><h4 id="注册"><a href="#注册" class="headerlink" title="注册"></a>注册</h4><p>用户向系统提交注册申请，获取真实身份信息对应的身份RID和用户属性集，数据所有者（交易用户）进行注册获取密钥和身份标识。</p><h4 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h4><p><a href="https://blog.csdn.net/zhangwenjiezw886/article/details/51006774">双线性</a></p><ol><li>数据拥有者:：选择一个以质数为序的群G<sub>0</sub>,用元素g(单位元)生成群，在限制字段中选择N个元素(N为阶)，并使用系统属性形成系统属性集S，并根据属性之间的相关性来确定S中的属性。S被分为x个树，H<sub>i</sub>被设置为i个树的深度，H为树中最大深度；随机选择向量U=(U<sub>y</sub>)<sub>1=&lt;x=&lt;y</sub>和U’=(U’<sub>y’</sub>)<sub>1=&lt;x‘=&lt;y’</sub>，u<sub>y</sub>代表与y属性树相对应的public参数，数据所有者选择素数p的序列，并生成群G<sub>1</sub>,H<sub>1</sub>。数据拥有者选择两个随机数η(姨塔)，μ(谬)，然后计算生成公钥PK={g,g<sup>μ</sup>}和私钥SK=η代表陷门。</li><li>验证结点：Z<sup>*</sup><sub>p</sub>在有限域中用p-基元表达一组元素，从中选择两个大小不同的随机数α，β，验证结点通过计算PK={G<sub>0</sub>,g,g<sup>β</sup>,Y=e(g,g)<sup>α</sup>,U,U’}和MK={α，β}来定义一个双线性图e:G<sub>0</sub>xG<sub>0</sub>=G<sub>1</sub>。</li><li>交易生成和签名：交易用户A生成交易信息，通过钱包签名算法对自身身份进行加密，并使用钱包地址对应的私钥对其签名，然后发送给交易用户B。签名的算法如下()：</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/20201223/1608734446144.png" alt="签名算法"></p><blockquote><p>Trans:交易信息、<br>δ A为用户自身加密后的信息即用于标识、<br>CT<sub>A</sub>（Ciphertext密文）私钥加密产生签名</p></blockquote><ol start="4"><li>产生索引：交易者从交易明文信息中提取关键字，并用索引密钥g<sup>μ</sup>和两个随机数字进行加密。</li><li>加密：Encrypt(M，TK，PK)[信息，非对称传输密钥，公钥]</li></ol>]]></content>
-    
-    
-    <summary type="html">区块链论文阅读</summary>
     
     
     
