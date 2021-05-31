@@ -93,6 +93,13 @@
   </url>
   
   <url>
+    <loc>https://merlynr.github.io/2020/10/17/2020-10-17daily/</loc>
+    
+    <lastmod>2021-05-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://merlynr.github.io/2020/10/15/2020-10-15daily/</loc>
     
     <lastmod>2021-05-24</lastmod>
@@ -101,13 +108,6 @@
   
   <url>
     <loc>https://merlynr.github.io/2020/10/24/2020-10-24daily/</loc>
-    
-    <lastmod>2021-05-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/2020/10/17/2020-10-17daily/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -128,14 +128,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/05/19/2021-05-15%E3%80%90Week%E3%80%91/</loc>
+    <loc>https://merlynr.github.io/2021/05/24/2021-05-24%E3%80%90Week%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/05/24/2021-05-24%E3%80%90Week%E3%80%91/</loc>
+    <loc>https://merlynr.github.io/2021/05/19/2021-05-15%E3%80%90Week%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -163,14 +163,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/05/06/TagUI%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E5%8F%8A%E5%88%86%E6%9E%90/</loc>
+    <loc>https://merlynr.github.io/2021/05/17/RPA+AI/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/05/17/RPA+AI/</loc>
+    <loc>https://merlynr.github.io/2021/05/06/TagUI%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E5%8F%8A%E5%88%86%E6%9E%90/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -375,14 +375,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/tags/code/</loc>
+    <loc>https://merlynr.github.io/tags/machine-learning/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/tags/machine-learning/</loc>
+    <loc>https://merlynr.github.io/tags/code/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -475,13 +475,6 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/categories/FrameWork/</loc>
-    <lastmod>2021-05-31</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://merlynr.github.io/categories/RPA/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
@@ -489,7 +482,7 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/categories/algorithm/</loc>
+    <loc>https://merlynr.github.io/categories/FrameWork/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -497,6 +490,13 @@
   
   <url>
     <loc>https://merlynr.github.io/categories/security/</loc>
+    <lastmod>2021-05-31</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/categories/algorithm/</loc>
     <lastmod>2021-05-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
