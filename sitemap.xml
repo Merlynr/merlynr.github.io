@@ -121,14 +121,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/10/17/2020-10-17daily/</loc>
+    <loc>https://merlynr.github.io/2020/10/24/2020-10-24daily/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/10/24/2020-10-24daily/</loc>
+    <loc>https://merlynr.github.io/2020/10/17/2020-10-17daily/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -149,13 +149,6 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/05/19/2021-05-15%E3%80%90Week%E3%80%91/</loc>
-    
-    <lastmod>2021-05-24</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://merlynr.github.io/2021/05/24/2021-05-24%E3%80%90Week%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
@@ -163,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/03/19/2021-3-19%E3%80%90%E5%91%A8%E6%80%BB%E7%BB%93%E3%80%91/</loc>
+    <loc>https://merlynr.github.io/2021/05/19/2021-05-15%E3%80%90Week%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -171,6 +164,13 @@
   
   <url>
     <loc>https://merlynr.github.io/2020/11/10/Block%20chain%20transaction%20privacy%20protection%20method%20and%20system/</loc>
+    
+    <lastmod>2021-05-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/2021/03/19/2021-3-19%E3%80%90%E5%91%A8%E6%80%BB%E7%BB%93%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -503,14 +503,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/categories/security/</loc>
+    <loc>https://merlynr.github.io/categories/algorithm/</loc>
     <lastmod>2021-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/categories/algorithm/</loc>
+    <loc>https://merlynr.github.io/categories/security/</loc>
     <lastmod>2021-06-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
