@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://merlynr.github.io/2021/06/15/%E5%9F%BA%E4%BA%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%A2%84%E6%B5%8B/</loc>
+    
+    <lastmod>2021-06-14</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://merlynr.github.io/2021/05/31/%E4%BA%8C%E5%88%86%E7%B1%BB%E4%B9%8B%E7%B1%BB%E5%88%AB%E4%B8%8D%E5%B9%B3%E8%A1%A1/</loc>
     
     <lastmod>2021-06-08</lastmod>
@@ -439,6 +446,20 @@
   
   <url>
     <loc>https://merlynr.github.io/tags/book/</loc>
+    <lastmod>2021-06-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/tags/process-mining/</loc>
+    <lastmod>2021-06-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/tags/deep-learning/</loc>
     <lastmod>2021-06-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
