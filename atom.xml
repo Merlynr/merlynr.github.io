@@ -6,7 +6,7 @@
   <link href="https://merlynr.github.io/atom.xml" rel="self"/>
   
   <link href="https://merlynr.github.io/"/>
-  <updated>2021-06-20T16:00:00.000Z</updated>
+  <updated>2021-06-23T16:00:00.000Z</updated>
   <id>https://merlynr.github.io/</id>
   
   <author>
@@ -17,11 +17,46 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>2021-6-21[daily]</title>
-    <link href="https://merlynr.github.io/2021/06/21/2021-6-21[daily]/"/>
-    <id>https://merlynr.github.io/2021/06/21/2021-6-21[daily]/</id>
+    <title>总结“基于机器学习的业务流程系统的预测”中的技术点</title>
+    <link href="https://merlynr.github.io/2021/06/24/%E6%80%BB%E7%BB%93%E2%80%9C%E5%9F%BA%E4%BA%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%A2%84%E6%B5%8B%E2%80%9D%E4%B8%AD%E7%9A%84%E6%8A%80%E6%9C%AF%E7%82%B9/"/>
+    <id>https://merlynr.github.io/2021/06/24/%E6%80%BB%E7%BB%93%E2%80%9C%E5%9F%BA%E4%BA%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%9A%84%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E9%A2%84%E6%B5%8B%E2%80%9D%E4%B8%AD%E7%9A%84%E6%8A%80%E6%9C%AF%E7%82%B9/</id>
+    <published>2021-06-23T16:00:00.000Z</published>
+    <updated>2021-06-23T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="论文总体流程"><a href="#论文总体流程" class="headerlink" title="论文总体流程"></a>论文总体流程</h2><p>本文针对三个预测任务提 出 了 两个预测模型 。 一个预测模型是 用来预测流 程结果 的 模 型 ， 本文提 出 了 利 用 深度 学 习 中 序 列 处理 网 络 Ｌ Ｓ ＴＭ算法模 型去预测流程结果 的方法 ， 此方法 旨 在将流程结果 的预测 问 题与 自 然语言处理方 向 相 结合 ， 提供 一个新 的解决思路 。另 一个预测模型 则是用 来预测事件活动与 时 间 相关任务 的模 型 ， 此预测 模型 将本文研 究 的预测流程下 一时刻活动与 时 间 、预测流程后续时刻事件 活动 与 时 间 （ 即 剩余周 期 时 间 ） 两个预测任务利 用 一个预测模型 实现 。</p><h2 id=""><a href="#" class="headerlink" title=" "></a> </h2>]]></content>
+    
+    
+    <summary type="html">【可選】文章描述</summary>
+    
+    
+    
+    <category term="plan" scheme="https://merlynr.github.io/categories/plan/"/>
+    
+    <category term="graduate student" scheme="https://merlynr.github.io/categories/plan/graduate-student/"/>
+    
+    <category term="summarize" scheme="https://merlynr.github.io/categories/plan/graduate-student/summarize/"/>
+    
+    <category term="paper" scheme="https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/"/>
+    
+    <category term="machine learning" scheme="https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/machine-learning/"/>
+    
+    <category term="algorithm" scheme="https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/machine-learning/algorithm/"/>
+    
+    <category term="process mining" scheme="https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/machine-learning/algorithm/process-mining/"/>
+    
+    
+    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
+    
+    <category term="plan" scheme="https://merlynr.github.io/tags/plan/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021-6-22[daily]</title>
+    <link href="https://merlynr.github.io/2021/06/21/2021-6-22[daily]/"/>
+    <id>https://merlynr.github.io/2021/06/21/2021-6-22[daily]/</id>
     <published>2021-06-20T16:00:00.000Z</published>
-    <updated>2021-06-20T16:00:00.000Z</updated>
+    <updated>2021-06-21T16:00:00.000Z</updated>
     
     <content type="html"><![CDATA[<h2 id="NEED-TODO"><a href="#NEED-TODO" class="headerlink" title="NEED TODO"></a>NEED TODO</h2><ul><li>[ ] 阅读论文SpinalFlow: An Architecture and Dataflow Tailored for Spiking Neural Networks</li><li>[ ] 制作相关演讲PPT</li><li>[ ] 学习三个吴恩达机器学习视频</li><li>[ ] 学习一个中等，一个简单算法</li><li>[ ] 学习Java相关进阶</li></ul><h2 id="Plan"><a href="#Plan" class="headerlink" title="Plan"></a>Plan</h2><ol><li>10.20-11.20，阅读论文</li><li>13.40-15.30，阅读论文</li><li>15.40-16.20，看机器学习视频</li><li>16.30-17.20，学习算法</li><li>18.10-21.10，看论文</li><li>21.20-22.40，看Java进阶</li></ol><h2 id="Completion-Status"><a href="#Completion-Status" class="headerlink" title="Completion Status"></a>Completion Status</h2><h2 id="TODO-Tomorrow"><a href="#TODO-Tomorrow" class="headerlink" title="TODO Tomorrow"></a>TODO Tomorrow</h2>]]></content>
     
@@ -48,29 +83,33 @@
   </entry>
   
   <entry>
-    <title>Spinalflow：针对尖刺神经网络量身定制的架构和数据流</title>
-    <link href="https://merlynr.github.io/2021/06/20/Spinalflow%EF%BC%9A%E9%92%88%E5%AF%B9%E5%B0%96%E5%88%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E9%87%8F%E8%BA%AB%E5%AE%9A%E5%88%B6%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8C%E6%95%B0%E6%8D%AE%E6%B5%81/"/>
-    <id>https://merlynr.github.io/2021/06/20/Spinalflow%EF%BC%9A%E9%92%88%E5%AF%B9%E5%B0%96%E5%88%BA%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E9%87%8F%E8%BA%AB%E5%AE%9A%E5%88%B6%E7%9A%84%E6%9E%B6%E6%9E%84%E5%92%8C%E6%95%B0%E6%8D%AE%E6%B5%81/</id>
-    <published>2021-06-19T16:00:00.000Z</published>
-    <updated>2021-06-19T16:00:00.000Z</updated>
+    <title>2021-6-24[daily]</title>
+    <link href="https://merlynr.github.io/2021/06/21/2021-6-24[daily]/"/>
+    <id>https://merlynr.github.io/2021/06/21/2021-6-24[daily]/</id>
+    <published>2021-06-20T16:00:00.000Z</published>
+    <updated>2021-06-23T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/wydbyxr/article/details/83956277">深度学习基础—不同网络种类—尖峰神经网络/脉冲神经网络(spiking neural network, snn)<em>wydbyxr的博客-CSDN博客</em>尖峰神经网络</a></p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>脉冲神经网络（SNN）属于第三代神经网络模型，实现了更高级的生物神经模拟水平。除了神经元和突触状态之外，SNN 还将时间概念纳入了其操作之中。</p><p><a href="https://www.thinbug.com/q/34570221">尖峰神经网络 - Thinbug</a></p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>对SNN基线的分析表明，在适度的尖峰率下，SNN实现的效率明显低于ANNs的加速器。</p><p>因为SNN数据流必须考虑几个刻度的神经元电位，从而为重用模式引入了一个新的数据结构和一个新的维度。</p><h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>为了提高SNN硬件效率</p><h2 id="知识背景"><a href="#知识背景" class="headerlink" title="知识背景"></a>知识背景</h2><p>受神经科学的启发，研究人员探索了脉冲神经网络在各种图像和语音应用中实现高预测精度的潜力[2]、[5]、[16]、[14]、[55]。尖峰神经元是有状态的；它根据以前看到的输入保持一个电位；当接收到二进制输入尖峰时，电位向上或向下移动；当电位达到阈值时，产生二进制输出尖峰。尖峰神经元模仿生物神经元的操作，希望模拟大脑能够在非常低的能量下提供非常高的预测精度[55]。</p><p>SNNS预计将在以下情况下有效，有用：（i）当没有提供大型/标记的训练集时<br>（ii）输入预期偏离培训集时<br>（iii）在连续学习[8]，[43]是必要的时候，<br>（iv）在参与资源密集型训练方法之前建立初始神经网络权重[32]。</p><p>理论上，SNN应该表现出高稀疏性，即，它们可以将8bitANN的信息内容打包到稀疏尖峰序列的相对定时中。本工作试图在克服时间维度的同时实现snn的低能势。不幸的是，与ANN加速器[13]，[27]，[12]，[27]，[2]相比，现代SNN架构实现每种神经元的吞吐量较低和较高的能量。这主要是因为SNNs中的时间特性——输入在多个节拍间被接收和处理。这不仅需要更多的时间，还会对架构数据流和可以利用的数据重用施加约束。此外，数据流还必须管理独特的大型数据结构的重用。</p><p>因此，我们创建了一个基线SNN架构SpikingEyeriss，它是根据一个典型的ANN加速器Eyeriss建模的。我们观察到，以传统方式处理snn(包括速率编码和时间编码)会在每一次滴答中给神经元电位带来显著的数据移动。Eyeriss行平稳数据流加剧了这个问题，其中部分和(或神经元电位)在卸载到全局缓冲区之前没有完全积累。为了解决这个问题，我们引入了一个新的加速器，SpinalFlow，它在一个时间步(像ann)中以压缩和按时间顺序排序的方式处理峰值。在这种方法中使用行平稳的数据流将导致重大的排序开销;这可以通过调整数据流以使用输出平稳模型来解决。建议的数据流确实需要从一个大缓冲区中重复访问权值。对于某些工作负载，这个大缓冲区相对于ANN基线降低了SpinalFlow的计算密度。这种缺点在处理低分辨率输入和稀疏脉冲序列时得到了缓解，这是时域编码snn固有的特性。因此，该体系结构被设计为自然地利用SNN脉冲序列[40]，[51]中预期的高稀疏性。相对于基线ANN, SpinalFlow有更简单的处理元素，但有一个额外的硬件合并排序单元和一个利用权重重用的大缓冲区。</p><h2 id="解决方案及成果"><a href="#解决方案及成果" class="headerlink" title="解决方案及成果"></a>解决方案及成果</h2><p><strong><font color="#8A2BE2">概述</font></strong><br>介绍了一种新的SNN架构，SpinalFlow，用于处理压缩的，带时间戳的，有序的输入尖峰顺序。它采用一种计算顺序，使得网络层的输出也被压缩，打上时间戳和排序。一个神经元的所有相关计算在连续步骤中进行，以消除神经元潜在存储开销。因此，通过更好的数据重用，我们将SNN加速器的能量效率提高了一个数量级。</p><ul><li>SNN dataflow需要考虑多个tick的neuron potentials，带来了新的数据结构和新的数据pattern。</li><li>提出SpinalFlow，处理Compressed，time-stamped, sorted sequence的输入输出；一个神经元执行一系列步骤的计算来减少potential的存储开销，better data reuse</li></ul><p>实验证明，根据观测稀疏度的不同，SNN体系结构可以在延迟和推理能量方面与人工神经网络体系结构（ANN）竞争，从而降低了在需要实时学习的场景中进行实际部署的障碍。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>]]></content>
-    
-    
-    <summary type="html">为了应付课程，，，，</summary>
+    <content type="html"><![CDATA[<h2 id="NEED-TODO"><a href="#NEED-TODO" class="headerlink" title="NEED TODO"></a>NEED TODO</h2><ul><li>[ ] 阅读论文基于机器学习的业务流程系统的预测，总结其中技术点</li><li>[ ] 学习三个吴恩达机器学习视频</li><li>[ ] 学习一个中等，一个简单算法</li><li>[ ] 学习Java相关进阶</li></ul><h2 id="Plan"><a href="#Plan" class="headerlink" title="Plan"></a>Plan</h2><ul><li>[x] 1. 10.20-11.20，阅读论文</li><li>[ ]  2. 13.40-15.30，阅读论文</li><li>[ ]  3. 15.40-16.20，看机器学习视频</li><li>[ ]  4. 16.30-17.20，学习算法</li><li>[ ]  5. 18.10-21.10，看论文</li><li>[ ]  6. 21.20-22.40，看Java进阶</li></ul><h2 id="Completion-Status"><a href="#Completion-Status" class="headerlink" title="Completion Status"></a>Completion Status</h2><h2 id="TODO-Tomorrow"><a href="#TODO-Tomorrow" class="headerlink" title="TODO Tomorrow"></a>TODO Tomorrow</h2>]]></content>
     
     
+      
+      
+    <summary type="html">&lt;h2 id=&quot;NEED-TODO&quot;&gt;&lt;a href=&quot;#NEED-TODO&quot; class=&quot;headerlink&quot; title=&quot;NEED TODO&quot;&gt;&lt;/a&gt;NEED TODO&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;[ ] 阅读论文基于机器学习的业务流程系统的预测，总结其中技术点&lt;/li</summary>
+      
     
-    <category term="paper" scheme="https://merlynr.github.io/categories/paper/"/>
+    
+    
+    <category term="plan" scheme="https://merlynr.github.io/categories/plan/"/>
     
     
     <category term="daily" scheme="https://merlynr.github.io/tags/daily/"/>
     
+    <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
+    
     <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
     
-    <category term="paper" scheme="https://merlynr.github.io/tags/paper/"/>
-    
-    <category term="exam" scheme="https://merlynr.github.io/tags/exam/"/>
+    <category term="plan" scheme="https://merlynr.github.io/tags/plan/"/>
     
   </entry>
   
@@ -93,9 +132,9 @@
     
     <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
     
-    <category term="paper" scheme="https://merlynr.github.io/tags/paper/"/>
-    
     <category term="machine learning" scheme="https://merlynr.github.io/tags/machine-learning/"/>
+    
+    <category term="paper" scheme="https://merlynr.github.io/tags/paper/"/>
     
     <category term="process mining" scheme="https://merlynr.github.io/tags/process-mining/"/>
     
@@ -324,9 +363,9 @@
     
     <category term="RPA" scheme="https://merlynr.github.io/tags/RPA/"/>
     
-    <category term="paper" scheme="https://merlynr.github.io/tags/paper/"/>
-    
     <category term="machine learning" scheme="https://merlynr.github.io/tags/machine-learning/"/>
+    
+    <category term="paper" scheme="https://merlynr.github.io/tags/paper/"/>
     
     <category term="algorithm" scheme="https://merlynr.github.io/tags/algorithm/"/>
     
@@ -446,29 +485,6 @@
   </entry>
   
   <entry>
-    <title>Nicholas Burns</title>
-    <link href="https://merlynr.github.io/2021/05/06/Nicholas%20Burns/"/>
-    <id>https://merlynr.github.io/2021/05/06/Nicholas%20Burns/</id>
-    <published>2021-05-05T16:00:00.000Z</published>
-    <updated>2021-05-24T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：nicholas_burns@hks.harvard.edu</li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：alison_hillegeist@hks.harvard.edu</li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&amp;t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  —棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
-    
-    
-    <summary type="html">社工</summary>
-    
-    
-    
-    <category term="people" scheme="https://merlynr.github.io/categories/people/"/>
-    
-    
-    <category term="security" scheme="https://merlynr.github.io/tags/security/"/>
-    
-    <category term="people" scheme="https://merlynr.github.io/tags/people/"/>
-    
-  </entry>
-  
-  <entry>
     <title>TagUI源码阅读及分析</title>
     <link href="https://merlynr.github.io/2021/05/06/TagUI%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E5%8F%8A%E5%88%86%E6%9E%90/"/>
     <id>https://merlynr.github.io/2021/05/06/TagUI%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E5%8F%8A%E5%88%86%E6%9E%90/</id>
@@ -492,6 +508,29 @@
     <category term="RPA" scheme="https://merlynr.github.io/tags/RPA/"/>
     
     <category term="code" scheme="https://merlynr.github.io/tags/code/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Nicholas Burns</title>
+    <link href="https://merlynr.github.io/2021/05/06/Nicholas%20Burns/"/>
+    <id>https://merlynr.github.io/2021/05/06/Nicholas%20Burns/</id>
+    <published>2021-05-05T16:00:00.000Z</published>
+    <updated>2021-05-24T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：nicholas_burns@hks.harvard.edu</li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：alison_hillegeist@hks.harvard.edu</li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&amp;t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  —棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
+    
+    
+    <summary type="html">社工</summary>
+    
+    
+    
+    <category term="people" scheme="https://merlynr.github.io/categories/people/"/>
+    
+    
+    <category term="security" scheme="https://merlynr.github.io/tags/security/"/>
+    
+    <category term="people" scheme="https://merlynr.github.io/tags/people/"/>
     
   </entry>
   
@@ -548,33 +587,6 @@
     <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
     
     <category term="RPA" scheme="https://merlynr.github.io/tags/RPA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021-03-26【周总结】</title>
-    <link href="https://merlynr.github.io/2021/03/24/2021-03-24%E3%80%90Week%E3%80%91/"/>
-    <id>https://merlynr.github.io/2021/03/24/2021-03-24%E3%80%90Week%E3%80%91/</id>
-    <published>2021-03-23T16:00:00.000Z</published>
-    <updated>2021-05-24T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="本周安排"><a href="#本周安排" class="headerlink" title="本周安排"></a>本周安排</h2><ul><li>[ ]  MIT6.004课程完成</li><li>[x] 学位英语</li><li>[ ] 继续查询项目依赖bug</li><li>[x] 查询论文，并阅读总结两篇</li><li>[x] openRPA实例实现</li></ul><h2 id="完成情况"><a href="#完成情况" class="headerlink" title="完成情况"></a>完成情况</h2><blockquote><p>主要精力放在学位英语上了，后期学习了部分MIT6003的课程，以及最后研究了openRPA的使用</p></blockquote><p><strong>论文方面</strong></p><pre><code>    与openRPA技术相关的论文还是没有查阅到，只是查阅了一些综述以及国内外对于RPA预测的推文，现在归纳了三个可研究点：</code></pre><ol><li>RPA机器人在运行时一般需要最高权限，这就可能引起黑客的攻击直接让过传统权限控制系统，通过直接攻击黑客来攻击系统</li><li>找到一个适合的场景，做RPA+AI，类似文本、语音、或者直接获取通讯记录来给RPA传输指令，这个研究点是目前比较常被提到的RPA4.0</li><li>RPA缺乏对于未知问题的解决能力，这个点预计很难研究，这是一个普遍问题</li></ol><p><strong>个人课程学习</strong></p><blockquote><p>空间技术课程提到一个“社会计算”，这个是杨老师他们大实验的学长有过研究就是给我们科普了一下，不过李波老师提到了他们大实验室有个好的idea就是搭建一个实验室的微服务系统，然后把每届的研究成果数据都放上去，以方便给后几届学弟学妹使用，老师我觉得我们实验室与师兄师姐交流太少了，而且他们也很忙几乎没有空和我们交流，这个idea也可以实现在我们实验室，对于学生提供了一个很好的学习见解。</p></blockquote><p><strong>公司方面</strong></p><blockquote><p>每周没有任务跟进，后期会对公司依赖bug进行查询补充</p></blockquote><h2 id="下周安排"><a href="#下周安排" class="headerlink" title="下周安排"></a>下周安排</h2><ul><li>[ ] 根据已经发现的RPA研究点中的第一个小点进行查阅论文并总结</li><li>[ ] 今天对openRPA进行了初步阅读，发现openRPA是C#的项目，本身没有学习过，会花两到三天进行学习C#语言，然后阅读源码</li><li>[ ] 继续学习MIT6003课程</li><li>[ ] 补充公司项目依赖部分bug</li><li>[ ] 每天尽量听会英语课程</li></ul>]]></content>
-    
-    
-    <summary type="html">每周学习总结</summary>
-    
-    
-    
-    <category term="weekly report" scheme="https://merlynr.github.io/categories/weekly-report/"/>
-    
-    
-    <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
-    
-    <category term="report" scheme="https://merlynr.github.io/tags/report/"/>
-    
-    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
-    
-    <category term="weekly" scheme="https://merlynr.github.io/tags/weekly/"/>
     
   </entry>
   
