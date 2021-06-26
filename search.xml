@@ -8,7 +8,7 @@
       <link href="2021/06/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9C%A8%E9%A2%84%E6%B5%8B%E4%B8%8B%E4%B8%80%E4%B8%AA%E8%BF%87%E7%A8%8B%E4%BA%8B%E4%BB%B6%E9%97%AE%E9%A2%98%E4%B8%8A%E7%9A%84%E5%88%9D%E6%AD%A5%E5%BA%94%E7%94%A8/"/>
       <url>2021/06/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9C%A8%E9%A2%84%E6%B5%8B%E4%B8%8B%E4%B8%80%E4%B8%AA%E8%BF%87%E7%A8%8B%E4%BA%8B%E4%BB%B6%E9%97%AE%E9%A2%98%E4%B8%8A%E7%9A%84%E5%88%9D%E6%AD%A5%E5%BA%94%E7%94%A8/</url>
       
-        <content type="html"><![CDATA[<p><font color="#DC143C">TITLE</font>: A Deep Learning Approach for Predicting Process Behaviour at Runtime</p><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>描述深度学习与循环神经网络在预测下一个过程事件问题上的初步应用</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h2><h2 id="Deep-Learning"><a href="#Deep-Learning" class="headerlink" title="Deep Learning"></a>Deep Learning</h2><h2 id="Process-Prediction-using-RNN"><a href="#Process-Prediction-using-RNN" class="headerlink" title="Process Prediction using RNN"></a>Process Prediction using RNN</h2><h2 id="Experimental-Results"><a href="#Experimental-Results" class="headerlink" title="Experimental Results"></a>Experimental Results</h2><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><h2 id="扩展学习"><a href="#扩展学习" class="headerlink" title="扩展学习"></a>扩展学习</h2><h3 id="递归神经网络与循环神经网络"><a href="#递归神经网络与循环神经网络" class="headerlink" title="递归神经网络与循环神经网络"></a>递归神经网络与循环神经网络</h3><p><font color="#0000FF">Recursive Neural Network || Recurrent Neural Network</font></p>]]></content>
+        <content type="html"><![CDATA[<p><font color="#DC143C">TITLE</font>: A Deep Learning Approach for Predicting Process Behaviour at Runtime</p><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>描述深度学习与循环神经网络在预测下一个过程事件问题上的初步应用</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>主要介绍了流程预测与自然语言的处理有很多地方类似，同时也有不同之处。</p><p><font color="#FF1493">流程预测与自然语言不同：</font></p><ul><li>过程预测（事件类型数量）中词汇量的大小远小于自然语言词汇的大小</li><li>轨迹的长度远远超过自然语言中的典型句子长度</li><li>通过内部过程逻辑确定或约束过程事件序列，通常通过基于案例数据确定的决策规则确定。然而，以语法和形态规则的形式，自然语言也受到限制</li></ul><h2 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h2><p><strong><font color="#B22222">这块主要讲了一下业务流程预测相关的研究</font></strong></p><h3 id="预测完成一个案件的剩余时间"><a href="#预测完成一个案件的剩余时间" class="headerlink" title="预测完成一个案件的剩余时间"></a>预测完成一个案件的剩余时间</h3><ol><li>使用事件频率、事件时间和案例数据的增强回归</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624673781121.png" alt="When will this case finally be finished?"><br>2. 将隐马尔可夫模型应用于事件序列和执行时间[基于一个带注释的转换系统]</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624674466379.png" alt="A test-bed for the evaluation of bussiness process prediction techniques"><br>3. 使用聚类树和有限状态机(FSM)来预测运行过程案例的剩余时间</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624674870904.png" alt="Context-aware predictions on bussiness processes: An ensemble-based solution"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624674967541.png" alt="Discovering context-aware models for predicting business process performances"><br>4. 将复杂的事件处理（CEP）应用于事件序列，并培训以预测其未来行为</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675079138.png" alt="Facilitating predictive event-driven process analytics"><br>5. 使用随机petri网模拟</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675153578.png" alt="Prediction of remaining service execution time using stochastic petri nets with arbitrary firing delays"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675288618.png" alt="Prediction of bussiness process durations using non-markovian stochastic petri nets"><br>6. 基于案例数据聚类和回归的预测技术</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675498447.png" alt="A data-driven prediction framework for analyzing and monitoring business process performances"><br>7. 对部分和全部案例采用聚类方法</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675713998.png" alt="Process remaining time prediction using query catalogs"><br>8. 提出了两种基于带注释的转换系统的方法，以及支持向量回归和朴素贝叶斯分类器</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675768877.png" alt="Data-aware remaining time prediction of business process instances"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675838918.png" alt="Time and activity sequence prediction of business process instances"></p><h3 id="流程预测结果评估【二元评估】"><a href="#流程预测结果评估【二元评估】" class="headerlink" title="流程预测结果评估【二元评估】"></a>流程预测结果评估【二元评估】</h3><ol><li>在时间、资源和案例数据上使用决策树</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624676985594.png" alt="Predictive business operations management"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624677076066.png" alt="Business process intelligence"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624677129344.png" alt="Improving bussiness "><br>2. 使用支持向量机</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624686889124.png" alt="Periodic berformance prediction for real-time business process monitoring"><br>3. 基于聚类和局部离群点检测</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687171172.png" alt="Real-time business process monitoring method for prediction of abnormal termination using knni-based LOF prediction"><br>4. 使用决策树来预测违反线性时序逻辑限制</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687372135.png" alt="Predictive monitoring of business processes"><br><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687442053.png" alt="Predictive monitoring of business processes"><br>5. 使用随机森林</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687491226.png" alt="Complex symbolic sequence encodings for predictive monitoring of business processes"><br>6. 采用神经网络、约束满足和服务质量聚合</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687569443.png" alt="Comparing and combining predictive business process monitoring techniques"><br>7. 聚类和回归</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687617567.png" alt="A prediction framework for proactive monitoring aggregate process-performance indicators"></p><h2 id="Deep-Learning"><a href="#Deep-Learning" class="headerlink" title="Deep Learning"></a>Deep Learning</h2><h2 id="Process-Prediction-using-RNN"><a href="#Process-Prediction-using-RNN" class="headerlink" title="Process Prediction using RNN"></a>Process Prediction using RNN</h2><h2 id="Experimental-Results"><a href="#Experimental-Results" class="headerlink" title="Experimental Results"></a>Experimental Results</h2><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><h2 id="扩展学习"><a href="#扩展学习" class="headerlink" title="扩展学习"></a>扩展学习</h2><h3 id="递归神经网络与循环神经网络"><a href="#递归神经网络与循环神经网络" class="headerlink" title="递归神经网络与循环神经网络"></a>递归神经网络与循环神经网络</h3><p><font color="#0000FF">Recursive Neural Network || Recurrent Neural Network</font></p><h3 id="Hidden-Markov-Models-HHM"><a href="#Hidden-Markov-Models-HHM" class="headerlink" title="Hidden Markov Models(HHM)"></a>Hidden Markov Models(HHM)</h3><h3 id="LSTM与RNN"><a href="#LSTM与RNN" class="headerlink" title="LSTM与RNN"></a>LSTM与RNN</h3>]]></content>
       
       
       <categories>
@@ -24,9 +24,9 @@
             
             <tag> study </tag>
             
-            <tag> paper </tag>
-            
             <tag> machine learning </tag>
+            
+            <tag> paper </tag>
             
             <tag> deep learning </tag>
             
@@ -379,9 +379,9 @@
             
             <tag> RPA </tag>
             
-            <tag> paper </tag>
-            
             <tag> machine learning </tag>
+            
+            <tag> paper </tag>
             
             <tag> algorithm </tag>
             
@@ -518,7 +518,7 @@
       <link href="2021/05/06/Nicholas%20Burns/"/>
       <url>2021/05/06/Nicholas%20Burns/</url>
       
-        <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：<a href="mailto:&#110;&#105;&#99;&#x68;&#111;&#x6c;&#x61;&#x73;&#x5f;&#x62;&#117;&#114;&#x6e;&#115;&#x40;&#104;&#107;&#x73;&#x2e;&#x68;&#97;&#114;&#x76;&#97;&#x72;&#100;&#x2e;&#101;&#100;&#x75;">&#110;&#105;&#99;&#x68;&#111;&#x6c;&#x61;&#x73;&#x5f;&#x62;&#117;&#114;&#x6e;&#115;&#x40;&#104;&#107;&#x73;&#x2e;&#x68;&#97;&#114;&#x76;&#97;&#x72;&#100;&#x2e;&#101;&#100;&#x75;</a></li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：<a href="mailto:&#97;&#x6c;&#105;&#115;&#x6f;&#x6e;&#95;&#x68;&#x69;&#108;&#108;&#101;&#x67;&#x65;&#x69;&#x73;&#116;&#64;&#104;&#x6b;&#115;&#46;&#x68;&#97;&#114;&#x76;&#x61;&#x72;&#x64;&#x2e;&#101;&#x64;&#117;">&#97;&#x6c;&#105;&#115;&#x6f;&#x6e;&#95;&#x68;&#x69;&#108;&#108;&#101;&#x67;&#x65;&#x69;&#x73;&#116;&#64;&#104;&#x6b;&#115;&#46;&#x68;&#97;&#114;&#x76;&#x61;&#x72;&#x64;&#x2e;&#101;&#x64;&#117;</a></li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  –棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：<a href="mailto:&#110;&#105;&#99;&#x68;&#111;&#108;&#x61;&#x73;&#95;&#98;&#117;&#x72;&#x6e;&#115;&#x40;&#x68;&#107;&#115;&#x2e;&#x68;&#97;&#x72;&#118;&#97;&#114;&#100;&#x2e;&#101;&#100;&#117;">&#110;&#105;&#99;&#x68;&#111;&#108;&#x61;&#x73;&#95;&#98;&#117;&#x72;&#x6e;&#115;&#x40;&#x68;&#107;&#115;&#x2e;&#x68;&#97;&#x72;&#118;&#97;&#114;&#100;&#x2e;&#101;&#100;&#117;</a></li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：<a href="mailto:&#97;&#108;&#105;&#115;&#111;&#x6e;&#95;&#104;&#x69;&#x6c;&#x6c;&#x65;&#x67;&#x65;&#x69;&#115;&#116;&#x40;&#104;&#x6b;&#x73;&#x2e;&#x68;&#x61;&#x72;&#x76;&#97;&#114;&#100;&#x2e;&#x65;&#x64;&#x75;">&#97;&#108;&#105;&#115;&#111;&#x6e;&#95;&#104;&#x69;&#x6c;&#x6c;&#x65;&#x67;&#x65;&#x69;&#115;&#116;&#x40;&#104;&#x6b;&#x73;&#x2e;&#x68;&#x61;&#x72;&#x76;&#97;&#114;&#100;&#x2e;&#x65;&#x64;&#x75;</a></li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  –棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
       
       
       <categories>
@@ -913,35 +913,6 @@
     
     
     <entry>
-      <title>学习D一天</title>
-      <link href="2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/"/>
-      <url>2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>Plane</p></blockquote><hr><ul><li><input checked="" disabled="" type="checkbox"> 提出信息安全理论项目初步计划</li><li><input checked="" disabled="" type="checkbox"> 14:00-16:00 读身份加密的材料</li><li><input checked="" disabled="" type="checkbox"> 16:10-17:20 完成医院系统项目日志集成</li></ul><p><em>- [ ]  18:50-20:50 数据库的系统学习</em></p><ul><li><input disabled="" type="checkbox"> 21:00-22:30 springmvc学习</li><li><input disabled="" type="checkbox"> 22:30-23:30 总结</li></ul><hr><h3 id="信息安全理论项目安排"><a href="#信息安全理论项目安排" class="headerlink" title="信息安全理论项目安排"></a>信息安全理论项目安排</h3><ol><li>李完成基本项目搭建及核心抓包功能实现</li><li>陈完成数据库表完成【先将需要的表构思一下发群里看一下】</li><li>邹完成规则及书写功能需求</li><li>郑和邹书写功能需求，及将规则写入后端</li><li>郑艺根据功能需求完成基本的框架搭建和样式</li></ol><h3 id="身份认证相关论文"><a href="#身份认证相关论文" class="headerlink" title="身份认证相关论文"></a>身份认证相关论文</h3><h4 id="A-Survey-of-Zero-Trust-Research"><a href="#A-Survey-of-Zero-Trust-Research" class="headerlink" title="A Survey of Zero Trust Research"></a>A Survey of Zero Trust Research</h4><p>@author 张宇 张妍【北京数字认证股份有限公司】</p><h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><ol><li>“边界防护”</li></ol><ol start="2"><li>何为无边界趋势下的网络安全问题</li><li></li><li>何为基于网络位置的隐式信任</li><li>何为静态防御</li><li>了解“ Google基于零信任构建的BeyondCorp项目”</li><li>了解“提出了软件定义边界（software defined perimeter,SDP)网络安全模型”</li><li>计算机专业词汇</li></ol><ul><li><strong>策略引擎（Policy Engine）：</strong> 该组件负责最终决定是否授予指定访问主体对资源（访问客体）的访问权限。策略引擎使用企业安全策略以及来自外部源（例如IP黑名单，威胁情报服务）的输入作为“信任算法”的输入，以决定授予或拒绝对该资源的访问，策略引擎的核心作用是信任评估。</li><li><strong>策略管理器（Policy Administrator）：</strong> 组件负责建立客户端与资源之间的连接。它将生成客户端用于访问企业资源的任何身份验证令牌或凭据。它与策略引擎紧密相关并依赖于其决定最终允许或拒绝连接，策略管理器的核心作用是策略判定点，是零信任动态权限的判定组件。</li><li><strong>策略执行点（Policy Enforcement Point）：</strong> 这实际上是一个组件系统，负责开始，持续监控、并最终结束访问主体与访问客体之间的连接。策略执行点实际可分为两个不同的组件：客户端组件（如用户笔记本电脑上的agent）与资源端组件（如资源前控制访问的网关），策略执行点的核心作用是确保业务的安全访问。</li><li><ul><li><strong>持续诊断和缓解计划系统（CDM System）：</strong> 该系统收集关于企业系统当前状态的信息，并将更新应用到配置和软件组件中。企业CDM系统还提供给策略引擎关于系统访问请求的信息。</li></ul></li><li><ul><li><strong>行业合规系统（Industry Compliance System）：</strong> 该系统确保企业与当前政府管理的一致性。包括企业开发的所有策略规则来确保合规。</li></ul></li><li><ul><li><strong>威胁情报流（Threat Intelligence）：</strong> 该系统提供帮助策略引擎进行访问决策的信息。</li></ul></li><li><ul><li><strong>数据访问策略（Data Access Policy）：</strong> 数据访问策略是企业为企业资源创建的关于数据访问的属性、规则和策略的集合。策略规则集可以编码在策略引擎中或有PE动态生成。</li></ul></li><li><ul><li><strong>企业公钥基础设施（PKI）：</strong> 该系统负责生成和记录企业对资源、应用等发布的证书。既包括全局CA生态系统和联邦PKI。</li></ul></li><li><ul><li><strong>ID管理系统（ID Management）：</strong> 系统负责创建、保存和管理企业用户帐户和身份记录。系统中既含有必要的用户信息，也含有其他企业特征，比如角色、访问属性、或分配的系统。</li></ul></li><li><ul><li><strong>安全应急和事件管理系统（SIEM System）：</strong> 集合了系统日志、网络流量、资源权利和其他信息的企业系统为企业信息系统体佛那个安全态势的反馈。</li></ul></li></ul><ol start="8"><li>何为分配基于二元决策的策略</li><li>了解RADIUS协议</li><li>了解SSO方式认证</li></ol><h5 id="梳理"><a href="#梳理" class="headerlink" title="梳理"></a>梳理</h5><h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>如何进行动态认证？如何有效进行动态认证？</p><p><a href="https://www.secrss.com/articles/14045">引用</a><br><a href="chrome-extension://gfbliohnnapiefjpjlpjnehglfpaknnc/pages/pdf_viewer.html?r=https://www.gartner.com/teamsiteanalytics/servePDF?g=/imagesrv/media-products/pdf/Qi-An-Xin/Qianxin-1-1XXWAXWM.pdf">引用</a></p><h3 id="对于数据库的详细学习"><a href="#对于数据库的详细学习" class="headerlink" title="对于数据库的详细学习"></a>对于数据库的详细学习</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> daily report </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> daily </tag>
-            
-            <tag> study </tag>
-            
-            <tag> plan </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>当前区块链交易的缺陷</title>
       <link href="2020/11/10/%E5%BD%93%E5%89%8D%E5%8C%BA%E5%9D%97%E9%93%BE%E4%BA%A4%E6%98%93%E7%9A%84%E7%BC%BA%E9%99%B7/"/>
       <url>2020/11/10/%E5%BD%93%E5%89%8D%E5%8C%BA%E5%9D%97%E9%93%BE%E4%BA%A4%E6%98%93%E7%9A%84%E7%BC%BA%E9%99%B7/</url>
@@ -963,6 +934,35 @@
             <tag> paper </tag>
             
             <tag> block chain </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>学习D一天</title>
+      <link href="2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/"/>
+      <url>2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Plane</p></blockquote><hr><ul><li><input checked="" disabled="" type="checkbox"> 提出信息安全理论项目初步计划</li><li><input checked="" disabled="" type="checkbox"> 14:00-16:00 读身份加密的材料</li><li><input checked="" disabled="" type="checkbox"> 16:10-17:20 完成医院系统项目日志集成</li></ul><p><em>- [ ]  18:50-20:50 数据库的系统学习</em></p><ul><li><input disabled="" type="checkbox"> 21:00-22:30 springmvc学习</li><li><input disabled="" type="checkbox"> 22:30-23:30 总结</li></ul><hr><h3 id="信息安全理论项目安排"><a href="#信息安全理论项目安排" class="headerlink" title="信息安全理论项目安排"></a>信息安全理论项目安排</h3><ol><li>李完成基本项目搭建及核心抓包功能实现</li><li>陈完成数据库表完成【先将需要的表构思一下发群里看一下】</li><li>邹完成规则及书写功能需求</li><li>郑和邹书写功能需求，及将规则写入后端</li><li>郑艺根据功能需求完成基本的框架搭建和样式</li></ol><h3 id="身份认证相关论文"><a href="#身份认证相关论文" class="headerlink" title="身份认证相关论文"></a>身份认证相关论文</h3><h4 id="A-Survey-of-Zero-Trust-Research"><a href="#A-Survey-of-Zero-Trust-Research" class="headerlink" title="A Survey of Zero Trust Research"></a>A Survey of Zero Trust Research</h4><p>@author 张宇 张妍【北京数字认证股份有限公司】</p><h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><ol><li>“边界防护”</li></ol><ol start="2"><li>何为无边界趋势下的网络安全问题</li><li></li><li>何为基于网络位置的隐式信任</li><li>何为静态防御</li><li>了解“ Google基于零信任构建的BeyondCorp项目”</li><li>了解“提出了软件定义边界（software defined perimeter,SDP)网络安全模型”</li><li>计算机专业词汇</li></ol><ul><li><strong>策略引擎（Policy Engine）：</strong> 该组件负责最终决定是否授予指定访问主体对资源（访问客体）的访问权限。策略引擎使用企业安全策略以及来自外部源（例如IP黑名单，威胁情报服务）的输入作为“信任算法”的输入，以决定授予或拒绝对该资源的访问，策略引擎的核心作用是信任评估。</li><li><strong>策略管理器（Policy Administrator）：</strong> 组件负责建立客户端与资源之间的连接。它将生成客户端用于访问企业资源的任何身份验证令牌或凭据。它与策略引擎紧密相关并依赖于其决定最终允许或拒绝连接，策略管理器的核心作用是策略判定点，是零信任动态权限的判定组件。</li><li><strong>策略执行点（Policy Enforcement Point）：</strong> 这实际上是一个组件系统，负责开始，持续监控、并最终结束访问主体与访问客体之间的连接。策略执行点实际可分为两个不同的组件：客户端组件（如用户笔记本电脑上的agent）与资源端组件（如资源前控制访问的网关），策略执行点的核心作用是确保业务的安全访问。</li><li><ul><li><strong>持续诊断和缓解计划系统（CDM System）：</strong> 该系统收集关于企业系统当前状态的信息，并将更新应用到配置和软件组件中。企业CDM系统还提供给策略引擎关于系统访问请求的信息。</li></ul></li><li><ul><li><strong>行业合规系统（Industry Compliance System）：</strong> 该系统确保企业与当前政府管理的一致性。包括企业开发的所有策略规则来确保合规。</li></ul></li><li><ul><li><strong>威胁情报流（Threat Intelligence）：</strong> 该系统提供帮助策略引擎进行访问决策的信息。</li></ul></li><li><ul><li><strong>数据访问策略（Data Access Policy）：</strong> 数据访问策略是企业为企业资源创建的关于数据访问的属性、规则和策略的集合。策略规则集可以编码在策略引擎中或有PE动态生成。</li></ul></li><li><ul><li><strong>企业公钥基础设施（PKI）：</strong> 该系统负责生成和记录企业对资源、应用等发布的证书。既包括全局CA生态系统和联邦PKI。</li></ul></li><li><ul><li><strong>ID管理系统（ID Management）：</strong> 系统负责创建、保存和管理企业用户帐户和身份记录。系统中既含有必要的用户信息，也含有其他企业特征，比如角色、访问属性、或分配的系统。</li></ul></li><li><ul><li><strong>安全应急和事件管理系统（SIEM System）：</strong> 集合了系统日志、网络流量、资源权利和其他信息的企业系统为企业信息系统体佛那个安全态势的反馈。</li></ul></li></ul><ol start="8"><li>何为分配基于二元决策的策略</li><li>了解RADIUS协议</li><li>了解SSO方式认证</li></ol><h5 id="梳理"><a href="#梳理" class="headerlink" title="梳理"></a>梳理</h5><h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>如何进行动态认证？如何有效进行动态认证？</p><p><a href="https://www.secrss.com/articles/14045">引用</a><br><a href="chrome-extension://gfbliohnnapiefjpjlpjnehglfpaknnc/pages/pdf_viewer.html?r=https://www.gartner.com/teamsiteanalytics/servePDF?g=/imagesrv/media-products/pdf/Qi-An-Xin/Qianxin-1-1XXWAXWM.pdf">引用</a></p><h3 id="对于数据库的详细学习"><a href="#对于数据库的详细学习" class="headerlink" title="对于数据库的详细学习"></a>对于数据库的详细学习</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> daily report </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> daily </tag>
+            
+            <tag> study </tag>
+            
+            <tag> plan </tag>
             
         </tags>
       
