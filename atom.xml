@@ -6,7 +6,7 @@
   <link href="https://merlynr.github.io/atom.xml" rel="self"/>
   
   <link href="https://merlynr.github.io/"/>
-  <updated>2021-06-24T16:00:00.000Z</updated>
+  <updated>2021-07-04T16:00:00.000Z</updated>
   <id>https://merlynr.github.io/</id>
   
   <author>
@@ -17,13 +17,118 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>KNN（K近邻法 K Nearest Neighbors）</title>
+    <link href="https://merlynr.github.io/2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/"/>
+    <id>https://merlynr.github.io/2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/</id>
+    <published>2021-07-04T16:00:00.000Z</published>
+    <updated>2021-07-04T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/25994179">一文搞懂k近邻（k-NN）算法（一） - 知乎</a></p><p><a href="https://blog.csdn.net/qq_20412595/article/details/82013677">机器学习算法（2）之K近邻算法_不曾走远的博客-CSDN博客</a></p><p><a href="https://blog.csdn.net/pxhdky/article/details/85080980">【机器学习】K近邻法（KNN）与kd树原理详解_齐在的专栏-CSDN博客</a></p><p>TODO 序列KNN</p><h2 id="KNN概述"><a href="#KNN概述" class="headerlink" title="KNN概述"></a>KNN概述</h2><ul><li>常用有监督学习方法</li><li>常用分类方法</li><li>同时也是回归方法</li><li>是懒惰学习</li></ul><blockquote><p><font color="#ff7500">扩展学习</font><br>懒惰学习是一种训练集处理方法，其会<font color="#012C54">在收到测试样本的同时进行训练</font>，与之相对的是急切学习，其会<font color="#8A2BE2">在训练阶段开始对样本进行学习</font>处理。</p></blockquote><p><font color="#FF8C00">基本思路：</font><br>如果一个待分类样本在特征空间中的k个最相似(即特征空间中K近邻)的样本中的大多数属于某一个类别，则该样本也属于这个类别，即近朱者赤，近墨者黑。</p><h2 id="KNN算法介绍"><a href="#KNN算法介绍" class="headerlink" title="KNN算法介绍"></a>KNN算法介绍</h2><h3 id="KNN模型"><a href="#KNN模型" class="headerlink" title="KNN模型"></a>KNN模型</h3><p><strong>kNN使用的模型实际上对应于对特征空间的划分。</strong></p><p><font color="#006400">由三个及基本要素组成：</font></p><ul><li>距离度量</li><li>k值的选择</li><li>决策规划</li></ul><ol><li>距离度量</li></ol><p>KNN中使用的距离度量可以是欧式距离、曼哈顿距离、切比雪夫距离或者一般的闵可夫斯基距离。</p><blockquote><p><font color="#9932CC">知识补充</font><br>设特征空间 $X$ 是 $n$ 维实数向量空间<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>R</mi><mi>n</mi></msup></math>，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>x</mi><mi>j</mi></msub></math>∈ $X$ ，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><mo>(</mo><msubsup><mi>x</mi><mi>i</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>x</mi><mi>i</mi><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msubsup><mo>)</mo><mo>,</mo><mo>&#x22EF;</mo><mo>,</mo><msubsup><mi>x</mi><mi>i</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></msubsup><msup><mo>)</mo><mi>T</mi></msup></math>，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>j</mi></msub><mo>=</mo><mo>(</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msubsup><mo>)</mo><mo>,</mo><mo>&#x22EF;</mo><mo>,</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></msubsup><msup><mo>)</mo><mi>T</mi></msup></math></p><ol><li><p>闵可夫斯基距离（Minkowski distance,<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离）<br><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>x</mi><mi>j</mi></msub></math>的<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离定义为：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491452207.png"><br>其中，p ≥ 1 。 </p></li><li><p>曼哈顿距离（Manhattan distance）<br>当p = 1 时，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离就变成了曼哈顿距离：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491491032.png"></p></li><li><p>欧式距离（Euclidean distance）<br>当p = 2时，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离就变成了欧式距离：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491674920.png"></p></li><li><p>切比雪夫距离（Chebyshev distance）<br>当<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>=</mo><mo>&#x221E;</mo><mo>,</mo><msub><mi>L</mi><mi>p</mi></msub></math>距离就变成了切比雪夫距离，它是各个坐标距离的最大值：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491693716.png"></p></li></ol></blockquote><ol start="2"><li>k值选择（借鉴李航–统计学习方法）</li></ol><p>如果k值较小，则训练误差减少，只有与输入实例相似的训练实例才会对于预测结果起作用,“学习”<font color="#D2691E">近似误差会减小</font>，但泛化误差提高了，预测结果会对近邻实例点非常敏感。k值较小意味着模型变得复杂，容易发生<font color="#0000FF">过拟合</font>。</p><p>如果k值较大，可以减少泛化误差，其优点是可以<font color="#D2691E">减少学习的估计误差</font>，但训练误差会增加，这时与输入实例相差较远的训练实例也会对预测结果起作用。k值较大意味着模型变得简单，容易发生<font color="#0000FF">欠拟合</font>。</p><p>通常情况下，我们需要对 k 经过多种尝试，来决定到底使用多大的 k 来作为最终参数。k通常会在3～10直接取值，或者是k等于训练数据的<font color="#DC143C">平方根</font>。比如15个数据，可能会取k=4。</p><p>当k = 1时，k近邻算法就是最近邻算法。k值一般<font color="#FF1493">采用交叉验证法选取最优值</font>。</p><ol start="3"><li>决策规划</li></ol><p>通常，在分类任务中使用投票法计算最终预测结果，在回归任务中使用平均法，还可基于距离远近进行加权平均或加权投票。</p><h3 id="KNN算法描述"><a href="#KNN算法描述" class="headerlink" title="KNN算法描述"></a>KNN算法描述</h3><p>下面以<font color="#008B8B">分类</font>任务为例，介绍KNN算法，回归任务与此类似，区别不大。</p><p>输入：训练数据集<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>=</mo><mo>{</mo><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>y</mi><mi>i</mi></msub><mo>)</mo><msubsup><mo>}</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup></math>    ，其中，<img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625492364666.png"> 是实例的类别。<br>过程：</p><ul><li>根据给定的距离度量，在训练集D中找出与x最邻近的k个点，涵盖着k 个点的领域记为<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>N</mi><mi>k</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo></math>；</li><li>在<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>N</mi><mi>k</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo></math>中根据分类决策规则决定x的类别y： <img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625492543638.png" alt="所属类别"><br>输出：测试样本x xx所属的类别y yy。</li></ul><h2 id="KNN算法实现"><a href="#KNN算法实现" class="headerlink" title="KNN算法实现"></a>KNN算法实现</h2><h3 id="KNN算法蛮力实现"><a href="#KNN算法蛮力实现" class="headerlink" title="KNN算法蛮力实现"></a>KNN算法蛮力实现</h3><p> 首先我们看看最想当然的方式。</p><pre><code> 既然我们要找到k个最近的邻居来做预测，那么我们只需要计算预测样本和所有训练集中的样本的距离，然后计算出最小的k个距离即可，接着多数表决，很容易做出预测。这个方法的确简单直接，在样本量少，样本特征少的时候有效。但是在实际运用中很多时候用不上，为什么呢？因为我们经常碰到样本的特征数有上千以上，样本量有几十万以上，如果我们这要去预测少量的测试集样本，算法的时间效率很成问题。因此，这个方法我们一般称之为蛮力实现。&lt;font color=&quot;#1E90FF&quot;&gt;比较适合于少量样本的简单模型的时候用&lt;/font&gt;。</code></pre><h3 id="KD树实现原理"><a href="#KD树实现原理" class="headerlink" title="KD树实现原理"></a>KD树实现原理</h3><pre><code>KD树算法没有一开始就尝试对测试样本分类，而是**先对训练集建模，建立的模型就是KD树，建好了模型再对测试集做预测**。所谓的KD树就是K个特征维度的树，注意这里的K和KNN中的K的意思不同。KNN中的K代表特征输出类别，KD树中的K代表样本特征的维数。为了防止混淆，后面我们称特征维数为n。</code></pre>]]></content>
+    
+    
+    <summary type="html">【可選】文章描述</summary>
+    
+    
+    
+    <category term="paper" scheme="https://merlynr.github.io/categories/paper/"/>
+    
+    
+    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
+    
+    <category term="plan" scheme="https://merlynr.github.io/tags/plan/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markov Model（马尔可夫模型）</title>
+    <link href="https://merlynr.github.io/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/"/>
+    <id>https://merlynr.github.io/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/</id>
+    <published>2021-07-04T16:00:00.000Z</published>
+    <updated>2021-07-04T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">【可選】文章描述</summary>
+    
+    
+    
+    <category term="paper" scheme="https://merlynr.github.io/categories/paper/"/>
+    
+    
+    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
+    
+    <category term="plan" scheme="https://merlynr.github.io/tags/plan/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用于业务流程事件和结果预测的混合模型</title>
+    <link href="https://merlynr.github.io/2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/"/>
+    <id>https://merlynr.github.io/2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/</id>
+    <published>2021-07-04T16:00:00.000Z</published>
+    <updated>2021-07-04T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>对于多样性流程进行异常预测</p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><ol><li>序列k近邻法（KNN）</li><li>基于序列比对的马尔科夫模型扩展法</li></ol><p><font color="#1E90FF">思路：</font><br>利用数据的时间分类特征，利用高阶马尔可夫模型预测过程的下一步，并利用序列对比技术预测过程的结果。通过考虑基于k个最近邻的相似过程序列的子集，增加了数据的多样性方面。</p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>已经证明，通过一组实验，序列k最近邻提法比原始提供更好的结果;我们的扩展马尔可夫模型优于随机猜测、马尔可夫模型和隐马尔可夫模型。</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="序列比对"><a href="#序列比对" class="headerlink" title="序列比对"></a>序列比对</h2><h2 id="预测模型"><a href="#预测模型" class="headerlink" title="预测模型"></a>预测模型</h2><h2 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h2><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;&lt;h3 id=&quot;目的&quot;&gt;&lt;a href=&quot;#目的&quot; class=&quot;headerlink&quot; title=&quot;目的&quot;&gt;&lt;/a&gt;目的&lt;/h3&gt;&lt;p&gt;对于多</summary>
+      
+    
+    
+    
+    <category term="paper" scheme="https://merlynr.github.io/categories/paper/"/>
+    
+    
+    <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
+    
+    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
+    
+    <category term="RPA" scheme="https://merlynr.github.io/tags/RPA/"/>
+    
+    <category term="paper" scheme="https://merlynr.github.io/tags/paper/"/>
+    
+    <category term="machine learning" scheme="https://merlynr.github.io/tags/machine-learning/"/>
+    
+    <category term="deep learning" scheme="https://merlynr.github.io/tags/deep-learning/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>七月前完成</title>
+    <link href="https://merlynr.github.io/2021/06/27/%E4%B8%83%E6%9C%88%E5%89%8D%E5%AE%8C%E6%88%90/"/>
+    <id>https://merlynr.github.io/2021/06/27/%E4%B8%83%E6%9C%88%E5%89%8D%E5%AE%8C%E6%88%90/</id>
+    <published>2021-06-26T16:00:00.000Z</published>
+    <updated>2021-06-26T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul><li><input disabled="" type="checkbox"> 机器学习</li><li><input disabled="" type="checkbox"> 预测算法</li><li><input disabled="" type="checkbox"> 五篇小论文</li><li><input disabled="" type="checkbox"> 考虑数据源与公司想结合</li></ul><h2 id="done"><a href="#done" class="headerlink" title="done"></a>done</h2><ol><li>XES文档2.5</li><li>使用ProMLite</li></ol>]]></content>
+    
+    
+    <summary type="html">周学习计划</summary>
+    
+    
+    
+    <category term="plan" scheme="https://merlynr.github.io/categories/plan/"/>
+    
+    
+    <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
+    
+    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
+    
+    <category term="plan" scheme="https://merlynr.github.io/tags/plan/"/>
+    
+    <category term="daily/weekly" scheme="https://merlynr.github.io/tags/daily-weekly/"/>
+    
+  </entry>
+  
+  <entry>
     <title>深度学习与循环神经网络在预测下一个过程事件问题上的初步应用</title>
     <link href="https://merlynr.github.io/2021/06/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9C%A8%E9%A2%84%E6%B5%8B%E4%B8%8B%E4%B8%80%E4%B8%AA%E8%BF%87%E7%A8%8B%E4%BA%8B%E4%BB%B6%E9%97%AE%E9%A2%98%E4%B8%8A%E7%9A%84%E5%88%9D%E6%AD%A5%E5%BA%94%E7%94%A8/"/>
     <id>https://merlynr.github.io/2021/06/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B8%8E%E5%BE%AA%E7%8E%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%9C%A8%E9%A2%84%E6%B5%8B%E4%B8%8B%E4%B8%80%E4%B8%AA%E8%BF%87%E7%A8%8B%E4%BA%8B%E4%BB%B6%E9%97%AE%E9%A2%98%E4%B8%8A%E7%9A%84%E5%88%9D%E6%AD%A5%E5%BA%94%E7%94%A8/</id>
     <published>2021-06-24T16:00:00.000Z</published>
     <updated>2021-06-24T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p><font color="#DC143C">TITLE</font>: A Deep Learning Approach for Predicting Process Behaviour at Runtime</p><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>描述深度学习与循环神经网络在预测下一个过程事件问题上的初步应用</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>主要介绍了流程预测与自然语言的处理有很多地方类似，同时也有不同之处。</p><p><font color="#FF1493">流程预测与自然语言不同：</font></p><ul><li>过程预测（事件类型数量）中词汇量的大小远小于自然语言词汇的大小</li><li>轨迹的长度远远超过自然语言中的典型句子长度</li><li>通过内部过程逻辑确定或约束过程事件序列，通常通过基于案例数据确定的决策规则确定。然而，以语法和形态规则的形式，自然语言也受到限制</li></ul><h2 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h2><p><strong><font color="#B22222">这块主要讲了一下业务流程预测相关的研究</font></strong></p><h3 id="预测完成一个案件的剩余时间"><a href="#预测完成一个案件的剩余时间" class="headerlink" title="预测完成一个案件的剩余时间"></a>预测完成一个案件的剩余时间</h3><ol><li>使用事件频率、事件时间和案例数据的增强回归</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624673781121.png" alt="When will this case finally be finished?"><br>2. 将隐马尔可夫模型应用于事件序列和执行时间[基于一个带注释的转换系统]</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624674466379.png" alt="A test-bed for the evaluation of bussiness process prediction techniques"><br>3. 使用聚类树和有限状态机(FSM)来预测运行过程案例的剩余时间</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624674870904.png" alt="Context-aware predictions on bussiness processes: An ensemble-based solution"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624674967541.png" alt="Discovering context-aware models for predicting business process performances"><br>4. 将复杂的事件处理（CEP）应用于事件序列，并培训以预测其未来行为</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675079138.png" alt="Facilitating predictive event-driven process analytics"><br>5. 使用随机petri网模拟</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675153578.png" alt="Prediction of remaining service execution time using stochastic petri nets with arbitrary firing delays"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675288618.png" alt="Prediction of bussiness process durations using non-markovian stochastic petri nets"><br>6. 基于案例数据聚类和回归的预测技术</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675498447.png" alt="A data-driven prediction framework for analyzing and monitoring business process performances"><br>7. 对部分和全部案例采用聚类方法</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675713998.png" alt="Process remaining time prediction using query catalogs"><br>8. 提出了两种基于带注释的转换系统的方法，以及支持向量回归和朴素贝叶斯分类器</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675768877.png" alt="Data-aware remaining time prediction of business process instances"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675838918.png" alt="Time and activity sequence prediction of business process instances"></p><h3 id="流程预测结果评估【二元评估】"><a href="#流程预测结果评估【二元评估】" class="headerlink" title="流程预测结果评估【二元评估】"></a>流程预测结果评估【二元评估】</h3><ol><li>在时间、资源和案例数据上使用决策树</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624676985594.png" alt="Predictive business operations management"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624677076066.png" alt="Business process intelligence"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624677129344.png" alt="Improving bussiness "><br>2. 使用支持向量机</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624686889124.png" alt="Periodic berformance prediction for real-time business process monitoring"><br>3. 基于聚类和局部离群点检测</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687171172.png" alt="Real-time business process monitoring method for prediction of abnormal termination using knni-based LOF prediction"><br>4. 使用决策树来预测违反线性时序逻辑限制</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687372135.png" alt="Predictive monitoring of business processes"><br><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687442053.png" alt="Predictive monitoring of business processes"><br>5. 使用随机森林</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687491226.png" alt="Complex symbolic sequence encodings for predictive monitoring of business processes"><br>6. 采用神经网络、约束满足和服务质量聚合</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687569443.png" alt="Comparing and combining predictive business process monitoring techniques"><br>7. 聚类和回归</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687617567.png" alt="A prediction framework for proactive monitoring aggregate process-performance indicators"></p><h2 id="Deep-Learning"><a href="#Deep-Learning" class="headerlink" title="Deep Learning"></a>Deep Learning</h2><h2 id="Process-Prediction-using-RNN"><a href="#Process-Prediction-using-RNN" class="headerlink" title="Process Prediction using RNN"></a>Process Prediction using RNN</h2><h2 id="Experimental-Results"><a href="#Experimental-Results" class="headerlink" title="Experimental Results"></a>Experimental Results</h2><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><h2 id="扩展学习"><a href="#扩展学习" class="headerlink" title="扩展学习"></a>扩展学习</h2><h3 id="递归神经网络与循环神经网络"><a href="#递归神经网络与循环神经网络" class="headerlink" title="递归神经网络与循环神经网络"></a>递归神经网络与循环神经网络</h3><p><font color="#0000FF">Recursive Neural Network || Recurrent Neural Network</font></p><h3 id="Hidden-Markov-Models-HHM"><a href="#Hidden-Markov-Models-HHM" class="headerlink" title="Hidden Markov Models(HHM)"></a>Hidden Markov Models(HHM)</h3><h3 id="LSTM与RNN"><a href="#LSTM与RNN" class="headerlink" title="LSTM与RNN"></a>LSTM与RNN</h3>]]></content>
+    <content type="html"><![CDATA[<p><font color="#DC143C">TITLE</font>: A Deep Learning Approach for Predicting Process Behaviour at Runtime</p><h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><p>描述深度学习与循环神经网络在预测下一个过程事件问题上的初步应用</p><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>主要介绍了流程预测与自然语言的处理有很多地方类似，同时也有不同之处。</p><p><font color="#FF1493">流程预测与自然语言不同：</font></p><ul><li>过程预测（事件类型数量）中词汇量的大小远小于自然语言词汇的大小</li><li>轨迹的长度远远超过自然语言中的典型句子长度</li><li>通过内部过程逻辑确定或约束过程事件序列，通常通过基于案例数据确定的决策规则确定。然而，以语法和形态规则的形式，自然语言也受到限制</li></ul><h2 id="Related-Work"><a href="#Related-Work" class="headerlink" title="Related Work"></a>Related Work</h2><p><strong><font color="#B22222">这块主要讲了一下业务流程预测相关的研究</font></strong></p><h3 id="预测完成一个案件的剩余时间"><a href="#预测完成一个案件的剩余时间" class="headerlink" title="预测完成一个案件的剩余时间"></a>预测完成一个案件的剩余时间</h3><ol><li>使用事件频率、事件时间和案例数据的增强回归</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624673781121.png" alt="When will this case finally be finished?"><br>2. 将隐马尔可夫模型应用于事件序列和执行时间[基于一个带注释的转换系统]</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624674466379.png" alt="A test-bed for the evaluation of bussiness process prediction techniques"><br>3. 使用聚类树和有限状态机(FSM)来预测运行过程案例的剩余时间</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624674870904.png" alt="Context-aware predictions on bussiness processes: An ensemble-based solution"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624674967541.png" alt="Discovering context-aware models for predicting business process performances"><br>4. 将复杂的事件处理（CEP）应用于事件序列，并培训以预测其未来行为</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675079138.png" alt="Facilitating predictive event-driven process analytics"><br>5. 使用随机petri网模拟</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675153578.png" alt="Prediction of remaining service execution time using stochastic petri nets with arbitrary firing delays"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675288618.png" alt="Prediction of bussiness process durations using non-markovian stochastic petri nets"><br>6. 基于案例数据聚类和回归的预测技术</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675498447.png" alt="A data-driven prediction framework for analyzing and monitoring business process performances"><br>7. 对部分和全部案例采用聚类方法</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675713998.png" alt="Process remaining time prediction using query catalogs"><br>8. 提出了两种基于带注释的转换系统的方法，以及支持向量回归和朴素贝叶斯分类器</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675768877.png" alt="Data-aware remaining time prediction of business process instances"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624675838918.png" alt="Time and activity sequence prediction of business process instances"></p><h3 id="流程预测结果评估【二元评估】"><a href="#流程预测结果评估【二元评估】" class="headerlink" title="流程预测结果评估【二元评估】"></a>流程预测结果评估【二元评估】</h3><ol><li>在时间、资源和案例数据上使用决策树</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624676985594.png" alt="Predictive business operations management"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624677076066.png" alt="Business process intelligence"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624677129344.png" alt="Improving bussiness "><br>2. 使用支持向量机</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624686889124.png" alt="Periodic berformance prediction for real-time business process monitoring"><br>3. 基于聚类和局部离群点检测</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687171172.png" alt="Real-time business process monitoring method for prediction of abnormal termination using knni-based LOF prediction"><br>4. 使用决策树来预测违反线性时序逻辑限制</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687372135.png" alt="Predictive monitoring of business processes"><br><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687442053.png" alt="Predictive monitoring of business processes"><br>5. 使用随机森林</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687491226.png" alt="Complex symbolic sequence encodings for predictive monitoring of business processes"><br>6. 采用神经网络、约束满足和服务质量聚合</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687569443.png" alt="Comparing and combining predictive business process monitoring techniques"><br>7. 聚类和回归</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021626/1624687617567.png" alt="A prediction framework for proactive monitoring aggregate process-performance indicators"></p><h2 id="Deep-Learning"><a href="#Deep-Learning" class="headerlink" title="Deep Learning"></a>Deep Learning</h2><h2 id="Process-Prediction-using-RNN"><a href="#Process-Prediction-using-RNN" class="headerlink" title="Process Prediction using RNN"></a>Process Prediction using RNN</h2><h2 id="Experimental-Results"><a href="#Experimental-Results" class="headerlink" title="Experimental Results"></a>Experimental Results</h2><h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><h2 id="扩展学习"><a href="#扩展学习" class="headerlink" title="扩展学习"></a>扩展学习</h2><h3 id="阅读paper36【P10】"><a href="#阅读paper36【P10】" class="headerlink" title="阅读paper36【P10】"></a>阅读paper36【P10】</h3><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021627/1624759564094.png" alt="paper36"></p><h3 id="递归神经网络与循环神经网络"><a href="#递归神经网络与循环神经网络" class="headerlink" title="递归神经网络与循环神经网络"></a>递归神经网络与循环神经网络</h3><p><font color="#0000FF">Recursive Neural Network || Recurrent Neural Network</font></p><h3 id="Hidden-Markov-Models-HHM"><a href="#Hidden-Markov-Models-HHM" class="headerlink" title="Hidden Markov Models(HHM)"></a>Hidden Markov Models(HHM)</h3><h3 id="LSTM与RNN"><a href="#LSTM与RNN" class="headerlink" title="LSTM与RNN"></a>LSTM与RNN</h3>]]></content>
     
     
     <summary type="html">对于深度学习在预测中应用的总结</summary>
@@ -37,9 +142,9 @@
     
     <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
     
-    <category term="machine learning" scheme="https://merlynr.github.io/tags/machine-learning/"/>
-    
     <category term="paper" scheme="https://merlynr.github.io/tags/paper/"/>
+    
+    <category term="machine learning" scheme="https://merlynr.github.io/tags/machine-learning/"/>
     
     <category term="deep learning" scheme="https://merlynr.github.io/tags/deep-learning/"/>
     
@@ -363,9 +468,9 @@
     
     <category term="RPA" scheme="https://merlynr.github.io/tags/RPA/"/>
     
-    <category term="machine learning" scheme="https://merlynr.github.io/tags/machine-learning/"/>
-    
     <category term="paper" scheme="https://merlynr.github.io/tags/paper/"/>
+    
+    <category term="machine learning" scheme="https://merlynr.github.io/tags/machine-learning/"/>
     
     <category term="algorithm" scheme="https://merlynr.github.io/tags/algorithm/"/>
     
@@ -481,112 +586,6 @@
     <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
     
     <category term="machine learning" scheme="https://merlynr.github.io/tags/machine-learning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nicholas Burns</title>
-    <link href="https://merlynr.github.io/2021/05/06/Nicholas%20Burns/"/>
-    <id>https://merlynr.github.io/2021/05/06/Nicholas%20Burns/</id>
-    <published>2021-05-05T16:00:00.000Z</published>
-    <updated>2021-05-24T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：<a href="mailto:&#110;&#105;&#99;&#x68;&#111;&#108;&#x61;&#x73;&#95;&#98;&#117;&#x72;&#x6e;&#115;&#x40;&#x68;&#107;&#115;&#x2e;&#x68;&#97;&#x72;&#118;&#97;&#114;&#100;&#x2e;&#101;&#100;&#117;">&#110;&#105;&#99;&#x68;&#111;&#108;&#x61;&#x73;&#95;&#98;&#117;&#x72;&#x6e;&#115;&#x40;&#x68;&#107;&#115;&#x2e;&#x68;&#97;&#x72;&#118;&#97;&#114;&#100;&#x2e;&#101;&#100;&#117;</a></li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：<a href="mailto:&#97;&#108;&#105;&#115;&#111;&#x6e;&#95;&#104;&#x69;&#x6c;&#x6c;&#x65;&#x67;&#x65;&#x69;&#115;&#116;&#x40;&#104;&#x6b;&#x73;&#x2e;&#x68;&#x61;&#x72;&#x76;&#97;&#114;&#100;&#x2e;&#x65;&#x64;&#x75;">&#97;&#108;&#105;&#115;&#111;&#x6e;&#95;&#104;&#x69;&#x6c;&#x6c;&#x65;&#x67;&#x65;&#x69;&#115;&#116;&#x40;&#104;&#x6b;&#x73;&#x2e;&#x68;&#x61;&#x72;&#x76;&#97;&#114;&#100;&#x2e;&#x65;&#x64;&#x75;</a></li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  –棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
-    
-    
-    <summary type="html">社工</summary>
-    
-    
-    
-    <category term="people" scheme="https://merlynr.github.io/categories/people/"/>
-    
-    
-    <category term="security" scheme="https://merlynr.github.io/tags/security/"/>
-    
-    <category term="people" scheme="https://merlynr.github.io/tags/people/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>TagUI源码阅读及分析</title>
-    <link href="https://merlynr.github.io/2021/05/06/TagUI%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E5%8F%8A%E5%88%86%E6%9E%90/"/>
-    <id>https://merlynr.github.io/2021/05/06/TagUI%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E5%8F%8A%E5%88%86%E6%9E%90/</id>
-    <published>2021-05-05T16:00:00.000Z</published>
-    <updated>2021-05-24T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>idea：</p><ol><li>RPA进程与AI的融合，非BPA那种与业务进行结合</li></ol><h3 id="tagui运行背后的技术支持"><a href="#tagui运行背后的技术支持" class="headerlink" title="tagui运行背后的技术支持"></a>tagui运行背后的技术支持</h3><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/1620314243708.png" alt="技术支持"></p><ol><li>Automation Flow:作为一种flow 编辑工具，集成在tagui中，允许TagUi可以通过本地文件，在线文件甚至url获取业务流程；</li></ol><ul><li>同时可以通过命令，图表，url，API，email等方式传入参数</li></ul><ol start="3"><li>Chrome Extension 可以通过类似录视频的方式记录用户行为并创建业务流程</li><li>R&amp;Python 提供机器学习模块</li><li>Sikuli 图像识别处理</li><li>CasperJS测试集成工具</li></ol><h3 id="关键技术组成"><a href="#关键技术组成" class="headerlink" title="关键技术组成"></a>关键技术组成</h3><ul><li>SikuliX 用于图像标记、追踪功能</li><li>phantomJs 是一种轻量级脚本语言（环境简单）</li><li>casperjs中基于PhantomJS和SlimerJS的导航脚本和测试工具，包函了对于一些对于网页的基本操作的工具</li><li>SlimerJS与phantomjs类似，互相补充</li></ul><h3 id="项目结构"><a href="#项目结构" class="headerlink" title="项目结构"></a>项目结构</h3><ul><li>end_process: 通过扫描进程，按顺序杀死进程比Ctrl+C更加安全可靠</li><li>erina:==与tagui——helper有关，暂时无法看懂 #009688==</li><li>sleep: 补充win10环境中对于进程延迟的控制</li><li>tagui：TagUI接受脚本和参数</li><li>tagui_chrome: 用于连接chrome，通过控制浏览器发送和接收数据</li><li>tagui_crontab: 运行tagui服务端tagui_service</li><li>tagui_footer: 输出当前网站的url和title</li><li>tagui_global: ==暂时不懂 #009688==</li><li>tagui_header: ==作为一个工具包 #009688==</li></ul><h3 id="功能实现详细阐述"><a href="#功能实现详细阐述" class="headerlink" title="功能实现详细阐述"></a>功能实现详细阐述</h3><ol><li>监控对应任务进程进行杀死【php,chrome,sikuli,python,r,tagui】</li><li>sss</li><li>在Windows环境中无法进程设置延时，所以通过ping.exe补充功能</li><li>tagui框架入口源码交易理解，不做详细分析</li><li>tagui_chrome主要是依赖Textalk实现与chrome并发通信,同时它集成了Sikuli，可以通过图像识别实现业务流程</li><li>通过监控服务端状态，运行或者重复运行tagui_service</li><li>利用casperJs抓取当前脚本的url和title</li><li>sss</li><li>sss</li></ol><h3 id="补充知识"><a href="#补充知识" class="headerlink" title="补充知识"></a>补充知识</h3><p><a href="https://zhuanlan.zhihu.com/p/366304958">https://zhuanlan.zhihu.com/p/366304958</a><br><a href="https://github.com/kensoh/TagUI/tree/before_aisg">https://github.com/kensoh/TagUI/tree/before_aisg</a></p><h4 id="shell语言规范"><a href="#shell语言规范" class="headerlink" title="shell语言规范"></a>shell语言规范</h4><p><a href="https://www.cnblogs.com/zrmw/p/9625727.html">https://www.cnblogs.com/zrmw/p/9625727.html</a></p><p><a href="https://blog.csdn.net/weixin_37766087/article/details/99974385">https://blog.csdn.net/weixin_37766087/article/details/99974385</a></p><h4 id="curl工具"><a href="#curl工具" class="headerlink" title="curl工具"></a>curl工具</h4><p><a href="https://www.ruanyifeng.com/blog/2019/09/curl-reference.html">https://www.ruanyifeng.com/blog/2019/09/curl-reference.html</a></p><h4 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h4><p><a href="https://blog.csdn.net/shenhuan1104/article/details/75852822">https://blog.csdn.net/shenhuan1104/article/details/75852822</a></p><p>grep -iq 404 ，匹配到404，则返回1；反之</p><h4 id="业务流程模型（BPMN）"><a href="#业务流程模型（BPMN）" class="headerlink" title="业务流程模型（BPMN）"></a>业务流程模型（BPMN）</h4><h4 id="流程引擎"><a href="#流程引擎" class="headerlink" title="流程引擎"></a>流程引擎</h4><p>CasperJS + PhantomJS==》Puppeteer + Node.js引擎</p><p><a href="https://blog.csdn.net/qq_38941937/article/details/110296665">https://blog.csdn.net/qq_38941937/article/details/110296665</a></p><h4 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h4><ol><li>流式无并行</li></ol><h4 id="开题失败—题目比较无实际意义"><a href="#开题失败—题目比较无实际意义" class="headerlink" title="开题失败—题目比较无实际意义"></a>开题失败—题目比较无实际意义</h4><p><img src="./attachments/RPA%E5%8A%A8%E6%80%81%E6%84%9F%E7%9F%A5%E5%88%86%E9%85%8D%E4%B8%9A%E5%8A%A1%E8%B5%84%E6%BA%90%E7%9A%84%E7%A0%94%E7%A9%B6%E4%B8%8E%E5%BA%94%E7%94%A8.pptx" alt="RPA动态感知分配业务资源的研究与应用"></p>]]></content>
-    
-    
-    <summary type="html">Tagui源码阅读</summary>
-    
-    
-    
-    <category term="FrameWork" scheme="https://merlynr.github.io/categories/FrameWork/"/>
-    
-    
-    <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
-    
-    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
-    
-    <category term="RPA" scheme="https://merlynr.github.io/tags/RPA/"/>
-    
-    <category term="code" scheme="https://merlynr.github.io/tags/code/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021-04-12【Week】</title>
-    <link href="https://merlynr.github.io/2021/04/12/2021-04-12%E3%80%90Week%E3%80%91/"/>
-    <id>https://merlynr.github.io/2021/04/12/2021-04-12%E3%80%90Week%E3%80%91/</id>
-    <published>2021-04-11T16:00:00.000Z</published>
-    <updated>2021-05-24T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="本周安排"><a href="#本周安排" class="headerlink" title="本周安排"></a>本周安排</h2><ul><li><input disabled="" type="checkbox"> MIT6.003要听四节课程</li><li><input checked="" disabled="" type="checkbox"> 阅读并总结论文</li></ul><blockquote><p>Automated Discovery of Data Transformations for Robotic Process Automation</p></blockquote><ul><li><input checked="" disabled="" type="checkbox"> 阅读 “Robotic Process Automation (RPA) and Security ”制定一份RPA系统配置计划书</li><li><input checked="" disabled="" type="checkbox"> 完成RPA总结</li><li><input disabled="" type="checkbox"> 搭建实验室论坛</li><li><input disabled="" type="checkbox"> 完成小论文框架</li></ul><p><strong>后期补充</strong></p><ul><li><input checked="" disabled="" type="checkbox"> 帮涛总完成数据库整理</li><li><input checked="" disabled="" type="checkbox"> 确定基本RPA系统的组成</li></ul><h2 id="完成情况"><a href="#完成情况" class="headerlink" title="完成情况"></a>完成情况</h2><p><strong>任务完成</strong></p><ol><li>MIT6.003只听完第一节课，英语讲需要字幕反复听；</li><li>两篇论文，第一篇是关于RPA在进行文档操作过程中数据转换的改进，这篇还没有细读，后面细读一下、第二篇是关于RPA可能存在的问题，只是一篇综述，没有实际建议</li><li>RPA总结也初步完成，包括给那几个本科生讲了一下，就当时情况看，他们确实没有多少了解，几位同学可能还需要一些项目培养一下编码能力，可能需要更多努力来完成比赛，同时对于比赛题目的确定也需要多多了解RPA的应用场景</li><li>实验室论坛这块准备先让新来的师弟试试呀，和他交流过，他对于网络这块比较擅长，但是对于服务器这块比较欠缺，目前他和邹瑞学习，正好可以锻炼一下，如果后期没有完成，我再完成</li><li>目前研究点基本明确，只是缺少一个对于RPA研究下去信心，资料少，人少，学习内容多，工程大，确实需要先把UiPath搭建起来，并研究通了才能有信息继续研究下去</li><li>小论文这块想的是，本来学硕要求变难了，在平时学习过程中就开始填充知识，尽可能的跟上戴师兄和陈剑秋师兄的脚步</li><li>周五上午的数据整理初步完成，当时整理只是整理了部分，涛总也只是催了几个数据库的整理，后续情况等下次涛总安排吧</li><li>周六周日的时间，调研了一下UiPath的搭建，确定了基本的需求和流程，准备下周准备资源并进行搭建</li></ol><p><strong>学习方面</strong></p><blockquote><p>主要精力集中在RPA的总结上了，通过梳理几个大型公司的RPA产品，确定了目前比较热门以及将会被推广的产品有点：</p></blockquote><ol><li>对于屏幕抓取的智能解决方案，通过AI自我修复流程，极低的降低了业务流程因因素抓取失败或因被其它相近元素干扰导致流程作业失败的机率</li><li>为用户提供一个可以用户可以自己训练AI的场景，让用户可以根据自己实际生产需求，训练出更符合自身的AI</li><li>视频录制业务流程，传统的录制由于对于元素的获取容易受到旁边元素干扰，而且对于未知问题处理能力极差，所有需要专门RPA开发员的，但是目前有个别公司推出了一个图像识别算法，大体意思是通过扫描页面元素树确定鼠标触碰元素，几乎达到无失误识别，同时加上AI修正流程功能，录制视频来创建业务流程的目的已经可以达到了。</li><li>还有一点是比较容易忽略的同时是很实际的，对于RPA的部署，本身RPA对于资源的消耗是比较大的，但是却是弹性的，所以比较难以控制RPA部署规模，有个别公司也提出了解决方案，就是，算法，bot，已经中台控制都是分开，分规模，分类别可选择的进行部署。</li></ol><p> <strong>论文方面</strong></p><ol><li>RPA相关的论文，除了一些综述已经找不到其它有价值的了，下一步可能更多去一些公司的论坛进行查看了</li><li>目前有两个点，一个是，通过大量阅读和对于各个公司的观察，发现他们的重心都放在与AI的结合，扩展使用场景，却回避了RPA安全的严重缺陷，可能他们的场景是公司内网吧，所以第一个研究点就是RPA中的安全传输或者RPA中bot的数字认证；第二个是大点，还未确定可能与第一点，就是寻找一个应用场景，RPA需要与场景结合，通用性太高就容易导致研究</li><li>为RPA场景做准备，会阅读一些与人工智能相关的论文</li></ol><h2 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h2><ol><li>学习资料已经只剩下框架的官方文档了，国内外的论文可以查到的都是一些综述了，后期只能查阅一些一些公司的讨论</li><li>对于UiPath的搭建进行了初步了解，RPA框架本身存在的问题就是无法容器化，这也是一个研究点，所以如果公司没用空的服务器，我只能在本地虚拟金进行尝试了，我今天在阿里云买了一个两核4G的服务器上进行搭建，发现内存不够，但是扩容需要钱太多了，就放弃了，下一步就在本地搭建RPA只能在本地进行尝试</li></ol><h2 id="后期安排"><a href="#后期安排" class="headerlink" title="后期安排"></a>后期安排</h2><ul><li><input disabled="" type="checkbox"> 提出一个较为可操作的部署方案，并在本地进行尝试并总结</li><li><input disabled="" type="checkbox"> 了解一下市场需求，构思一个RPA隐患会造成极大破坏的场景，提出解决方案</li><li><input disabled="" type="checkbox"> 查阅一些公司的技术思路，了解一下他们在安全这块的研究点及解决方案，目前我总结的有几点：<ol><li>如何最大化的职责分配保障业务安全并最小的避免对业务流程的干扰</li><li>如何有效的进行身份认证和凭证的发放与验证</li><li>是否可以通过数据加密有效保证安全，还待考虑！</li><li>日志监控这块研究一下，思路是构建一个日志记录追踪，类似微服务中的日志记录</li></ol></li></ul>]]></content>
-    
-    
-    <summary type="html">每周安排</summary>
-    
-    
-    
-    <category term="weekly report" scheme="https://merlynr.github.io/categories/weekly-report/"/>
-    
-    
-    <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
-    
-    <category term="report" scheme="https://merlynr.github.io/tags/report/"/>
-    
-    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
-    
-    <category term="weekly" scheme="https://merlynr.github.io/tags/weekly/"/>
-    
-    <category term="RPA" scheme="https://merlynr.github.io/tags/RPA/"/>
-    
-    <category term="plan" scheme="https://merlynr.github.io/tags/plan/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RPA</title>
-    <link href="https://merlynr.github.io/2021/03/28/what%E2%80%98s%20the%20mean%20of%20RPA/"/>
-    <id>https://merlynr.github.io/2021/03/28/what%E2%80%98s%20the%20mean%20of%20RPA/</id>
-    <published>2021-03-27T16:00:00.000Z</published>
-    <updated>2021-05-24T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="RPA"><a href="#RPA" class="headerlink" title="RPA"></a>RPA</h2><h3 id="进化历史"><a href="#进化历史" class="headerlink" title="进化历史"></a>进化历史</h3><ol><li>上个世纪二十年代 亨利·福特，改革了工业生产方式，开启了工业时代，提出了对于处理重复工作的需求</li><li>1990-2000，计算机被广泛使用，用于处理办公，提出批处理脚本和触发器</li><li>2000-2015，VBA宏编程（EXCEL宏）和BPA</li><li>2015-2018，RPA模型创建成功，并投入使用</li><li>2019~，RPA+AI，即RPA4.0被推出，被大企业认可</li></ol><p>1.2. 反应了为了解决重复工作，提出了批处理事务<br>脚本自动化：在RPA技术出现之前，脚本自动化是企业自动化可选的比较靠谱自动化落地技术。用于解决最基础的几步任务自动化，技术的缺点是没有容错、任务管理、弱鸡的基于GUI的能力。商业上的优势是，几乎可以免费使用。<br>3. VBA编程语言的创建是为了解决办公中常遇到的重复性问题【简单化】、BPA（业务流程自动化）通过深度关注业务流程，集成所有相关应用程序来实现功能，业务的实现与程序耦合太重【复杂化】</p><p>目前给出三个区别：<br><strong>集成</strong>：BPA相较于RPA对于一个业务流程提出了更加全面、更加精确的解决方法，但是BPA是一种侵入性很强的整合形式。它用自己的软件对现有的系统进行大修，并实现自己的系统。RPA不会破坏现有的业务流程。【存在优缺点】<br><strong>工作流</strong>：RPA机器人访问桌面现有的用户界面并执行人工任务，但是目前大多数机器人无法进行决策。BPA中使用的工作流程更加复杂，使用单一的处理模型来创建集成多种系统的工作流程。这些系统彼此交换和提取信息，以实现任务自动化，这需要API和数据库访问。这需要对编码和开发的大量IT支持。【应用场景的不同，无优缺点之分】<br><strong>定价</strong>：BPA定价取决于公司的规模。还有其涉及到的业务的规模。UiPath(RPA龙头企业)更加使用RPA类型来定价。【站在技术方面，RPA更加灵活，也更加适用】<br>4. 通过集成现有的业务不紧破坏了已有业务，同时过度的耦合、高昂的成本和无法普遍推广，这些条件都指定了传统化业务自动化流程只能为大公司所用。<br>这个时候屏幕抓取技术的诞生就突破了传统BPA的过度耦合的问题，它不需要过度依赖以前的业务来获取和处理数据，同时自动化与管理工具（管理系统的版本，安装，卸载等）使得RPA更易于推广，最后一个就是AI的加入，它是解放人类双手的核心，它可以根据人类先前的判断来执行任务。<br>5. RPA4.0的提出 我们不仅要看到AI为RPA提供的红利，同时也要看到RPA技术对于AI技术发展的重要意义，RPA为AI技术的发展提供了手和脚，RPA作为AI技术与现实生活的连接器，扩大了AI技术的使用范围</p><h3 id="基本定义"><a href="#基本定义" class="headerlink" title="基本定义"></a>基本定义</h3><p>RPA的核心是通过自动化、智能化技术来“代替人”进行重复性、低价性、无需人工决策等固定性流程化操作，从而有效的提高工作效率，减少错误。</p><p>The main difference between software<br>robots and applications is the identity access<br>management (IAM) domain —  RPA instances<br>behave like an individual user. </p><h3 id="RPA进化四个阶段"><a href="#RPA进化四个阶段" class="headerlink" title="RPA进化四个阶段"></a>RPA进化四个阶段</h3><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618314304547.png" alt="四个阶段"></p><p>1：辅助性RPA（Assisted RPA）<br>　　在RPA 1.0阶段，作为“虚拟助手”出现的RPA，几乎涵盖了机器人自动化的主要功能，以及现有桌面自动化软件的全部操作。部署在员工PC机上，以提高工作效率。缺点则是难以实现端到端的自动化，成规模地应用还很难。<br>　　2：非辅助性RPA（Unassisted RPA）<br>　　在RPA 2.0阶段，被称为“虚拟劳动力”的RPA，主要目标即实现端到端的自动化，以及虚拟员工分级。主要部署在VMS虚拟机上，能够编排工作内容，集中化管理机器人、分析机器人的表现等。缺点则是对于RPA软件机器人的工作仍然需要人工的控制和管理。<br>　　3：自主性RPA（Autonomous RPA）<br>　　在RPA 3.0阶段，其主要目标是实现端到端的自动化和成规模多功能虚拟劳动力。通常部署在云服务器和SaaS上，特点是实现自动分级、动态负载平衡、情景感知、高级分析和工作流。缺点则是处理非结构化数据仍较为困难。<br>　　4：认知性RPA（Cognitive RPA）<br>　　RPA 4.0将是未来RPA发展的方向。开始运用人工智能、机器学习以及自然语言处理等技术，以实现非结构化数据的处理、预测规范分析、自动任务接受处理等功能。<br>　　目前，尽管大多数RPA软件产品，都还集中在2.0 - 3.0之间，但其发展已相当成熟，产品化程度亦是很高。一些行业巨头已经开始向RPA 4.0发起了探索。</p><h3 id="播放几个视频"><a href="#播放几个视频" class="headerlink" title="播放几个视频"></a>播放几个视频</h3><h3 id="扩展理解"><a href="#扩展理解" class="headerlink" title="扩展理解"></a>扩展理解</h3><p>轻量级IT，任何电子设备都可以被操控，<br>智能客服、智能家居，以及很多重复性较高、朝左流程固定的办公工作都可以被替代</p><h2 id="国内外现状"><a href="#国内外现状" class="headerlink" title="国内外现状"></a>国内外现状</h2><p>就国内外发展现状进行对比，全球五强RPA占有47%的市场，中国国产RPA目前智能更多被使用在能源、医疗、政务等一些领域。</p><h3 id="国内外"><a href="#国内外" class="headerlink" title="国内外"></a>国内外</h3><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021412/1618235359990.png" alt="国内外RPA"></p><p>国内主要厂商：来也科技、达观数据、云扩科技、艺赛旗、阿里云等<br>国外及世界领先的厂商：UiPath(免费社区版)、Blue Prism、Automation Anywhere</p><p>虽然国际RPA依旧扮演领导者和行业的规则的制定者，但是在各种新技术与RPA融合进程中，以及在生态建设成为RPA厂商主要竞争力的主流打法上，国产RPA并没有落后。甚至在一些方面，已经超越某些国外厂商。</p><p>可以通过近几年的融资金额和市场估值可以看出国产RPA也在蓬勃发展。</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618313802380.png" alt="2020年融资"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618314424625.png" alt="近五年的投资事件"></p><h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><p><a href="https://zhuanlan.zhihu.com/p/275757075">https://zhuanlan.zhihu.com/p/275757075</a></p><h3 id="UiPath"><a href="#UiPath" class="headerlink" title="UiPath"></a>UiPath</h3><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618316991750.png" alt="UiPath服务器平台三层逻辑"></p><p>1）表示层<br>数据REST API端点<br>通知API<br>Web应用程序<br>2）Web服务层xiac<br>业务逻辑实现（下层为单个任务节点的实现提供服务，上层是bot根据任务队列，任务组成等多因素来控制任务执行）<br>3）持久层<br>弹性搜索<br>SQL服务器</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618317691754.png" alt="设计框架"></p><ol><li>开发人员在UiPath Studio中构建流程</li><li>使用Development Orchestrator和Quality Assurance Qrcheestrator对其进行测试；完成后，他们将工作流（未打包）签入uiatph中主UiProcess Library文件夹（在VCS上）</li><li>将工作流封装，并保存到QA，为本机专有使用</li><li>如果在测试期间发现任何问题，则重复上述步骤。</li><li>一旦所有的QA测试都通过了，包就被复制到生产环境（P包）</li><li>生产过程正在进行，由生产机器人运行</li></ol><ul><li><p>UiPath由studio（开发工具），Orchestrator（自动化云平台和监控平台），robot（运行已开发的机器人服务）组成</p></li><li><p>Robot分为Front Office Robot和Back Office Robot.缩写分别为FOR和BOR。 FOR需要手工启动。</p></li><li><p>BOR需要配合Orchestrator启动。</p></li><li><p>现在又分别叫Attended和Unattended：</p></li><li><p>Attended要有人照看，不能在电脑锁屏的状态下运行自动工作流</p></li><li><p>Unattended不用人工照看，可以在电脑锁屏的状态下运行自动工作流，由Orchestrator远程执行</p></li></ul><blockquote><p>Invokes Repository 调用（调用存储库）==公用部分，被多方调用 #00BCD4==<br>Reusable Code Library 可重用代码库</p></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618320047098.png" alt="新版设计框架"></p><ul><li>提供免费社区版</li><li>产品线丰富，拓展了AI、process mining方面的能力</li><li>它提供了多种托管选项，例如云环境，虚拟机和终端服务</li><li>它支持各种Web和桌面应用程序</li><li>它支持自动登录功能来运行机器人</li><li>它包括可与 .Net，Java，Flash，PDF，Legacy，SAP配合使用的抓取解决方案，且准确性最高</li></ul><h3 id="阿里云RPA"><a href="#阿里云RPA" class="headerlink" title="阿里云RPA"></a>阿里云RPA</h3><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618321774264.png" alt="流程编辑器"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618323038585.png" alt="整体结构"></p><p>阿里云RPA4.0采用主流C/S架构模式，前端客户端采用.net平台，基于Windows系统具有自主研发的SDK及各项功能，后端服务端采用Linux（CentOS）操作系统，提供各类后台服务和组件。</p><ul><li>对接阿里达摩院，NLP、OCR等人工智能能力深度整合，让机器人更智能</li><li>拥有丰富的SDK自动化模块，支持自定义SDK库</li><li>阿里云统一售后支持体系</li></ul><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618323129695.png" alt="场景"></p><h3 id="实在智能-章鱼数字员工"><a href="#实在智能-章鱼数字员工" class="headerlink" title="实在智能-章鱼数字员工"></a>实在智能-章鱼数字员工</h3><p>解决问题：<br>    - 用户可以根据自身需求指定AI套件<br>    - 通用AI能力精度不足</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021415/1618463061303.png" alt="AaaS架构"></p><ol><li>RPA与算法平台进行无缝衔接</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021415/1618463296265.png" alt="与算法平台衔接"></p><p>【视频–实在智能】</p><ol start="2"><li>集群以及AI定制</li></ol><blockquote><p>不同的系统对于计算能力，内容，硬盘以及网络的要求是不同的，可以根据系统不同分集群部署，不如算法运行在GPU上，而小型数据中台选择数据库服务器集群等；同时用户可以根据自身要求，选择算法和算法服务集群。</p></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021415/1618463370738.png" alt="根据用户需求定制"></p><ol start="3"><li>算法开发训练</li></ol><blockquote><p>集成传统BPA的优势，为当前业务提供更加精确的算法</p></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021415/1618463186299.png" alt="算法开发训练"></p><p><strong>产品优势：</strong></p><blockquote><p>北斗****<br>1.传统的无锚点拾取，只能在简单场景<br>2.当页面中出现相同元素时通过附近元素进行判断并标识,选择不当容易导致流程失败<br>3.完全无感知的自动锚点选择，通过step-of-out图神经网络技术学习页面上的拓扑关系</p></blockquote><blockquote><p>神盾<br>通过监控流程，如果发生异常，则通过北斗自动修复元素来修正自动流程</p></blockquote><p><a href="https://mp.weixin.qq.com/s?__biz=MzI2NjE2NjQ0Ng==&mid=2247484934&idx=1&sn=d7d105996c81ac9af8a5567a6db799aa&chksm=ea930fc7dde486d137d60d0a013db9d2f7390c0b3876da95a47ef8b0f17857fbab6fa40bd17b&scene=21#wechat_redirect">开源框架</a></p><blockquote><p>魔镜</p></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021415/1618464900207.png" alt="自动化开发"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021415/1618464926504.png" alt="魔镜"></p><p>  目前各大公司对于RPA的使用多处于RPA2.0-RPA3.0之间，即需要RPA开发者介于，而魔镜这种通过视频与日志结合的开发模式将很大程度降低客户使用成本。</p><h3 id="框架总结"><a href="#框架总结" class="headerlink" title="框架总结"></a>框架总结</h3><p>RPA解决方案是依托于各类先进信息技术手段的虚拟劳动力，根据预先设定的程序操作指令对任务进行自动化处理，实现业务流程由机器人自动化处理。</p><p><strong>RPA能做的</strong></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618320374905.png" alt="可以满足我们的"></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618323364197.png" alt="新的行业标准"></p><ol><li>作为辅助甚至代替传统职工的工作软件，它需要员工的权限，但是却又脱离了系统的安全保障，这就造成了安全危机。<br>任子旭的对于网络安全和内部合规的提议：<br>对网络安全和内控合规的要求和约束时，主要是两个思路：<strong>遵从和自证清白</strong>。</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618320690337.png" alt="保障安全"></p><ol start="2"><li>作为一个辅助软件，本身高效性的前提是与相对应的工作量对照的，这就需要在配置时根据公司业务量来取舍，防止资源被浪费</li><li>虚拟化和环境一致性。整个项目的交付过程中，并没有那么简单。我们要考虑空间环境、系统环境、程序适用、版本兼容等多个因素。</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021413/1618320927712.png" alt="部署中的注意点"></p><h2 id="研究内容"><a href="#研究内容" class="headerlink" title="研究内容"></a>研究内容</h2><p>RPA到底可以发展到什么程度？</p><h3 id="可研究点"><a href="#可研究点" class="headerlink" title="可研究点"></a>可研究点</h3><h4 id="RPA-网络安全风险"><a href="#RPA-网络安全风险" class="headerlink" title="RPA 网络安全风险"></a>RPA 网络安全风险</h4><ol><li>滥用特权访问</li></ol><ul><li>攻击者可能能够危及机器人使用的管理员帐户。攻击者可以使用管理员帐户获得对敏感数据的访问权限</li><li>在离职之前，前员工可以编程机器人删除重要数据并中断业务流程</li></ul><ol start="2"><li>披露敏感数据</li></ol><ul><li>机器人开发人员可能会错误地编写BOT，以将高机密数据（例如信用卡信息）上传到公众通过Web访问的数据库。</li><li>机器人开发人员可以使用他或她的账户窃取业务其他服务信息</li></ul><ol start="3"><li>安全漏洞</li></ol><ul><li>虚拟机环境中可能存在安全漏洞，这是机器人运行的环境。</li><li>机器人开发人员编程机器人发送/接收敏感数据而不加密。此数据很脆弱，可以由攻击者利用</li></ul><ol start="4"><li>拒绝服务</li></ol><ul><li>一些不良的编程实践可以使机器人消耗所有虚拟机系统资源并导致虚拟机变得无响应，因此无法执行任何工作</li><li>虚拟机可能受到计划受到计划升级或网络维护的影响，可能导致中断损失。</li></ul><p><strong>应对策略</strong></p><ol><li>先进的职责分工，这就限制RPA用户只能执行分配给分配的任务，并且它们没有提升访问权限。同时也要限制代码开发人员与使用者的行为。</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021414/1618390329616.png" alt="主要RPA角色"></p><ol start="2"><li>数字身份认证和凭证的发放与验证，大部分黑客攻击都是在凭据被损害后发起的。为了避免这种情况，就需要设置机器人为最小的特权角色，那么机器人只能执行它的设计，并且其用户角色不能用于执行其他功能</li><li>数据加密，保证数据在传输过程前被加密，以及作业完成后删除。</li><li>监视日志并在内部控件损坏时执行审计，机器人活动可用于监测异常行为并进行审计，以防问题存在问题。</li><li>在发布生产代码之前，需要先扫描代码的漏洞，可以通过一些工具实现，Dynamic Application Security Testing (DAST) 【动态应用安全测试】and Fortify. </li></ol><h4 id="业务流程转型，RPA部署的效率、评估和解决方案"><a href="#业务流程转型，RPA部署的效率、评估和解决方案" class="headerlink" title="业务流程转型，RPA部署的效率、评估和解决方案"></a>业务流程转型，RPA部署的效率、评估和解决方案</h4><h4 id="对于其他功能的聚合，如应用控制，OCR-桌面自动化，中央管理等"><a href="#对于其他功能的聚合，如应用控制，OCR-桌面自动化，中央管理等" class="headerlink" title="对于其他功能的聚合，如应用控制，OCR,桌面自动化，中央管理等"></a>对于其他功能的聚合，如应用控制，OCR,桌面自动化，中央管理等</h4><h4 id="分区平台的共享服务必然会被需求较小的公司需求"><a href="#分区平台的共享服务必然会被需求较小的公司需求" class="headerlink" title="分区平台的共享服务必然会被需求较小的公司需求"></a>分区平台的共享服务必然会被需求较小的公司需求</h4><h4 id="跨平台的应用操作能力"><a href="#跨平台的应用操作能力" class="headerlink" title="跨平台的应用操作能力"></a>跨平台的应用操作能力</h4><h4 id="容器化"><a href="#容器化" class="headerlink" title="容器化"></a>容器化</h4><h4 id="RPA开发运维"><a href="#RPA开发运维" class="headerlink" title="RPA开发运维"></a>RPA开发运维</h4><p>从软件供应商转变为服务供应商<br>在共享服务中，自动化会变得极其慢，集群</p><h3 id="后期安排"><a href="#后期安排" class="headerlink" title="后期安排"></a>后期安排</h3><p>UiPath、tensorFlow</p>]]></content>
-    
-    
-    <summary type="html">学习汇总</summary>
-    
-    
-    
-    <category term="RPA" scheme="https://merlynr.github.io/categories/RPA/"/>
-    
-    
-    <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
-    
-    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
-    
-    <category term="RPA" scheme="https://merlynr.github.io/tags/RPA/"/>
     
   </entry>
   
