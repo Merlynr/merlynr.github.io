@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://merlynr.github.io/2021/07/06/attachments/1625557760628.table/</loc>
+    
+    <lastmod>2021-07-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://merlynr.github.io/2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/</loc>
     
     <lastmod>2021-07-04</lastmod>
@@ -177,7 +184,7 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/03/24/2021-03-24%E3%80%90Week%E3%80%91/</loc>
+    <loc>https://merlynr.github.io/2020/10/24/2020-10-24daily/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -191,7 +198,7 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/10/24/2020-10-24daily/</loc>
+    <loc>https://merlynr.github.io/2021/03/24/2021-03-24%E3%80%90Week%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -219,14 +226,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/05/17/RPA+AI/</loc>
+    <loc>https://merlynr.github.io/2021/05/06/Nicholas%20Burns/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/05/06/Nicholas%20Burns/</loc>
+    <loc>https://merlynr.github.io/2021/05/17/RPA+AI/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -254,14 +261,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/03/28/what%E2%80%98s%20the%20mean%20of%20RPA/</loc>
+    <loc>https://merlynr.github.io/2020/06/19/xiang-ji-http-yu-https-zhi-jian-de-qu-bie/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/06/19/xiang-ji-http-yu-https-zhi-jian-de-qu-bie/</loc>
+    <loc>https://merlynr.github.io/2021/03/28/what%E2%80%98s%20the%20mean%20of%20RPA/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -438,13 +445,6 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/tags/machine-learning/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://merlynr.github.io/tags/people/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
@@ -452,14 +452,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/tags/code/</loc>
+    <loc>https://merlynr.github.io/tags/machine-learning/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/tags/book/</loc>
+    <loc>https://merlynr.github.io/tags/code/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -495,6 +495,13 @@
   
   <url>
     <loc>https://merlynr.github.io/tags/kernal-function/</loc>
+    <lastmod>2021-07-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/tags/book/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -559,14 +566,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/categories/RPA/</loc>
+    <loc>https://merlynr.github.io/categories/people/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/categories/people/</loc>
+    <loc>https://merlynr.github.io/categories/RPA/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -587,14 +594,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/categories/life/</loc>
+    <loc>https://merlynr.github.io/categories/algorithm/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/categories/algorithm/</loc>
+    <loc>https://merlynr.github.io/categories/life/</loc>
     <lastmod>2021-07-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
