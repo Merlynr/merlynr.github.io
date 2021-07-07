@@ -9,6 +9,13 @@
   </url>
   
   <url>
+    <loc>https://merlynr.github.io/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/</loc>
+    
+    <lastmod>2021-07-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://merlynr.github.io/2021/07/06/attachments/1625557760628.table/</loc>
     
     <lastmod>2021-07-06</lastmod>
@@ -24,13 +31,6 @@
   
   <url>
     <loc>https://merlynr.github.io/2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/</loc>
-    
-    <lastmod>2021-07-04</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/</loc>
     
     <lastmod>2021-07-04</lastmod>
     
@@ -542,6 +542,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://merlynr.github.io/tags/machine-leaning/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -594,14 +601,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/categories/algorithm/</loc>
+    <loc>https://merlynr.github.io/categories/security/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/categories/security/</loc>
+    <loc>https://merlynr.github.io/categories/algorithm/</loc>
     <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
