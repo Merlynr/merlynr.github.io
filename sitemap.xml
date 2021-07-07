@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://merlynr.github.io/2021/07/07/%E7%98%BE/</loc>
+    
+    <lastmod>2021-07-06</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://merlynr.github.io/2021/07/06/attachments/1625557760628.table/</loc>
     
     <lastmod>2021-07-06</lastmod>
@@ -170,6 +177,13 @@
   </url>
   
   <url>
+    <loc>https://merlynr.github.io/2020/10/15/2020-10-15daily/</loc>
+    
+    <lastmod>2021-05-24</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://merlynr.github.io/2020/10/17/2020-10-17daily/</loc>
     
     <lastmod>2021-05-24</lastmod>
@@ -177,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/10/15/2020-10-15daily/</loc>
+    <loc>https://merlynr.github.io/2021/03/24/2021-03-24%E3%80%90Week%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -192,13 +206,6 @@
   
   <url>
     <loc>https://merlynr.github.io/2021/04/12/2021-04-12%E3%80%90Week%E3%80%91/</loc>
-    
-    <lastmod>2021-05-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/2021/03/24/2021-03-24%E3%80%90Week%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -233,14 +240,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/05/17/RPA+AI/</loc>
+    <loc>https://merlynr.github.io/2021/05/06/TagUI%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E5%8F%8A%E5%88%86%E6%9E%90/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/05/06/TagUI%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB%E5%8F%8A%E5%88%86%E6%9E%90/</loc>
+    <loc>https://merlynr.github.io/2021/05/17/RPA+AI/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -275,14 +282,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/02/22/%E4%BA%94%E4%B8%AARPA%E6%A1%86%E6%9E%B6%E9%80%9A%E8%AF%BB/</loc>
+    <loc>https://merlynr.github.io/2021/02/01/%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91---%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/02/01/%E5%88%86%E5%B8%83%E5%BC%8F%E5%BC%80%E5%8F%91---%E6%B6%88%E6%81%AF%E6%9C%BA%E5%88%B6/</loc>
+    <loc>https://merlynr.github.io/2021/02/22/%E4%BA%94%E4%B8%AARPA%E6%A1%86%E6%9E%B6%E9%80%9A%E8%AF%BB/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -310,14 +317,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/01/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%A4%8D%E4%B9%A0-2/</loc>
+    <loc>https://merlynr.github.io/2021/01/03/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87---%E7%A0%94%E7%A9%B6%E7%94%9F/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/01/03/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87---%E7%A0%94%E7%A9%B6%E7%94%9F/</loc>
+    <loc>https://merlynr.github.io/2021/01/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%A4%8D%E4%B9%A0-2/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -347,7 +354,7 @@
 
   <url>
     <loc>https://merlynr.github.io/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -355,182 +362,182 @@
   
   <url>
     <loc>https://merlynr.github.io/tags/daily/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/graduate-student/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/report/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/security/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/study/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/Java/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/summarize/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/front-end/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/weekly/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/RPA/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/plan/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/paper/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/block-chain/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/people/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/tags/machine-learning/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/code/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/tags/algorithm/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/tags/data-mining/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/tags/kernal-method/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/tags/kernal-trick/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/tags/kernal-function/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <loc>https://merlynr.github.io/tags/machine-learning/</loc>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/book/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/daily-weekly/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/tags/algorithm/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/tags/data-mining/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/tags/kernal-method/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/tags/kernal-trick/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/tags/kernal-function/</loc>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/deep-learning/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/exam/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/tags/design-model/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -539,126 +546,126 @@
   
   <url>
     <loc>https://merlynr.github.io/categories/daily-report/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/categories/weekly-report/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/categories/plan/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/categories/paper/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/categories/people/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/categories/RPA/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/categories/FrameWork/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/categories/RPA/</loc>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/categories/security/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/categories/algorithm/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/categories/life/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/categories/algorithm/</loc>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/categories/plan/graduate-student/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/categories/machine-learning/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/categories/plan/graduate-student/summarize/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/machine-learning/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/machine-learning/algorithm/</loc>
-    <lastmod>2021-07-06</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/machine-learning/algorithm/process-mining/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://merlynr.github.io/categories/exam/</loc>
-    <lastmod>2021-07-06</lastmod>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/categories/plan/graduate-student/summarize/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/machine-learning/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/machine-learning/algorithm/</loc>
+    <lastmod>2021-07-07</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/categories/plan/graduate-student/summarize/paper/machine-learning/algorithm/process-mining/</loc>
+    <lastmod>2021-07-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

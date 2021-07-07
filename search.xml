@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>瘾</title>
+      <link href="2021/07/07/%E7%98%BE/"/>
+      <url>2021/07/07/%E7%98%BE/</url>
+      
+        <content type="html"><![CDATA[<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul><li><input disabled="" type="checkbox"> 酒</li><li><input disabled="" type="checkbox"> 手机</li><li><input disabled="" type="checkbox"> 游戏</li><li><input disabled="" type="checkbox"> 小视频</li></ul><h2 id="HOW"><a href="#HOW" class="headerlink" title="HOW"></a>HOW</h2><ol><li>酒每个月少喝就行了</li><li>分析上瘾手机的原因，太无聊了，找到替代品</li><li>游戏本质就是单身狗</li><li>小视频太闲了，需要找到替代品</li></ol><ul><li><input disabled="" type="checkbox"> 手机不上床</li><li><input disabled="" type="checkbox"> 游戏emmmm</li><li><input disabled="" type="checkbox"> 小视频换个环境，聊聊天什么的就行了</li><li><input disabled="" type="checkbox"> 找个积极的上瘾</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> plan </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> graduate student </tag>
+            
+            <tag> plan </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title></title>
       <link href="2021/07/06/attachments/1625557760628.table/"/>
       <url>2021/07/06/attachments/1625557760628.table/</url>
@@ -48,7 +75,7 @@
       <link href="2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/"/>
       <url>2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/</url>
       
-        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/mantch/p/11203748.html">一次性弄懂马尔可夫模型、隐马尔可夫模型、马尔可夫网络和条件随机场！(词性标注代码实现) - mantch - 博客园</a></p><h2 id="马尔可夫网络、马尔可夫模型、马尔可夫过程、贝叶斯网络的区别"><a href="#马尔可夫网络、马尔可夫模型、马尔可夫过程、贝叶斯网络的区别" class="headerlink" title="马尔可夫网络、马尔可夫模型、马尔可夫过程、贝叶斯网络的区别"></a>马尔可夫网络、马尔可夫模型、马尔可夫过程、贝叶斯网络的区别</h2><p>共分六点说明这些概念【<font color="#DC143C">这6点是依次递进的，不要跳跃着看</font>】：</p><ol><li>将随机变量作为结点，若两个随机变量相关或者不独立，则将二者连接一条边；若给定若干随机变量，则形成一个有向图，即构成一个<strong>网络</strong>。</li><li>如果该网络是有向无环图，则这个网络称为<strong>贝叶斯网络</strong>。</li><li>如果这个图退化成线性链的方式，则得到<strong>马尔可夫模型</strong>；因为每个结点都是随机变量，将其看成各个时刻(或空间)的相关变化，以随机过程的视角，则可以看成是<strong>马尔可夫过程</strong>。</li><li>若上述网络是无向的，则是无向图模型，又称<strong>马尔可夫随机场</strong>或者<strong>马尔可夫网络</strong>。</li><li>如果在给定某些条件的前提下，研究这个马尔可夫随机场，则得到<strong>条件随机场</strong>。</li><li>如果使用条件随机场解决标注问题，并且进一步将条件随机场中的网络拓扑变成线性的，则得到<strong>线性链条件随机场</strong>。</li></ol><h2 id="马尔可夫模型"><a href="#马尔可夫模型" class="headerlink" title="马尔可夫模型"></a>马尔可夫模型</h2><h3 id="马尔可夫过程"><a href="#马尔可夫过程" class="headerlink" title="马尔可夫过程"></a>马尔可夫过程</h3><p>马尔可夫过程（Markov process）是一类<font color="#00FFFF">随机</font>过程。它的原始模型是马尔可夫链。<br>该过程具有如下特性：在已知目前状态（现在）的条件下，它未来的演变（将来）<font color="#0000FF">不依赖</font>于它以往的演变 (过去 )。</p><p>每个状态的转移只依赖于之前的n个状态，这个过程被称为1个n阶的模型，其中n是影响转移状态的数目。最简单的马尔可夫过程就是一阶过程，<font color="#006400">每一个状态的转移只依赖于其之前的那一个状态</font>，这个也叫作<strong>马尔可夫性质</strong>。</p><p>假设这个模型的每个状态都只依赖于之前的状态，这个假设被称为<font color="#1E90FF">马尔科夫假设</font>，这个假设可以大大的简化这个问题。显然，这个假设可能是一个非常糟糕的假设，导致很多重要的信息都丢失了。<br><img src="https://gitee.com/merlynr/img-store/raw/master/202176/1625557564343.png"></p><p>假设天气服从<strong>马尔可夫链</strong>：</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202176/1625557700847.png" alt="天气"></p><p>从上面这幅图可以看出：</p><ul><li>假如今天是晴天，明天变成阴天的概率是0.1</li><li>假如今天是晴天，明天任然是晴天的概率是0.9，和上一条概率之和为1，这也符合真实生活的情况。</li></ul><p><img src="./attachments/1625557760628.table.html" alt="表格"></p><p>由上表我们可以得到马尔可夫链的<strong>状态转移矩阵</strong>：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202176/1625557951076.png" alt="状态转移矩阵"></p><p>因此，一阶马尔可夫过程定义了以下三个部分：</p><ul><li>状态：晴天和阴天</li><li>初始向量：定义系统在时间为0的时候的状态的概率</li><li>状态转移矩阵：每种天气转换的概率</li></ul><p>马尔可夫模型（Markov Model）是一种<font color="#DC143C">统计模型</font>，广泛应用在语音识别，词性自动标注，音字转换，概率文法等各个自然语言处理等应用领域。经过长期发展，尤其是在语音识别中的成功应用，使它成为一种通用的统计工具。到目前为止，它一直被认为是实现快速精确的语音识别系统的最成功的方法。</p><h2 id="隐马尔可夫模型（HMM）"><a href="#隐马尔可夫模型（HMM）" class="headerlink" title="隐马尔可夫模型（HMM）"></a>隐马尔可夫模型（HMM）</h2><blockquote><p> 在某些情况下马尔科夫过程不足以描述我们希望发现的模式。回到之前那个天气的例子，一个隐居的人可能不能直观的观察到天气的情况，但是有一些海藻。民间的传说告诉我们海藻的状态在某种概率上是和天气的情况相关的。在这种情况下我们有两个状态集合，一个可以观察到的状态集合（海藻的状态）和一个隐藏的状态（天气的状况）。我们希望能找到一个算法可以根据海藻的状况和马尔科夫假设来预测天气的状况。</p></blockquote><p>而这个算法就叫做**隐马尔可夫模型(HMM)**。</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202176/1625559690747.png" alt="HMM"></p><p>隐马尔可夫模型 (Hidden Markov Model) 是一种<strong>统计模型</strong>，用来描述一个含有隐含未知参数的马尔可夫过程。<strong>它是结构最简单的动态贝叶斯网，这是一种著名的有向图模型，</strong> 主要用于<font color="#FF00FF">时序</font>数据建模，在语音识别、自然语言处理等领域有广泛应用。</p><h3 id="隐马尔可夫三大问题"><a href="#隐马尔可夫三大问题" class="headerlink" title="隐马尔可夫三大问题"></a>隐马尔可夫三大问题</h3><p><font color="#9400D3">注意</font></p><ol><li>给定模型，如何有效计算产生观测序列的概率？换言之，如何评估模型与观测序列之间的<font color="#FF1493">匹配程度</font>？</li><li>给定模型和观测序列，如何找到与此观测序列最匹配的状态序列？换言之，如何根据观测序列推断出隐藏的<font color="#B22222">模型状态</font>？</li><li>给定观测序列，如何调整模型参数使得该序列出现的概率最大？换言之，如何训练模型使其能最好地<font color="#B22222">描述</font>观测数据？</li></ol><p>前两个问题是模式识别的问题：1) 根据隐马尔科夫模型得到一个可观察状态序列的概率(<strong>评价</strong>)；2) 找到一个隐藏状态的序列使得这个序列产生一个可观察状态序列的概率最大(<strong>解码</strong>)。第三个问题就是根据一个可以观察到的状态序列集产生一个隐马尔科夫模型（<strong>学习</strong>）。</p><p>对应的三大问题解法：</p><ol><li>向前算法(Forward Algorithm)、向后算法(Backward Algorithm)</li><li>维特比算法(Viterbi Algorithm)</li><li>鲍姆-韦尔奇算法(Baum-Welch Algorithm) (约等于EM算法)</li></ol><blockquote><p>小明现在有三天的假期，他为了打发时间，可以在每一天中选择三件事情来做，这三件事情分别是散步、购物、打扫卫生(<strong>对应着可观测序列</strong>)，可是在生活中我们所做的决定一般都受到天气的影响，可能晴天的时候想要去购物或者散步，可能下雨天的时候不想出门，留在家里打扫卫生。而天气(晴天、下雨天)就属于<strong>隐藏状态</strong>，用一幅概率图来表示这一马尔可夫过程：</p></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/202176/1625563725550.png" alt="场景"></p><p>那么，我们提出三个问题，分别对应马尔可夫的<font color="#B22222">三大</font>问题：</p><ol><li>已知整个模型，我观测到连续三天做的事情是：散步，购物，收拾。那么，根据模型，计算产生这些行为的概率是多少。</li><li>同样知晓这个模型，同样是这三件事，我想猜，这三天的天气是怎么样的。</li><li>最复杂的，我只知道这三天做了这三件事儿，而其他什么信息都没有。我得建立一个模型，晴雨转换概率，第一天天气情况的概率分布，根据天气情况选择做某事的概率分布。</li></ol><h3 id="第一个问题解法"><a href="#第一个问题解法" class="headerlink" title="第一个问题解法"></a>第一个问题解法</h3><ol><li><strong>遍历算法</strong></li></ol><p>假设第一天(T=1 时刻)是晴天，想要购物，那么就把图上的对应概率相乘就能够得到了。<br>第二天(T=2 时刻)要做的事情，在第一天的概率基础上乘上第二天的概率，依次类推，最终得到这三天(T=3 时刻)所要做的事情的概率值，这就是遍历算法，简单而又粗暴。但问题是<font color="#2F4F4F">用遍历算法的复杂度会随着观测序列和隐藏状态的增加而成指数级增长。</font></p><p><font color="#B22222">复杂度为</font>：<math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>T</mi><msup><mi>N</mi><mi>T</mi></msup></math></p><ol start="2"><li><p><strong>前向算法</strong></p><ol><li>假设第一天要购物，那么就计算出第一天购物的概率(包括晴天和雨天)；假设第一天要散步，那么也计算出来，依次枚举。</li><li>假设前两天是购物和散步，也同样计算出这一种的概率；假设前两天是散步和打扫卫生，同样计算，枚举出前两天行为的概率。</li><li>第三步就是计算出前三天行为的概率。</li></ol></li></ol>]]></content>
+        <content type="html"><![CDATA[<p><a href="https://www.cnblogs.com/mantch/p/11203748.html">一次性弄懂马尔可夫模型、隐马尔可夫模型、马尔可夫网络和条件随机场！(词性标注代码实现) - mantch - 博客园</a></p><h2 id="马尔可夫网络、马尔可夫模型、马尔可夫过程、贝叶斯网络的区别"><a href="#马尔可夫网络、马尔可夫模型、马尔可夫过程、贝叶斯网络的区别" class="headerlink" title="马尔可夫网络、马尔可夫模型、马尔可夫过程、贝叶斯网络的区别"></a>马尔可夫网络、马尔可夫模型、马尔可夫过程、贝叶斯网络的区别</h2><p>共分六点说明这些概念【<font color="#DC143C">这6点是依次递进的，不要跳跃着看</font>】：</p><ol><li>将随机变量作为结点，若两个随机变量相关或者不独立，则将二者连接一条边；若给定若干随机变量，则形成一个有向图，即构成一个<strong>网络</strong>。</li><li>如果该网络是有向无环图，则这个网络称为<strong>贝叶斯网络</strong>。</li><li>如果这个图退化成线性链的方式，则得到<strong>马尔可夫模型</strong>；因为每个结点都是随机变量，将其看成各个时刻(或空间)的相关变化，以随机过程的视角，则可以看成是<strong>马尔可夫过程</strong>。</li><li>若上述网络是无向的，则是无向图模型，又称<strong>马尔可夫随机场</strong>或者<strong>马尔可夫网络</strong>。</li><li>如果在给定某些条件的前提下，研究这个马尔可夫随机场，则得到<strong>条件随机场</strong>。</li><li>如果使用条件随机场解决标注问题，并且进一步将条件随机场中的网络拓扑变成线性的，则得到<strong>线性链条件随机场</strong>。</li></ol><h2 id="马尔可夫模型"><a href="#马尔可夫模型" class="headerlink" title="马尔可夫模型"></a>马尔可夫模型</h2><h3 id="马尔可夫过程"><a href="#马尔可夫过程" class="headerlink" title="马尔可夫过程"></a>马尔可夫过程</h3><p>马尔可夫过程（Markov process）是一类<font color="#00FFFF">随机</font>过程。它的原始模型是马尔可夫链。<br>该过程具有如下特性：在已知目前状态（现在）的条件下，它未来的演变（将来）<font color="#0000FF">不依赖</font>于它以往的演变 (过去 )。</p><p>每个状态的转移只依赖于之前的n个状态，这个过程被称为1个n阶的模型，其中n是影响转移状态的数目。最简单的马尔可夫过程就是一阶过程，<font color="#006400">每一个状态的转移只依赖于其之前的那一个状态</font>，这个也叫作<strong>马尔可夫性质</strong>。</p><p>假设这个模型的每个状态都只依赖于之前的状态，这个假设被称为<font color="#1E90FF">马尔科夫假设</font>，这个假设可以大大的简化这个问题。显然，这个假设可能是一个非常糟糕的假设，导致很多重要的信息都丢失了。<br><img src="https://gitee.com/merlynr/img-store/raw/master/202176/1625557564343.png"></p><p>假设天气服从<strong>马尔可夫链</strong>：</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202176/1625557700847.png" alt="天气"></p><p>从上面这幅图可以看出：</p><ul><li>假如今天是晴天，明天变成阴天的概率是0.1</li><li>假如今天是晴天，明天任然是晴天的概率是0.9，和上一条概率之和为1，这也符合真实生活的情况。</li></ul><p><img src="./attachments/1625557760628.table.html" alt="表格"></p><p>由上表我们可以得到马尔可夫链的<strong>状态转移矩阵</strong>：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202176/1625557951076.png" alt="状态转移矩阵"></p><p>因此，一阶马尔可夫过程定义了以下三个部分：</p><ul><li>状态：晴天和阴天</li><li>初始向量：定义系统在时间为0的时候的状态的概率</li><li>状态转移矩阵：每种天气转换的概率</li></ul><p>马尔可夫模型（Markov Model）是一种<font color="#DC143C">统计模型</font>，广泛应用在语音识别，词性自动标注，音字转换，概率文法等各个自然语言处理等应用领域。经过长期发展，尤其是在语音识别中的成功应用，使它成为一种通用的统计工具。到目前为止，它一直被认为是实现快速精确的语音识别系统的最成功的方法。</p><h2 id="隐马尔可夫模型（HMM）"><a href="#隐马尔可夫模型（HMM）" class="headerlink" title="隐马尔可夫模型（HMM）"></a>隐马尔可夫模型（HMM）</h2><blockquote><p> 在某些情况下马尔科夫过程不足以描述我们希望发现的模式。回到之前那个天气的例子，一个隐居的人可能不能直观的观察到天气的情况，但是有一些海藻。民间的传说告诉我们海藻的状态在某种概率上是和天气的情况相关的。在这种情况下我们有两个状态集合，一个可以观察到的状态集合（海藻的状态）和一个隐藏的状态（天气的状况）。我们希望能找到一个算法可以根据海藻的状况和马尔科夫假设来预测天气的状况。</p></blockquote><p>而这个算法就叫做**隐马尔可夫模型(HMM)**。</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202176/1625559690747.png" alt="HMM"></p><p>隐马尔可夫模型 (Hidden Markov Model) 是一种<strong>统计模型</strong>，用来描述一个含有隐含未知参数的马尔可夫过程。<strong>它是结构最简单的动态贝叶斯网，这是一种著名的有向图模型，</strong> 主要用于<font color="#FF00FF">时序</font>数据建模，在语音识别、自然语言处理等领域有广泛应用。</p><h3 id="隐马尔可夫三大问题"><a href="#隐马尔可夫三大问题" class="headerlink" title="隐马尔可夫三大问题"></a>隐马尔可夫三大问题</h3><p><font color="#9400D3">注意</font></p><ol><li>给定模型，如何有效计算产生观测序列的概率？换言之，如何评估模型与观测序列之间的<font color="#FF1493">匹配程度</font>？</li><li>给定模型和观测序列，如何找到与此观测序列最匹配的状态序列？换言之，如何根据观测序列推断出隐藏的<font color="#B22222">模型状态</font>？</li><li>给定观测序列，如何调整模型参数使得该序列出现的概率最大？换言之，如何训练模型使其能最好地<font color="#B22222">描述</font>观测数据？</li></ol><p>前两个问题是模式识别的问题：1) 根据隐马尔科夫模型得到一个可观察状态序列的概率(<strong>评价</strong>)；2) 找到一个隐藏状态的序列使得这个序列产生一个可观察状态序列的概率最大(<strong>解码</strong>)。第三个问题就是根据一个可以观察到的状态序列集产生一个隐马尔科夫模型（<strong>学习</strong>）。</p><p>对应的三大问题解法：</p><ol><li>向前算法(Forward Algorithm)、向后算法(Backward Algorithm)</li><li>维特比算法(Viterbi Algorithm)</li><li>鲍姆-韦尔奇算法(Baum-Welch Algorithm) (约等于EM算法)</li></ol><blockquote><p>小明现在有三天的假期，他为了打发时间，可以在每一天中选择三件事情来做，这三件事情分别是散步、购物、打扫卫生(<strong>对应着可观测序列</strong>)，可是在生活中我们所做的决定一般都受到天气的影响，可能晴天的时候想要去购物或者散步，可能下雨天的时候不想出门，留在家里打扫卫生。而天气(晴天、下雨天)就属于<strong>隐藏状态</strong>，用一幅概率图来表示这一马尔可夫过程：</p></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/202176/1625563725550.png" alt="场景"></p><p>那么，我们提出三个问题，分别对应马尔可夫的<font color="#B22222">三大</font>问题：</p><ol><li>已知整个模型，我观测到连续三天做的事情是：散步，购物，收拾。那么，根据模型，计算产生这些行为的概率是多少。</li><li>同样知晓这个模型，同样是这三件事，我想猜，这三天的天气是怎么样的。</li><li>最复杂的，我只知道这三天做了这三件事儿，而其他什么信息都没有。我得建立一个模型，晴雨转换概率，第一天天气情况的概率分布，根据天气情况选择做某事的概率分布。</li></ol><h3 id="第一个问题解法"><a href="#第一个问题解法" class="headerlink" title="第一个问题解法"></a>第一个问题解法</h3><ol><li><strong>遍历算法</strong></li></ol><p>假设第一天(T=1 时刻)是晴天，想要购物，那么就把图上的对应概率相乘就能够得到了。<br>第二天(T=2 时刻)要做的事情，在第一天的概率基础上乘上第二天的概率，依次类推，最终得到这三天(T=3 时刻)所要做的事情的概率值，这就是遍历算法，简单而又粗暴。但问题是<font color="#2F4F4F">用遍历算法的复杂度会随着观测序列和隐藏状态的增加而成指数级增长。</font></p><p><font color="#B22222">复杂度为</font>：<math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn><mi>T</mi><msup><mi>N</mi><mi>T</mi></msup></math></p><p><font color="#8A2BE2">理解：</font>每次计算行为发生概率都从最开始遍历计算</p><ol start="2"><li><p><strong>前向算法</strong></p><ol><li>假设第一天要购物，那么就计算出第一天购物的概率(包括晴天和雨天)；假设第一天要散步，那么也计算出来，依次枚举。</li><li>假设前两天是购物和散步，也同样计算出这一种的概率；假设前两天是散步和打扫卫生，同样计算，枚举出前两天行为的概率。</li><li>第三步就是计算出前三天行为的概率。</li></ol></li></ol><p>第二步中要求的概率可以在第一步的基础上进行，同样的，第三步也会<font color="#0000FF">依赖</font>于第二步的计算结果。那么这样做就能够<strong>节省很多计算环节，类似于动态规划</strong>。</p><p><font color="#B22222">复杂度为</font>：<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>N</mi><mn>2</mn></msup><mi>T</mi></math></p><ol start="3"><li>后向算法</li></ol><p>跟前向算法相反，我们知道总的概率肯定是1，那么B_t=1，也就是最后一个时刻的概率合为1，先计算前三天的各种可能的概率，在计算前两天、前一天的数据，<font color="#696969">跟前向算法相反</font>的计算路径。</p><h3 id="第二个问题解法"><a href="#第二个问题解法" class="headerlink" title="第二个问题解法"></a>第二个问题解法</h3><ol><li>维特比算法（Viterbi）</li></ol><blockquote><p>维特比算法是一个特殊但应用最广的<strong>动态规划算法</strong>。利用动态规划，可以解决任何一个图中的<strong>最短</strong>路径问题。而维特比算法是针对一个特殊的图—篱笆网络（Lattice）的有向图最短路径问题而提出的。它之所以重要，是因为凡是使用<font color="#057748">隐含马尔可夫模型</font>描述的问题都可以用它来解码，包括今天的数字通信、语音识别、机器翻译、拼音转汉字、分词等。</p></blockquote><p>维特比算法一般用于模式识别，通过观测数据来<font color="#FF1493">反推出隐藏状态</font>。</p><p>因为是要根据观测数据来反推，所以这里要进行一个假设，<strong>假设这三天所做的行为分别是：散步、购物、打扫卫生</strong>，那么我们要求的是这三天的天气(路径)分别是什么。</p><ol><li>初始计算第一天下雨和第一天晴天去散步的概率值：<br><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>△</mi><mn>1</mn></msub><mo>(</mo><mi>R</mi><mo>)</mo></math>表示第一天下雨的概率<br><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>&#x3C0;</mi><mi>R</mi></msub></math>表示中间的状态(下雨)概率<br><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>b</mi><mi>R</mi></msub><mo>(</mo><msub><mi>O</mi><mn>1</mn></msub><mo>=</mo><mi>w</mi><mo>)</mo></math>表示下雨并且散步的概率<br><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>a</mi><mrow><mi>R</mi><mo>-</mo><mi>R</mi></mrow></msub></math>表示下雨天到下雨天的概率</li></ol><p><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>△</mi><mn>1</mn></msub><mo>(</mo><mi>R</mi><mo>)</mo></math>=<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>&#x3C0;</mi><mi>R</mi></msub><mo>*</mo><msub><mi>b</mi><mi>R</mi></msub><mo>(</mo><msub><mi>O</mi><mn>1</mn></msub><mo>=</mo><mi>w</mi><mo>)</mo></math>=0.6 * 0.1 = 0.06</p><p><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>△</mi><mn>1</mn></msub><mo>(</mo><mi>S</mi><mo>)</mo></math>=<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>&#x3C0;</mi><mi>S</mi></msub><mo>*</mo><msub><mi>b</mi><mi>S</mi></msub><mo>(</mo><msub><mi>O</mi><mn>1</mn></msub><mo>=</mo><mi>w</mi><mo>)</mo></math>=0.4 * 0.6 = 0.24</p><p><font color="#006400">初始路径</font>为：<br><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>&#x3D5;</mi><mn>1</mn></msub><mo>(</mo><mi>R</mi><mo>)</mo></math>=Rainy<br><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>&#x3D5;</mi><mn>1</mn></msub><mo>(</mo><mi>S</mi><mo>)</mo></math>=Sunny</p><ol start="2"><li>计算第二天下雨和第二天晴天去购物的概率值:</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/202177/1625641072263.png" alt="行为概率"></p><p><font color="#00FFFF">对应路径为：</font></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202177/1625642052293.png" alt="对应路径"></p><ol start="3"><li>计算第三天下雨和第三天晴天去打扫卫生的概率值：</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/202177/1625642832307.png" alt="第三天概率"></p><p><font color="#228B22">对应路径为：</font></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202177/1625642928241.png" alt="行为路径"></p><ol start="4"><li><p>比较每一步中△的概率大小，选取最大值并找到对应的路径，依次类推就能找到最有可能的隐藏状态路径。</p><ol><li>第一天的概率最大值为 <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>△</mi><mn>1</mn></msub><mi>S</mi></math>，对应路径为Sunny，</li><li>第二天的概率最大值为 <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>△</mi><mn>2</mn></msub><mi>S</mi></math>，对应路径为Sunny，</li><li>第三天的概率最大值为 <math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>△</mi><mn>3</mn></msub><mi>S</mi></math>，对应路径为Rainy。</li></ol></li><li><p>合起来的路径就是Sunny-&gt;Sunny-&gt;Rainy，这就是我们所求。</p></li></ol><h3 id="第三个问题解法"><a href="#第三个问题解法" class="headerlink" title="第三个问题解法"></a>第三个问题解法</h3><p>鲍姆-韦尔奇算法(Baum-Welch Algorithm) (约等于<strong>EM</strong>算法)</p><p>如果训练数据只有观测序列而没有状态序列，即{<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>O</mi><mn>1</mn></msub><mo>,</mo><msub><mi>O</mi><mn>2</mn></msub><mo>,</mo><mo>&#x22EF;</mo><mo>,</mo><msub><mi>O</mi><mi>S</mi></msub></math>}此时HMM的学习就得使用EM算法了，这是<font color="#FF1493">非监督</font>学习。</p><p>通常，如果给定数据和已经模型，那么求模型参数我们会用<font color="#8A2BE2">极大似然估计法</font>，但是<font color="#8B008B">如果变量中含有隐变量，无法用极大似然求解</font>（对数式子里面有求和，难以求出解析解），此时就可以使用EM算法。考虑HMM，观测序列 O是显变量，而状态变量I  则是隐变量，所以HMM实际上是<font color="#556B2F">含有隐变量的概率模型</font></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202177/1625646003916.png" alt="HMM的概率模型 | λ为模型参数"></p><blockquote><p><font color="#00FFFF">知识补充</font><br>极大似然估计<br>利用已知的样本结果信息，反推最具有可能（最大概率）导致这些样本结果出现的模型参数值！<br>换句话说，极大似然估计提供了一种给定观察数据来评估模型参数的方法，即：“<font color="#FF8C00">模型已定，参数未知</font>”。</p></blockquote><p>可以使用EM算法来求得模型参数。</p><p>关于EM算法流程，有多个版本，但是仔细学习可以发现是大同小异的，以下使用《统计学习方法》上介绍的EM算法流程。</p><p><a href="https://blog.csdn.net/qq_37334135/article/details/86302735">HMM学习笔记（二）：监督学习方法与Baum-Welch算法_成都往右的博客-CSDN博客</a></p><h2 id="马尔可夫网络"><a href="#马尔可夫网络" class="headerlink" title="马尔可夫网络"></a>马尔可夫网络</h2><h3 id="因子图"><a href="#因子图" class="headerlink" title="因子图"></a>因子图</h3><p>WiKIpedia：将一个具有多变量的全局函数因子分解，得到几个局部函数的乘积，以此为基础得到的一个双向图叫做<font color="#00CED1">因子图</font>（Factor Graph）。</p><p>通俗来讲，所谓因子图就是对函数进行因子分解得到的一种<strong>概率图</strong>。一般内含两种节点：变量节点和函数节点。我们知道，一<font color="#FF1493">个全局函数通过因式分解能够分解为多个局部函数的乘积</font>，这些局部函数和对应的变量关系就体现在因子图上。</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202177/1625649785149.png" alt="栗子"></p><p>其中fA,fB,fC,fD,fE为各函数，表示变量之间的关系，可以是条件概率也可以是其他关系。其对应的因子图为：</p>]]></content>
       
       
       <categories>
@@ -651,7 +678,7 @@
       <link href="2021/05/06/Nicholas%20Burns/"/>
       <url>2021/05/06/Nicholas%20Burns/</url>
       
-        <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：<a href="mailto:&#110;&#x69;&#99;&#104;&#111;&#108;&#97;&#x73;&#x5f;&#98;&#x75;&#114;&#110;&#x73;&#64;&#x68;&#107;&#115;&#x2e;&#104;&#97;&#114;&#x76;&#x61;&#x72;&#x64;&#46;&#x65;&#x64;&#117;">&#110;&#x69;&#99;&#104;&#111;&#108;&#97;&#x73;&#x5f;&#98;&#x75;&#114;&#110;&#x73;&#64;&#x68;&#107;&#115;&#x2e;&#104;&#97;&#114;&#x76;&#x61;&#x72;&#x64;&#46;&#x65;&#x64;&#117;</a></li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：<a href="mailto:&#97;&#x6c;&#x69;&#x73;&#x6f;&#110;&#x5f;&#104;&#x69;&#x6c;&#108;&#101;&#103;&#x65;&#x69;&#115;&#x74;&#64;&#104;&#x6b;&#115;&#46;&#x68;&#97;&#114;&#118;&#97;&#114;&#100;&#x2e;&#101;&#100;&#x75;">&#97;&#x6c;&#x69;&#x73;&#x6f;&#110;&#x5f;&#104;&#x69;&#x6c;&#108;&#101;&#103;&#x65;&#x69;&#115;&#x74;&#64;&#104;&#x6b;&#115;&#46;&#x68;&#97;&#114;&#118;&#97;&#114;&#100;&#x2e;&#101;&#100;&#x75;</a></li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  –棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：<a href="mailto:&#x6e;&#x69;&#99;&#x68;&#111;&#x6c;&#97;&#115;&#95;&#x62;&#117;&#114;&#x6e;&#115;&#x40;&#104;&#107;&#115;&#46;&#104;&#x61;&#114;&#118;&#x61;&#114;&#100;&#46;&#101;&#100;&#x75;">&#x6e;&#x69;&#99;&#x68;&#111;&#x6c;&#97;&#115;&#95;&#x62;&#117;&#114;&#x6e;&#115;&#x40;&#104;&#107;&#115;&#46;&#104;&#x61;&#114;&#118;&#x61;&#114;&#100;&#46;&#101;&#100;&#x75;</a></li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：<a href="mailto:&#x61;&#108;&#x69;&#x73;&#111;&#x6e;&#95;&#x68;&#x69;&#108;&#108;&#x65;&#x67;&#101;&#x69;&#115;&#116;&#x40;&#x68;&#x6b;&#x73;&#46;&#x68;&#97;&#x72;&#118;&#97;&#114;&#100;&#46;&#101;&#x64;&#x75;">&#x61;&#108;&#x69;&#x73;&#111;&#x6e;&#95;&#x68;&#x69;&#108;&#108;&#x65;&#x67;&#101;&#x69;&#115;&#116;&#x40;&#x68;&#x6b;&#x73;&#46;&#x68;&#97;&#x72;&#118;&#97;&#114;&#100;&#46;&#101;&#x64;&#x75;</a></li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  –棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
       
       
       <categories>
@@ -891,6 +918,37 @@
     
     
     <entry>
+      <title>高级软件考试准备---研究生</title>
+      <link href="2021/01/03/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87---%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
+      <url>2021/01/03/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87---%E7%A0%94%E7%A9%B6%E7%94%9F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="考试内容"><a href="#考试内容" class="headerlink" title="考试内容"></a>考试内容</h1><ol><li>面向对象</li></ol><ol start="2"><li>六大原则</li></ol><ul><li>单一职责原则</li><li>里氏替换原则</li><li>依赖倒置原则</li><li>接口隔离原则</li><li>迪米特法则</li><li>关闭原则</li></ul><ol start="3"><li>主讲了九个模式一个机制</li></ol><ul><li>策略</li><li>观察[主动or被动]</li><li>工厂，抽象工厂</li><li>装饰</li><li>建造</li><li>组合</li><li>外观</li><li>状态</li><li>适配</li><li>反射机制</li></ul><p><img src="https://gitee.com/merlynr/img-store/raw/master/202113/%E9%AB%98%E8%BD%AF%E5%A4%8D%E8%AF%95%E6%9D%90%E6%96%99.jpg" alt="往年考试题"></p><h1 id="分数占比分析"><a href="#分数占比分析" class="headerlink" title="分数占比分析"></a>分数占比分析</h1><blockquote><p>概念:模式设计 = 六四开<br><font color="red">抓好概念，模式设计这些言之有理即可</font></p></blockquote><h1 id="复习记录"><a href="#复习记录" class="headerlink" title="复习记录"></a>复习记录</h1><h2 id="程序设计方法基础"><a href="#程序设计方法基础" class="headerlink" title="程序设计方法基础"></a>程序设计方法基础</h2><ol><li>传统分层</li></ol><p>划分方式： 物理/逻辑<br>层数：两/三层</p><ol start="2"><li>逻辑上的三层结构</li></ol><ul><li>显示层View/UI（User Interface)</li><li>业务逻辑层BLL（Business Logic Layer）</li><li>数据访问层DAL（Data Access Layer）</li></ul><ol start="3"><li>原则，目的，优点</li></ol><p>分层访问<strong>原则</strong>：不可跨层进行访问、当前层只处理该职责的业务<br><strong>目的</strong>：隔离/解耦合<br><strong>优点</strong>：可维护性/扩展性/性能/安全性/</p><h2 id="面向对象方法的引入"><a href="#面向对象方法的引入" class="headerlink" title="面向对象方法的引入"></a>面向对象方法的引入</h2><ol><li>推广原因</li></ol><p><strong>为了解决块间的同名变量冲突，就会在编程中进行封装（保护）的尝试</strong>，对封装的进一步发展就提出了对象的概念，并增加了类，类继承的概念。、</p><ol start="2"><li>那么如何度量派生继承是良好的呢？</li></ol><p><strong>存在问题</strong>：代码的重用性和可扩展性都大大提升了，但是也带来了强耦合</p><blockquote><p><font color="#FF726A">LSP</font>：Liskov Substitution Principle<br>里氏原则可度量继承关系的质量，是面向对象的重要基石，该原则使得软件的功能扩展成为可能。</p></blockquote><ul><li>向下兼容思想【高版本可以打开低版本，子类可以透明替代父类，反之则否】</li></ul><p>如何满足向下兼容，且可扩展？<br>功能模块的<strong>可修改性</strong>，即程序中函数的调用不是在编译的时候确定，而是在运行时刻被确定的。</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202113/1609667788985.png" alt="虚函数"></p><p><em>c++的虚基类用在控制重复继承上，表示这个基类在实例化子类时只生成一个副本 java只能单继承，不存在重复继承</em></p><ol start="3"><li>面向对象的特性</li></ol><ul><li>抽象(Abstraction)</li><li>封装(Encapsulation)</li><li>继承派生(Inheritance)</li><li>多态(Polymorphism)</li><li>组合(Composition)</li></ul><ol start="4"><li>面向对象引入的目的</li></ol><ul><li>重用（Reuse：Inheritance &amp; composition）</li><li>统一接口（Unified interface）</li><li>适用变化（Adapt to Change of Request）</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> exam </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> graduate student </tag>
+            
+            <tag> study </tag>
+            
+            <tag> plan </tag>
+            
+            <tag> exam </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>设计模式复习-2</title>
       <link href="2021/01/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%A4%8D%E4%B9%A0-2/"/>
       <url>2021/01/03/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E5%A4%8D%E4%B9%A0-2/</url>
@@ -916,37 +974,6 @@
             <tag> exam </tag>
             
             <tag> design-model </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>高级软件考试准备---研究生</title>
-      <link href="2021/01/03/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87---%E7%A0%94%E7%A9%B6%E7%94%9F/"/>
-      <url>2021/01/03/%E9%AB%98%E7%BA%A7%E8%BD%AF%E4%BB%B6%E8%80%83%E8%AF%95%E5%87%86%E5%A4%87---%E7%A0%94%E7%A9%B6%E7%94%9F/</url>
-      
-        <content type="html"><![CDATA[<h1 id="考试内容"><a href="#考试内容" class="headerlink" title="考试内容"></a>考试内容</h1><ol><li>面向对象</li></ol><ol start="2"><li>六大原则</li></ol><ul><li>单一职责原则</li><li>里氏替换原则</li><li>依赖倒置原则</li><li>接口隔离原则</li><li>迪米特法则</li><li>关闭原则</li></ul><ol start="3"><li>主讲了九个模式一个机制</li></ol><ul><li>策略</li><li>观察[主动or被动]</li><li>工厂，抽象工厂</li><li>装饰</li><li>建造</li><li>组合</li><li>外观</li><li>状态</li><li>适配</li><li>反射机制</li></ul><p><img src="https://gitee.com/merlynr/img-store/raw/master/202113/%E9%AB%98%E8%BD%AF%E5%A4%8D%E8%AF%95%E6%9D%90%E6%96%99.jpg" alt="往年考试题"></p><h1 id="分数占比分析"><a href="#分数占比分析" class="headerlink" title="分数占比分析"></a>分数占比分析</h1><blockquote><p>概念:模式设计 = 六四开<br><font color="red">抓好概念，模式设计这些言之有理即可</font></p></blockquote><h1 id="复习记录"><a href="#复习记录" class="headerlink" title="复习记录"></a>复习记录</h1><h2 id="程序设计方法基础"><a href="#程序设计方法基础" class="headerlink" title="程序设计方法基础"></a>程序设计方法基础</h2><ol><li>传统分层</li></ol><p>划分方式： 物理/逻辑<br>层数：两/三层</p><ol start="2"><li>逻辑上的三层结构</li></ol><ul><li>显示层View/UI（User Interface)</li><li>业务逻辑层BLL（Business Logic Layer）</li><li>数据访问层DAL（Data Access Layer）</li></ul><ol start="3"><li>原则，目的，优点</li></ol><p>分层访问<strong>原则</strong>：不可跨层进行访问、当前层只处理该职责的业务<br><strong>目的</strong>：隔离/解耦合<br><strong>优点</strong>：可维护性/扩展性/性能/安全性/</p><h2 id="面向对象方法的引入"><a href="#面向对象方法的引入" class="headerlink" title="面向对象方法的引入"></a>面向对象方法的引入</h2><ol><li>推广原因</li></ol><p><strong>为了解决块间的同名变量冲突，就会在编程中进行封装（保护）的尝试</strong>，对封装的进一步发展就提出了对象的概念，并增加了类，类继承的概念。、</p><ol start="2"><li>那么如何度量派生继承是良好的呢？</li></ol><p><strong>存在问题</strong>：代码的重用性和可扩展性都大大提升了，但是也带来了强耦合</p><blockquote><p><font color="#FF726A">LSP</font>：Liskov Substitution Principle<br>里氏原则可度量继承关系的质量，是面向对象的重要基石，该原则使得软件的功能扩展成为可能。</p></blockquote><ul><li>向下兼容思想【高版本可以打开低版本，子类可以透明替代父类，反之则否】</li></ul><p>如何满足向下兼容，且可扩展？<br>功能模块的<strong>可修改性</strong>，即程序中函数的调用不是在编译的时候确定，而是在运行时刻被确定的。</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202113/1609667788985.png" alt="虚函数"></p><p><em>c++的虚基类用在控制重复继承上，表示这个基类在实例化子类时只生成一个副本 java只能单继承，不存在重复继承</em></p><ol start="3"><li>面向对象的特性</li></ol><ul><li>抽象(Abstraction)</li><li>封装(Encapsulation)</li><li>继承派生(Inheritance)</li><li>多态(Polymorphism)</li><li>组合(Composition)</li></ul><ol start="4"><li>面向对象引入的目的</li></ol><ul><li>重用（Reuse：Inheritance &amp; composition）</li><li>统一接口（Unified interface）</li><li>适用变化（Adapt to Change of Request）</li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> exam </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> graduate student </tag>
-            
-            <tag> study </tag>
-            
-            <tag> plan </tag>
-            
-            <tag> exam </tag>
             
         </tags>
       
@@ -1046,35 +1073,6 @@
     
     
     <entry>
-      <title>学习D一天</title>
-      <link href="2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/"/>
-      <url>2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/</url>
-      
-        <content type="html"><![CDATA[<blockquote><p>Plane</p></blockquote><hr><ul><li><input checked="" disabled="" type="checkbox"> 提出信息安全理论项目初步计划</li><li><input checked="" disabled="" type="checkbox"> 14:00-16:00 读身份加密的材料</li><li><input checked="" disabled="" type="checkbox"> 16:10-17:20 完成医院系统项目日志集成</li></ul><p><em>- [ ]  18:50-20:50 数据库的系统学习</em></p><ul><li><input disabled="" type="checkbox"> 21:00-22:30 springmvc学习</li><li><input disabled="" type="checkbox"> 22:30-23:30 总结</li></ul><hr><h3 id="信息安全理论项目安排"><a href="#信息安全理论项目安排" class="headerlink" title="信息安全理论项目安排"></a>信息安全理论项目安排</h3><ol><li>李完成基本项目搭建及核心抓包功能实现</li><li>陈完成数据库表完成【先将需要的表构思一下发群里看一下】</li><li>邹完成规则及书写功能需求</li><li>郑和邹书写功能需求，及将规则写入后端</li><li>郑艺根据功能需求完成基本的框架搭建和样式</li></ol><h3 id="身份认证相关论文"><a href="#身份认证相关论文" class="headerlink" title="身份认证相关论文"></a>身份认证相关论文</h3><h4 id="A-Survey-of-Zero-Trust-Research"><a href="#A-Survey-of-Zero-Trust-Research" class="headerlink" title="A Survey of Zero Trust Research"></a>A Survey of Zero Trust Research</h4><p>@author 张宇 张妍【北京数字认证股份有限公司】</p><h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><ol><li>“边界防护”</li></ol><ol start="2"><li>何为无边界趋势下的网络安全问题</li><li></li><li>何为基于网络位置的隐式信任</li><li>何为静态防御</li><li>了解“ Google基于零信任构建的BeyondCorp项目”</li><li>了解“提出了软件定义边界（software defined perimeter,SDP)网络安全模型”</li><li>计算机专业词汇</li></ol><ul><li><strong>策略引擎（Policy Engine）：</strong> 该组件负责最终决定是否授予指定访问主体对资源（访问客体）的访问权限。策略引擎使用企业安全策略以及来自外部源（例如IP黑名单，威胁情报服务）的输入作为“信任算法”的输入，以决定授予或拒绝对该资源的访问，策略引擎的核心作用是信任评估。</li><li><strong>策略管理器（Policy Administrator）：</strong> 组件负责建立客户端与资源之间的连接。它将生成客户端用于访问企业资源的任何身份验证令牌或凭据。它与策略引擎紧密相关并依赖于其决定最终允许或拒绝连接，策略管理器的核心作用是策略判定点，是零信任动态权限的判定组件。</li><li><strong>策略执行点（Policy Enforcement Point）：</strong> 这实际上是一个组件系统，负责开始，持续监控、并最终结束访问主体与访问客体之间的连接。策略执行点实际可分为两个不同的组件：客户端组件（如用户笔记本电脑上的agent）与资源端组件（如资源前控制访问的网关），策略执行点的核心作用是确保业务的安全访问。</li><li><ul><li><strong>持续诊断和缓解计划系统（CDM System）：</strong> 该系统收集关于企业系统当前状态的信息，并将更新应用到配置和软件组件中。企业CDM系统还提供给策略引擎关于系统访问请求的信息。</li></ul></li><li><ul><li><strong>行业合规系统（Industry Compliance System）：</strong> 该系统确保企业与当前政府管理的一致性。包括企业开发的所有策略规则来确保合规。</li></ul></li><li><ul><li><strong>威胁情报流（Threat Intelligence）：</strong> 该系统提供帮助策略引擎进行访问决策的信息。</li></ul></li><li><ul><li><strong>数据访问策略（Data Access Policy）：</strong> 数据访问策略是企业为企业资源创建的关于数据访问的属性、规则和策略的集合。策略规则集可以编码在策略引擎中或有PE动态生成。</li></ul></li><li><ul><li><strong>企业公钥基础设施（PKI）：</strong> 该系统负责生成和记录企业对资源、应用等发布的证书。既包括全局CA生态系统和联邦PKI。</li></ul></li><li><ul><li><strong>ID管理系统（ID Management）：</strong> 系统负责创建、保存和管理企业用户帐户和身份记录。系统中既含有必要的用户信息，也含有其他企业特征，比如角色、访问属性、或分配的系统。</li></ul></li><li><ul><li><strong>安全应急和事件管理系统（SIEM System）：</strong> 集合了系统日志、网络流量、资源权利和其他信息的企业系统为企业信息系统体佛那个安全态势的反馈。</li></ul></li></ul><ol start="8"><li>何为分配基于二元决策的策略</li><li>了解RADIUS协议</li><li>了解SSO方式认证</li></ol><h5 id="梳理"><a href="#梳理" class="headerlink" title="梳理"></a>梳理</h5><h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>如何进行动态认证？如何有效进行动态认证？</p><p><a href="https://www.secrss.com/articles/14045">引用</a><br><a href="chrome-extension://gfbliohnnapiefjpjlpjnehglfpaknnc/pages/pdf_viewer.html?r=https://www.gartner.com/teamsiteanalytics/servePDF?g=/imagesrv/media-products/pdf/Qi-An-Xin/Qianxin-1-1XXWAXWM.pdf">引用</a></p><h3 id="对于数据库的详细学习"><a href="#对于数据库的详细学习" class="headerlink" title="对于数据库的详细学习"></a>对于数据库的详细学习</h3>]]></content>
-      
-      
-      <categories>
-          
-          <category> daily report </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> daily </tag>
-            
-            <tag> study </tag>
-            
-            <tag> plan </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>当前区块链交易的缺陷</title>
       <link href="2020/11/10/%E5%BD%93%E5%89%8D%E5%8C%BA%E5%9D%97%E9%93%BE%E4%BA%A4%E6%98%93%E7%9A%84%E7%BC%BA%E9%99%B7/"/>
       <url>2020/11/10/%E5%BD%93%E5%89%8D%E5%8C%BA%E5%9D%97%E9%93%BE%E4%BA%A4%E6%98%93%E7%9A%84%E7%BC%BA%E9%99%B7/</url>
@@ -1096,6 +1094,35 @@
             <tag> paper </tag>
             
             <tag> block chain </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>学习D一天</title>
+      <link href="2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/"/>
+      <url>2020/11/10/%E5%AD%A6%E4%B9%A0D%E4%B8%80%E5%A4%A9/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>Plane</p></blockquote><hr><ul><li><input checked="" disabled="" type="checkbox"> 提出信息安全理论项目初步计划</li><li><input checked="" disabled="" type="checkbox"> 14:00-16:00 读身份加密的材料</li><li><input checked="" disabled="" type="checkbox"> 16:10-17:20 完成医院系统项目日志集成</li></ul><p><em>- [ ]  18:50-20:50 数据库的系统学习</em></p><ul><li><input disabled="" type="checkbox"> 21:00-22:30 springmvc学习</li><li><input disabled="" type="checkbox"> 22:30-23:30 总结</li></ul><hr><h3 id="信息安全理论项目安排"><a href="#信息安全理论项目安排" class="headerlink" title="信息安全理论项目安排"></a>信息安全理论项目安排</h3><ol><li>李完成基本项目搭建及核心抓包功能实现</li><li>陈完成数据库表完成【先将需要的表构思一下发群里看一下】</li><li>邹完成规则及书写功能需求</li><li>郑和邹书写功能需求，及将规则写入后端</li><li>郑艺根据功能需求完成基本的框架搭建和样式</li></ol><h3 id="身份认证相关论文"><a href="#身份认证相关论文" class="headerlink" title="身份认证相关论文"></a>身份认证相关论文</h3><h4 id="A-Survey-of-Zero-Trust-Research"><a href="#A-Survey-of-Zero-Trust-Research" class="headerlink" title="A Survey of Zero Trust Research"></a>A Survey of Zero Trust Research</h4><p>@author 张宇 张妍【北京数字认证股份有限公司】</p><h5 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h5><ol><li>“边界防护”</li></ol><ol start="2"><li>何为无边界趋势下的网络安全问题</li><li></li><li>何为基于网络位置的隐式信任</li><li>何为静态防御</li><li>了解“ Google基于零信任构建的BeyondCorp项目”</li><li>了解“提出了软件定义边界（software defined perimeter,SDP)网络安全模型”</li><li>计算机专业词汇</li></ol><ul><li><strong>策略引擎（Policy Engine）：</strong> 该组件负责最终决定是否授予指定访问主体对资源（访问客体）的访问权限。策略引擎使用企业安全策略以及来自外部源（例如IP黑名单，威胁情报服务）的输入作为“信任算法”的输入，以决定授予或拒绝对该资源的访问，策略引擎的核心作用是信任评估。</li><li><strong>策略管理器（Policy Administrator）：</strong> 组件负责建立客户端与资源之间的连接。它将生成客户端用于访问企业资源的任何身份验证令牌或凭据。它与策略引擎紧密相关并依赖于其决定最终允许或拒绝连接，策略管理器的核心作用是策略判定点，是零信任动态权限的判定组件。</li><li><strong>策略执行点（Policy Enforcement Point）：</strong> 这实际上是一个组件系统，负责开始，持续监控、并最终结束访问主体与访问客体之间的连接。策略执行点实际可分为两个不同的组件：客户端组件（如用户笔记本电脑上的agent）与资源端组件（如资源前控制访问的网关），策略执行点的核心作用是确保业务的安全访问。</li><li><ul><li><strong>持续诊断和缓解计划系统（CDM System）：</strong> 该系统收集关于企业系统当前状态的信息，并将更新应用到配置和软件组件中。企业CDM系统还提供给策略引擎关于系统访问请求的信息。</li></ul></li><li><ul><li><strong>行业合规系统（Industry Compliance System）：</strong> 该系统确保企业与当前政府管理的一致性。包括企业开发的所有策略规则来确保合规。</li></ul></li><li><ul><li><strong>威胁情报流（Threat Intelligence）：</strong> 该系统提供帮助策略引擎进行访问决策的信息。</li></ul></li><li><ul><li><strong>数据访问策略（Data Access Policy）：</strong> 数据访问策略是企业为企业资源创建的关于数据访问的属性、规则和策略的集合。策略规则集可以编码在策略引擎中或有PE动态生成。</li></ul></li><li><ul><li><strong>企业公钥基础设施（PKI）：</strong> 该系统负责生成和记录企业对资源、应用等发布的证书。既包括全局CA生态系统和联邦PKI。</li></ul></li><li><ul><li><strong>ID管理系统（ID Management）：</strong> 系统负责创建、保存和管理企业用户帐户和身份记录。系统中既含有必要的用户信息，也含有其他企业特征，比如角色、访问属性、或分配的系统。</li></ul></li><li><ul><li><strong>安全应急和事件管理系统（SIEM System）：</strong> 集合了系统日志、网络流量、资源权利和其他信息的企业系统为企业信息系统体佛那个安全态势的反馈。</li></ul></li></ul><ol start="8"><li>何为分配基于二元决策的策略</li><li>了解RADIUS协议</li><li>了解SSO方式认证</li></ol><h5 id="梳理"><a href="#梳理" class="headerlink" title="梳理"></a>梳理</h5><h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>如何进行动态认证？如何有效进行动态认证？</p><p><a href="https://www.secrss.com/articles/14045">引用</a><br><a href="chrome-extension://gfbliohnnapiefjpjlpjnehglfpaknnc/pages/pdf_viewer.html?r=https://www.gartner.com/teamsiteanalytics/servePDF?g=/imagesrv/media-products/pdf/Qi-An-Xin/Qianxin-1-1XXWAXWM.pdf">引用</a></p><h3 id="对于数据库的详细学习"><a href="#对于数据库的详细学习" class="headerlink" title="对于数据库的详细学习"></a>对于数据库的详细学习</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> daily report </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> daily </tag>
+            
+            <tag> study </tag>
+            
+            <tag> plan </tag>
             
         </tags>
       
