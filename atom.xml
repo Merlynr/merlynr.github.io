@@ -6,7 +6,7 @@
   <link href="https://merlynr.github.io/atom.xml" rel="self"/>
   
   <link href="https://merlynr.github.io/"/>
-  <updated>2021-07-12T16:00:00.000Z</updated>
+  <updated>2021-07-13T06:46:43.362Z</updated>
   <id>https://merlynr.github.io/</id>
   
   <author>
@@ -17,13 +17,26 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title></title>
+    <link href="https://merlynr.github.io/2021/07/13/attachments/1626158803254.table/"/>
+    <id>https://merlynr.github.io/2021/07/13/attachments/1626158803254.table/</id>
+    <published>2021-07-13T06:46:43.362Z</published>
+    <updated>2021-07-13T06:46:43.362Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>强化学习</title>
     <link href="https://merlynr.github.io/2021/07/13/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
     <id>https://merlynr.github.io/2021/07/13/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</id>
     <published>2021-07-12T16:00:00.000Z</published>
     <updated>2021-07-12T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>监督学习在机器学习中取得了重大的成功，然而在<strong>顺序决策制定</strong>和<strong>控制问题</strong>中，比如无人直升机、无人汽车等，难以给出显式的监督信息，因此这类问题中<strong>监督模型无法学习</strong>。<br>强化学习就是为了解决这类问题而产生的。在强化学习框架中，学习算法被称为一个agent，假设这个agent处于一个环境中，两者之间存在交互。<font color="#9400D3">agent通过与环境交互不断增强对环境的适应力，故得名强化学习。</font></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626145210759.png" alt="强化学习"></p><p>在每个时间步 $t$ ，agent：</p><ul><li>接受状态 $s _ { t }$</li><li>接受标量回报 $r _ { t }$</li><li>执行行动 $a _ { t }$</li></ul><p>环境：</p><ul><li>接受动作 $a _ { t }$</li><li>产生状态 $s _ { t }$</li><li>产生标量回报 $r _ { t }$</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>监督学习在机器学习中取得了重大的成功，然而在<strong>顺序决策制定</strong>和<strong>控制问题</strong>中，比如无人直升机、无人汽车等，难以给出显式的监督信息，因此这类问题中<strong>监督模型无法学习</strong>。<br>强化学习就是为了解决这类问题而产生的。在强化学习框架中，学习算法被称为一个agent，假设这个agent处于一个环境中，两者之间存在交互。<font color="#9400D3">agent通过与环境交互不断增强对环境的适应力，故得名强化学习。</font></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626145210759.png" alt="强化学习"></p><p>在每个时间步 $t$ ，agent：</p><ul><li>接受状态 $s _ { t }$</li><li>接受标量回报 $r _ { t }$</li><li>执行行动 $a _ { t }$</li></ul><p>环境：</p><ul><li>接受动作 $a _ { t }$</li><li>产生状态 $s _ { t }$</li><li>产生标量回报 $r _ { t }$</li></ul><h2 id="MDP-马尔科夫决策过程"><a href="#MDP-马尔科夫决策过程" class="headerlink" title="MDP(马尔科夫决策过程)"></a>MDP(马尔科夫决策过程)</h2><p>通常我们都是从MDP（马尔科夫决策过程）来了解强化学习的。MDP问题中，我们有一个五元组： $( S , A , P , \gamma , P )$</p><ul><li>$S$ :状态集，由agent所有可能的状态组成</li><li>$A$ :动作集，由agent所有可能的行动构成</li><li>$P ( s , a , s ^ { \prime } )$ :转移概率分布，表示状态s下执行动作a后下个时刻状态的概率分布</li><li>$\gamma$ :折扣因子，0≤ $\gamma$ ≤1，表示未来回报相对于当前回报的重要程度。如果 $\gamma$ =0，表示只重视当前立即回报； $\gamma$ =1表示将未来回报视为与当前回报同等重要。【<font color="#FF8C00">这块不懂，可以看后面下围棋的栗子</font>】</li><li>$R ( s , a , s ^ { \prime } )$ :标量立即回报函数。执行动作a，导致状态s转移到s′产生的回报。可以是关于状态-动作的函数 $S \times A \rightarrow R$ ，也可以是只关于状态的函数 $S \rightarrow R$ 。记t时刻的回报为 $r _ { t }$ ，为了后续表述方便，假设我们感兴趣的问题中回报函数只取决于状态，而状态-动作函数可以很容易地推广，这里暂不涉及。</li></ul><p><strong><font color="#8B008B">注：</font></strong> 这里阐述的MDP称为discounted MDP，即<font color="#00008B">带折扣因子的MDP</font>。有些MDP也可以定义为四元组： $( S , A , P , R )$ ，这是<em>因为这类MDP中使用的值函数不考虑折扣因子</em>。</p><blockquote><p>**<font color="#9932CC">马尔可夫性质</font>*<em>：当一个随机过程在给定现在状态及所有过去状态情况下，其未来状态的条件概率分布<font color="#006400">仅依赖于当前状态</font>；换句话说，在给定现在状态时，它与过去状态（即该过程的历史路径）是<font color="#1E90FF">条件独立</font>的，那么此随机过程即具有马尔可夫性质。<br>例如：</em>明天的天气（是否下大雨）仅与今天的天气（是否刮大风）有关，而与前天及以前的天气无关*。</p></blockquote><p>MDP过程具有马尔科夫性质，即给定当前状态，未来的状态与过去的状态无关。但与马尔科夫链不同的是，MDP还考虑了<strong>动作</strong>，也就是说MDP中状态的转移不仅和状态有关，还依赖于agent采取的动作。</p><p>我们可以通过下面表格了解各种马尔科夫模型的区别：</p><table><thead><tr><th></th><th>不考虑动作</th><th>考虑动作</th></tr></thead><tbody><tr><td>状态可观测</td><td>马尔科夫链（MC）</td><td>马尔科夫决策过程（MDP）</td></tr><tr><td>状态不完全可观测</td><td>隐马尔科夫模型（HMM）</td><td>不完全可观察马尔可夫决策过程（POMDP）</td></tr></tbody></table><p><strong><font color="#FF8C00">MDP的运行过程：</font></strong><br><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626158954807.png" alt="MDP"></p><p>我们从初始状态 $s _ { 0 }$ 出发，执行某个动作 $a _ { 0 }$ ，根据转移概率分布确定下一个状态 $s _ { 1 }$ ∼ $P _ { s0a0 }$ ，接着执行动作 $a _ { 1 }$ ，再根据 $P _ { s1a1 }$ 确定 $s _ { 2 }$ …。</p><p>一个discounted MDP中，我们的目标最大化一个累积未来折扣回报:<br>$R _ { t } = \sum _ { k = 0 } ^ { \infty } \gamma ^ { k } r _ { t + k + 1 }$</p>]]></content>
     
     
     <summary type="html">【可選】文章描述</summary>
@@ -565,34 +578,6 @@
     <category term="kernal trick" scheme="https://merlynr.github.io/tags/kernal-trick/"/>
     
     <category term="kernal function" scheme="https://merlynr.github.io/tags/kernal-function/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>协方差矩阵</title>
-    <link href="https://merlynr.github.io/2021/05/26/%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5/"/>
-    <id>https://merlynr.github.io/2021/05/26/%E5%8D%8F%E6%96%B9%E5%B7%AE%E7%9F%A9%E9%98%B5/</id>
-    <published>2021-05-25T16:00:00.000Z</published>
-    <updated>2021-05-26T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="方差和协方差的定义"><a href="#方差和协方差的定义" class="headerlink" title="方差和协方差的定义"></a>方差和协方差的定义</h2><p><font color="#184471"><strong>方差</strong>：</font>用来度量单个随机变量的离散程度</p><p>$$\sigma_{x}^{2}=\frac{1}{n-1} \sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)^{2}$$</p><p><font color="#D3B2F7">为什么样本方差的分母是n-1？</font></p><pre><code>最简单的原因，是因为因为均值已经用了n个数的平均来做估计在求方差时，只有(n-1)个数和均值信息是不相关的。而你的第ｎ个数已经可以由前(n-1)个数和均值　来唯一确定，实际上没有信息量。所以在计算方差时，只除以(n-1)。</code></pre><p><font color="#0C5F6C"><strong>协方差</strong>：</font>一般用来刻画两个随机变量的相似程度</p><p>$$\sigma(x, y)=\frac{1}{n-1} \sum_{i=1}^{n}\left(x_{i}-\bar{x}\right)\left(y_{i}-\bar{y}\right)$$</p><p>在公式中，符号 $\bar{x}, \bar{y}$ 分别表示两个随机变量所对应的观测样本均值，据此，我们发现：方差 $\sigma_{x}^{2}$ 可视作随机变量 x 关于其自身的协方差 $\sigma(x, x)$ .</p><h2 id="从方差-协方差到协方差矩阵"><a href="#从方差-协方差到协方差矩阵" class="headerlink" title="从方差/协方差到协方差矩阵"></a>从方差/协方差到协方差矩阵</h2><p>根据方差的定义，给定 $d$ 个随机变量 $x_{k},k=1,2,\ldots,d$ ，则这些随机变量的方差为<br>$$\sigma\left(x_{k},x_{k}\right)=\frac{1}{n-1}\sum_{i=1}^{n}\left(x_{k i}-\bar{x}_{k}\right)^{2},k=1,2,\ldots,d$$</p><p> $x_{k i}$ 表示随机变量 $x_{k}$ 中的第 $i$ 个观测样本，$n$  表示样本量，每个随机变量所对应的观测样本数量均为 $n$ 。<br> 对于这些随机变量，我们还可以根据协方差的定义，求出<strong>两两之间的协方差</strong>，即<br> <img src="https://gitee.com/merlynr/img-store/raw/master/2021527/1622097407978.png"></p><p> 因此，协方差矩阵为 $$\Sigma=\left[\begin{array}{ccc}\sigma\left(x_{1}, x_{1}\right)&amp;\cdots&amp;\sigma\left(x_{1},x_{d}\right)\\vdots&amp;\ddots&amp;\vdots\\sigma\left(x_{d},x_{1}\right)&amp;\cdots&amp;\sigma\left(x_{d},x_{d}\right)\end{array}\right]\in\mathbb{R}^{d\times d}$$<br>其中，对角线上的元素为各个随机变量的方差，非对角线上的元素为两两随机变量之间的协方差，根据协方差的定义，我们可以认定：矩阵 $\Sigma$ 为<font color="#AB8E35">对称矩阵</font>(symmetric matrix)，其大小为 $d$ x $d$ 。</p><h2 id="多元正态分布与线性变换"><a href="#多元正态分布与线性变换" class="headerlink" title="多元正态分布与线性变换"></a>多元正态分布与线性变换</h2><blockquote><p><font color="#EFED2E">多元正态分布</font>—n维的多元正态分布，也称为多元高斯分布</p></blockquote><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021526/1622033779880.png" alt="多元正态分布图"></p><p>假设一个向量 $x$ 服从均值向量为 $\boldsymbol{\mu}$ 、协方差矩阵为 $\Sigma$ 的多元正态分布(multi-variate Gaussian distribution)【第二章】，则 $$p(\boldsymbol{x})=|2 \pi \Sigma|^{-1 / 2} \exp \left(-\frac{1}{2}(\boldsymbol{x}-\boldsymbol{\mu})^{T} \Sigma^{-1}(\boldsymbol{x}-\boldsymbol{\mu})\right)$$</p><blockquote><p><font color="#DE8937">联立理解：</font>多元正态分布<br><img src="https://gitee.com/merlynr/img-store/raw/master/2021526/1622035698486.png" alt="多元正态分布"></p></blockquote><p>令该分布的均值向量为 $\boldsymbol{\mu}=\mathbf{0}$ ，由于指数项外面的系数 $|2 \pi \Sigma|^{-1 / 2}$ 通常作为常数，故可将多元正态分布简化为 $$p(\boldsymbol{x}) \propto \exp \left(-\frac{1}{2} \boldsymbol{x}^{T} \Sigma^{-1} \boldsymbol{x}\right)$$<br>再令 $\boldsymbol{x}=(y, z)^{T}$ ，包含两个随机变量 $y$ 和 $z$ ，则协方差矩阵可写成如下形式： $$ \Sigma=\left[\begin{array}{ll}\sigma(y, y) &amp; \sigma(y, z) \ \sigma(z, y) &amp; \sigma(z, z)\end{array}\right] \in \mathbb{R}^{2 \times 2} $$<br>用<font color="#006EFF">单位矩阵</font>(identity matrix) $I$ 作为<font color="#183D66">协方差矩阵</font>，随机变量 $y$ 和 $z$ 的方差均为1，则生成如干个随机数如图所示。 </p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021526/1622038800402.png" alt="图1二元正态分布"></p><blockquote><p><font color="#DE8937">知识补充：</font>单位矩阵<br> 单位矩阵是个方阵，从左上角到右下角的对角线（称为主对角线）上的元素均为1。除此以外全都为0。<strong>任何矩阵与单位矩阵相乘都等于本身</strong><br><img src="https://gitee.com/merlynr/img-store/raw/master/2021526/1622039427482.png" alt="单位矩阵"></p></blockquote><p>在生成的若干个随机数中，每个点的似然为 $$ \mathcal{L}(\boldsymbol{x}) \propto \exp \left(-\frac{1}{2} \boldsymbol{x}^{T} \boldsymbol{x}\right) $$</p><blockquote><p><font color="">知识补充：</font>线性变换<br><a href="https://www.bilibili.com/video/av6043439">视频教学</a><br>线性性质一：直线在变换后仍然保持为直线，不能弯曲；线性性质二：原点是固定不变的</p></blockquote><p>对图[二元正态分布]中的所有点考虑一个线性变换(linear transformation)：$\boldsymbol{t}=A \boldsymbol{x}$  ，我们能够得到图</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021526/1622039676816.png" alt="图2 经过线性变换的二元正态分布，先将图1的纵坐标压缩0.5倍，再将所有点逆时针旋转30°得到"></p><p>在线性变换中，矩阵 $A$ 被称为<strong>变换矩阵</strong>(transformation matrix)，为了将图1中的点经过线性变换得到我们想要的图2，其实我们需要构造两个矩阵：</p><ul><li><strong>尺度矩阵</strong>(scaling matrix)： $$S=\left[\begin{array}{cc}s_{y}&amp;0\0&amp;s_{z}\end{array}\right]$$</li><li><strong>旋转矩阵</strong>(rotation matrix)： $$R=\left[\begin{array}{cc}\cos(\theta)&amp;-\sin(\theta)\\sin(\theta)&amp;\cos(\theta)\end{array}\right]$$<br>其中， $\theta$ 为顺时针旋转的度数。</li></ul><blockquote><p><font color="#8591A6">补充知识：</font>变换矩阵、尺度矩阵和旋转矩阵三者的关系式<br>$A=R S$</p></blockquote><p>在这个例子中，尺度矩阵为 $S=\left[\begin{array}{l l}1&amp;0\0&amp;\frac{1}{2}\end{array}\right]$ ，旋转矩阵为 $R=\left[\begin{array}{c c}\cos\left(-\frac{\pi}{6}\right)&amp;-\sin\left(-\frac{\pi}{6}\right)\\sin\left(-\frac{\pi}{6}\right)&amp;\cos\left(-\frac{\pi}{6}\right)\end{array}\right]=\left[\begin{array}{c c}\frac{\sqrt{3}}{2}&amp;\frac{1}{2}\-\frac{1}{2}&amp;\frac{\sqrt{3}}{2}\end{array}\right]$ ，故变换矩阵为 $A=R S=\left[\begin{array}{cc}\frac{\sqrt{3}}{2}&amp;\frac{1}{4}\-\frac{1}{2}&amp;\frac{\sqrt{3}}{4}\end{array}\right]$</p><p>另外，需要考虑的是，经过了线性变换，$t$  的分布是什么样子呢？</p><p>将 $\boldsymbol{x}=A^{-1} \boldsymbol{t}$ 带入前面给出的似然 $\mathcal{L}(\boldsymbol{x})$ ，有 $\mathcal{L}(\boldsymbol{t}) \propto \exp \left(-\frac{1}{2}\left(A^{-1} \boldsymbol{t}\right)^{T}\left(A^{-1} \boldsymbol{t}\right)\right)$<br>$=\exp \left(-\frac{1}{2} \boldsymbol{t}^{T}\left(A A^{T}\right)^{-1} \boldsymbol{t}\right)$</p><p>由此可以得到，多元正态分布的协方差矩阵为 $$\Sigma=A A^{T}=\left[\begin{array}{cc}\frac{\sqrt{3}}{2} &amp; \frac{1}{4} \ -\frac{1}{2} &amp; \frac{\sqrt{3}}{4}\end{array}\right]\left[\begin{array}{cc}\frac{\sqrt{3}}{2} &amp; -\frac{1}{2} \ \frac{1}{4} &amp; \frac{\sqrt{3}}{4}\end{array}\right]=\left[\begin{array}{cc}\frac{13}{16} &amp; -\frac{3 \sqrt{3}}{16} \ -\frac{3 \sqrt{3}}{16} &amp; \frac{7}{16}\end{array}\right]$$</p><h2 id="协方差矩阵的特征值分解"><a href="#协方差矩阵的特征值分解" class="headerlink" title="协方差矩阵的特征值分解"></a>协方差矩阵的特征值分解</h2><blockquote><p>回到我们已经学过的线性代数内容，对于任意对称矩阵 $\Sigma$ ，存在一个特征值分解(eigenvalue decomposition, EVD)： $$\Sigma=U \Lambda U^{T}$$ 其中, $U$ 的每一列都是相互正交的特征向量，且是单位向量，满足 $U^{T}U=I$ ， $\Lambda$ 对角线上的元素是从大到小排列的特征值，非对角线上的元素均为0。</p></blockquote><p>当然，这条公式在这里也可以很容易地写成如下形式： $$\Sigma=\left(U \Lambda^{1 / 2}\right)\left(U \Lambda^{1 / 2}\right)^{T}=A A^{T}$$<br>其中，$A=U \Lambda^{1 / 2}$  ，因此，通俗地说，<font color="#226771">任意一个协方差矩阵都可以视为线性变换的结果。</font><br>在上面的例子中，<strong>特征向量构成的矩阵</strong>为 $$U=R=\left[\begin{array}{cc}\cos (\theta) &amp; -\sin (\theta) \ \sin (\theta) &amp; \cos (\theta)\end{array}\right]=\left[\begin{array}{cc}\frac{\sqrt{3}}{2} &amp; \frac{1}{2} \ -\frac{1}{2} &amp; \frac{\sqrt{3}}{2}\end{array}\right]$$<br><strong>特征值构成的矩阵</strong>为<br>$$\Lambda=S S^{T}=\left[\begin{array}{cc}s_{y}^{2} &amp; 0 \ 0 &amp; s_{z}^{2}\end{array}\right]=\left[\begin{array}{ll}1 &amp; 0 \ 0 &amp; \frac{1}{4}\end{array}\right]$$<br>到这里，我们发现：多元正态分布的概率密度是由<font color="#BD5A5D">协方差矩阵的特征向量控制旋转(rotation)</font>，<font color="">特征值控制尺度(scale)</font>，除了协方差矩阵，<font color="#810006">均值向量会控制概率密度的位置</font>，在图1和图2中，均值向量为 $0$ ，因此，概率密度的中心位于坐标原点。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;方差和协方差的定义&quot;&gt;&lt;a href=&quot;#方差和协方差的定义&quot; class=&quot;headerlink&quot; title=&quot;方差和协方差的定义&quot;&gt;&lt;/a&gt;方差和协方差的定义&lt;/h2&gt;&lt;p&gt;&lt;font color=&quot;#184471&quot;&gt;&lt;strong&gt;方差&lt;/strong&gt;：</summary>
-      
-    
-    
-    
-    <category term="algorithm" scheme="https://merlynr.github.io/categories/algorithm/"/>
-    
-    
-    <category term="graduate student" scheme="https://merlynr.github.io/tags/graduate-student/"/>
-    
-    <category term="study" scheme="https://merlynr.github.io/tags/study/"/>
-    
-    <category term="algorithm" scheme="https://merlynr.github.io/tags/algorithm/"/>
     
   </entry>
   
