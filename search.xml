@@ -4,6 +4,101 @@
   
     
     <entry>
+      <title>强化学习</title>
+      <link href="2021/07/13/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/"/>
+      <url>2021/07/13/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/</url>
+      
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>监督学习在机器学习中取得了重大的成功，然而在<strong>顺序决策制定</strong>和<strong>控制问题</strong>中，比如无人直升机、无人汽车等，难以给出显式的监督信息，因此这类问题中<strong>监督模型无法学习</strong>。<br>强化学习就是为了解决这类问题而产生的。在强化学习框架中，学习算法被称为一个agent，假设这个agent处于一个环境中，两者之间存在交互。<font color="#9400D3">agent通过与环境交互不断增强对环境的适应力，故得名强化学习。</font></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626145210759.png" alt="强化学习"></p><p>在每个时间步 $t$ ，agent：</p><ul><li>接受状态$s _ { t }$</li><li>接受标量回报$r _ { t }$</li><li>执行行动$a _ { t }$</li></ul><p>环境：</p><ul><li>接受动作at</li><li>产生状态st</li><li>产生标量回报rt</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> graduate student </tag>
+            
+            <tag> study </tag>
+            
+            <tag> algorithm </tag>
+            
+            <tag> machine leaning </tag>
+            
+            <tag> deep learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>暑假学习安排以及前段学习总结</title>
+      <link href="2021/07/11/%E6%9A%91%E5%81%87%E5%AD%A6%E4%B9%A0%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E5%89%8D%E6%AE%B5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+      <url>2021/07/11/%E6%9A%91%E5%81%87%E5%AD%A6%E4%B9%A0%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E5%89%8D%E6%AE%B5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/</url>
+      
+        <content type="html"><![CDATA[<h2 id="已完成–前段时间"><a href="#已完成–前段时间" class="headerlink" title="已完成–前段时间"></a>已完成–前段时间</h2><ol><li>观看学习了吴恩达的机器学习课程视频，观看的主要的目的是对于机器学习有个整体的观念，同时我也学到了机器学习实验中简单的调参，验证以及最后结果的分析。</li><li>总结性的略读了几篇业务流程中对于异常的检测的paper，主要还是通过根据时间特征来检测事件的状态，主要包括有：<ul><li>基于时间边界的事件异常检测【通过对事件划分时间边界】</li><li>基于关键路径【确认业务流程关键路径，比对花费所时间】</li><li>通过对于执行时间建模方法来预测【即构建所有活动持续时间直立方图，然后通过比对当前节点和余下节点在图中占比来预测】</li><li>综合时间模型和流程步骤分析【综合运用时间统计模型和通过多个步骤分析方法生成运行时间概率分布、计算异常概率、与阈值比较的方法，提出一种基于运行的异常预测算法来预测工作流中的时间异常，该算法分为即设计时段和运行时段两个阶段，在设计时段，生成该模型所有可能产生的运行轨迹，并计算它们的预计执行时间的概率分布；在运行时段，通过分析计算流程超时的可能性与预设的阈值做比较来判断是否预测为异常】</li></ul></li><li>精读了2019年较为新的paper【基于机器学习的流程异常预测方法】，文中作者提出一种混合模型，就是结合了通过标注时间时间来对超期异常预测，但是由于系统执行时间很容易受到环境等因素导致超过人工标注时间，所以作者提出了通过机器学习学习各个事件在整个流程的流程所消费的时间占比来预测异常。自己对于其中的算法和模型都进行详细了解，同时结合以前略读的论文，感觉这篇论文就是结合了一下前人的方法，没有实际创新点。</li><li>整理了关于业务流程预测中的详细研究方向：<pre><code>- 预测完成一个案件的剩余时间- 流程预测结果评估【二元评估】- 预测下一个事件</code></pre></li><li>对于业务流程预测下一事件进行系统学习【只完成了部分,这一部分吗主要是2016年以前的论文，即普遍是用机器模型，而更复杂的深度学习模型是2016年后被应用到】：<ul><li>利用数据的时间分类特征来预测，使用更高阶马尔可夫模型（HMMs，这里指的是隐马尔可夫模型）和使用序列比对的流程结果来预测过程的下一个步骤。个人理解就是将序列KNN与HMMs相结合，通过HMMs学习数据，获得高阶模型，然后混合了序列KNN的替换矩阵，利用局部序列对比，<strong>降低了高阶HMMs的弱覆盖的缺陷影响</strong>。</li><li>针对处理半结构化业务流程数据，提出一种针对特定事件进程的模型（PPM），个人学习理解它作为过渡模型，主要负责学习记录半结构化业务流程的实例，和替换矩阵，然后映射到扩展马尔可夫链预测【当遇到并行事务的时候通过递归的方式学习转换矩阵】，作者的优点主要体现在针对<strong>半结构化业务流程数据</strong>进行预测。 </li></ul></li></ol><h2 id="未完成及原因–前段时间"><a href="#未完成及原因–前段时间" class="headerlink" title="未完成及原因–前段时间"></a>未完成及原因–前段时间</h2><ol><li>机器学习还是需要实操来检验自己所理解的知识，但是由于前期花费在理论上的时间比较多，同花了很多时间在数学上，虽然准备了环境准备实操但是也没有按时完成，也搁浅了。</li><li>在系统了解学习对于业务异常检测的时候中，还有两篇关于结合积极语义模型和受病毒传播启发病毒传染模型启发的时间延迟传播模型的预测检测的方法没有阅读，主要由于后面确认了自己要研究预测下一步，所以就没有继续阅读了。</li><li>在预测行为异常的论文中多次提到了对数据进行初始标注，但是都没有详细说明，所以这块没有详细研究，后面也没继续关注</li><li>本来应该在七月底将2016年前关于业务流程预测下一步的几篇全部看完，但是由于中间整理实验数据跑一下基本的模型【结果也没跑，数据量过大，笔记本不行，在挖掘流程的时候就很卡】，还有遇到了考试月就耽误了</li></ol><h2 id="暑假安排"><a href="#暑假安排" class="headerlink" title="暑假安排"></a>暑假安排</h2><ol><li>7.25号之前将剩下的四五篇关键论文看完【2016年前】</li><li>8.20系统学习看一下深度学习中在流程预测的使用，目前查阅的主要有循环神经网络，MMs，语法感知技术，基于过程发现技术，基于自动机的预测技术等，我现在收集了相关14篇论文【有一些是重复的改进模型】，开始可能看的慢一点，后面应该会快一点</li><li>读深度学习相关论文的时候，开始我会阅读最早的三四篇，然后后面倒着读剩下的，这样一旦有idea也能知道自己的想法是不是与最新的重复了。</li><li>9.17-9.27回家过个中秋，同时发小结婚</li></ol><h2 id="期望"><a href="#期望" class="headerlink" title="期望"></a>期望</h2><ol><li>老师前面提到与公司项目相结合，使用公司的数据，我当时考虑的是使用公工数据集，这样有对比也易于发表，现在我能想到的是，本来后面要帮老师做那个RPA程序，就想的后面在大论文中加入一部分流程挖掘，正好可以利用公司的日志信息挖掘，然后根据数据训练模型【这一块明天有空和老师聊一下哇，因为老师让我做的那块貌似没有日志哇，所以交流一下哇】</li><li>在我阅读业务流程预测论文的过程中，我开始发现预测事件由传统机器学习中的序列匹配开始向深度学习中的NLP靠拢，通过学习事件之间的因果来预测下一步，可能这块研究没有NLP那么超前，所以基本模型没有配套，但是依旧可以向他们学习，这样更加容易改进模型发表paper</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> plane </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> graduate student </tag>
+            
+            <tag> study </tag>
+            
+            <tag> summarize </tag>
+            
+            <tag> plan </tag>
+            
+            <tag> paper </tag>
+            
+            <tag> machine learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>预测精度分析</title>
+      <link href="2021/07/08/%E9%A2%84%E6%B5%8B%E7%B2%BE%E5%BA%A6%E5%88%86%E6%9E%90/"/>
+      <url>2021/07/08/%E9%A2%84%E6%B5%8B%E7%B2%BE%E5%BA%A6%E5%88%86%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/qq_41196612/article/details/107265167">R语言实战——基于KNN聚类的时间序列分析预测_三只佩奇不结义的博客-CSDN博客_r语言knn回归及预测</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> paper </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> study </tag>
+            
+            <tag> plan </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>瘾</title>
       <link href="2021/07/07/%E7%98%BE/"/>
       <url>2021/07/07/%E7%98%BE/</url>
@@ -48,7 +143,7 @@
       <link href="2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/"/>
       <url>2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/</url>
       
-        <content type="html"><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>对于多样性流程进行异常预测</p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><ol><li>序列k近邻法（KNN）</li><li>基于序列比对的马尔科夫模型扩展法</li></ol><p><font color="#1E90FF">思路：</font><br>利用数据的时间分类特征，利用高阶马尔可夫模型预测过程的下一步，并利用序列对比技术预测过程的结果。通过考虑基于k个最近邻的相似过程序列的子集，增加了数据的多样性方面。</p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>已经证明，通过一组实验，序列k最近邻提法比原始提供更好的结果;我们的扩展马尔可夫模型优于随机猜测、马尔可夫模型和隐马尔可夫模型。</p><blockquote><p><font color="#2e4e7e">知识补充</font><br><a href="https://blog.zuishuailcq.xyz/2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/">KNN（K近邻法 K Nearest Neighbors） | 吾辈之人，自当自强不息！</a><br><a href="https://blog.zuishuailcq.xyz/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/">Markov Model（马尔可夫模型） | 吾辈之人，自当自强不息！</a></p></blockquote><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>在进行流程预测的前，我们需要从日志中挖掘流程。通过分析数据，可以得知数据为带有时间序列的数据。</p><h2 id="序列比对"><a href="#序列比对" class="headerlink" title="序列比对"></a>序列比对</h2><h2 id="预测模型"><a href="#预测模型" class="headerlink" title="预测模型"></a>预测模型</h2><h2 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h2><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2>]]></content>
+        <content type="html"><![CDATA[<h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>对于多样性流程进行异常预测</p><h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><ol><li>序列k近邻法（KNN）</li><li>基于序列比对的马尔科夫模型扩展法</li></ol><p><font color="#1E90FF">思路：</font><br>利用数据的时间分类特征，利用高阶马尔可夫模型预测过程的下一步，并利用序列对比技术预测过程的结果。通过考虑基于k个最近邻的相似过程序列的子集，增加了数据的多样性方面。</p><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>已经证明，通过一组实验，序列k最近邻提法比原始提供更好的结果;我们的扩展马尔可夫模型优于随机猜测、马尔可夫模型和隐马尔可夫模型。</p><blockquote><p><font color="#2e4e7e">知识补充</font><br><a href="https://blog.zuishuailcq.xyz/2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/">KNN（K近邻法 K Nearest Neighbors） | 吾辈之人，自当自强不息！</a><br><a href="https://blog.zuishuailcq.xyz/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/">Markov Model（马尔可夫模型） | 吾辈之人，自当自强不息！</a></p></blockquote><h2 id="阐述"><a href="#阐述" class="headerlink" title="阐述"></a>阐述</h2><p>在进行流程预测的前，我们需要从日志中挖掘流程。通过分析数据，可以得知数据为带有<strong>时间序列</strong>的数据。1999年已经有人证明MMs适用于研究用户网上浏览行为。同时事件序列也可用于训练已经<strong>编码后续事件之间的转换概率</strong>的马尔可夫模型，<br>类似其它机器学习模型，越是高阶的模型越是拟合数据，预测结果也更加准确。</p><blockquote><p><font color="#FF1493">知识补充</font><br>在马尔可夫链的每一步，系统根据概率分布，可以从一个状态变到另一个状态,也可以保持当前状态。状态的改变叫做过渡，与不同的状态改变相关的概率叫做<strong>过渡概率</strong><br><font color="#006400">TODO </font>默认预测的提出没有仔细研究<br>当给定数据集很少时，导致无法机器学习和准确预测，所以为了解决这个问题，提出了几个为了解决特征和默认事件之间的非线性依赖关系的模型，通过补充特征默认值来补充数据，进行预测。<strong>默认预测</strong></p></blockquote><p>但是当数据多样化同时不聚集的时候，会导致高阶模型弱覆盖，对于未被覆盖的序列，就需要默认预测。但是默认预测会降低模型的准确度。<br><em>在马尔可夫模型中</em>，为了平衡覆盖与准确性，一般解决思想是合并多个不同阶的MMs的转换状态，然后在预测的时候遵循“冗余”状态。例如可选择马尔可夫模型（selective Markov model）</p><blockquote><p>TODO<br>遵循“冗余”状态的实际意义是什么？它的实际表现是什么<br>an extension of All Kth order Markov models (Deshpande &amp; Karypis, 2004)</p></blockquote><blockquote><p><font color="#2F4F4F">知识补充</font><br>个人理解<strong>弱覆盖</strong>是由于特征广而弱，无法高效学习，导致有一些特征被丢弃没有学习到。</p></blockquote><p>第二部部分讲述的是采用kNN算法来预测过程结果，即通过比对给定领域内的序列，找到最相似的序列。06年有研究者发表“预测使用电信公司的数据流失”，用欧几里德距离来计算给定序列与样本之间的距离。</p><blockquote><p>TODO 生物顺序结合没懂</p></blockquote><p>在本文中作者将KNN与生物学的序列对齐组合形成顺序kNN。</p><blockquote><p><font color="#bf242a">知识补充</font><br><strong>编辑距离</strong>是针对二个字符串（例如英文字）的差异程度的量化量测，量测方式是看至少需要多少次的处理才能将一个字符串变成另一个字符串。</p></blockquote><h3 id="creation"><a href="#creation" class="headerlink" title="creation"></a>creation</h3><blockquote><p>TODO 不理解下面的匹配机制</p></blockquote><p>首先是为了解决高阶MMs弱覆盖，提出了MMs和序列对准融合的技术。当预测模型无法找到预测实例对应的序列时，<strong>应用匹配过程</strong>以便从与给定序列中最相似的转换矩阵中提取那些序列（图案）。</p><p>其次是提出一种预测结果的序列kNN方法，即通过比对序列局部结果，然后比对相似程度，获得预测结果</p><h2 id="序列比对"><a href="#序列比对" class="headerlink" title="序列比对"></a>序列比对</h2><p><font color="#FF1493">为了确定序列相似性</font><br>序列比对主要类似于生物学中的新的DNA序列与DNA数据库进行比较。将DNA序列的事务与蛋白质数据库进行比较，以验证它们之间的关系是否可能发生在发生概率之间。</p><blockquote><p>序列比对<br>包括全局比对和局部比对<br>全局比对是提供了全局优化解决方案，遍历所有查询序列的整个长度。<br>局部比对旨在从两个查询序列中找到最相似的段</p></blockquote><p>我们在MMs中并不是使用当前的序列比对算法，而是使用序列比对的思想；同时作者提出<strong>局部序列比对与kNNs的结合</strong>使用方法：【替换矩阵】</p><blockquote><p><font color="#006400">知识补充</font><br>在序列比对算法中的<strong>替换矩阵</strong>又称为打分矩阵，其数学本质是统计权重。<br><a href="https://zhuanlan.zhihu.com/p/150582377">替换矩阵（计分矩阵）| 原理和作用 - 知乎</a><br>在序列比对中，我们一般需要给出一个定量的数值来描述两者的一致性和相似性。在此过程中，替换矩阵用来评价碱基或残基之间的相似性，在长期实践中，人们发现一些特定的碱基替换或者残基替换的频率是要高于另一些替换的，因此人们可以通过统计方法或者基于进化的突变模型来给每一种替换定义不同的分值，来体现出不同碱基或残基之间发生替换的可能性。其可以分成核酸序列替换矩阵和蛋白质序列替换矩阵。</p></blockquote><p> <strong><font color="#9932CC">替换矩阵：</font></strong><br> <em>生物学中用于描述单位时间内，一个氨基酸转换为另一个氨基酸的速率</em>。本文中替换矩阵作为单位矩阵，主对角线的元素是1，其他元素都是0。为了呈现突变，使用了更复杂形式的替代矩阵。上边<font color="#1E90FF">知识补充</font>中提到不同的矩阵不同值可以更好表现序列单元之间转换的可能性与频率。<font color="#FF00FF">我的理解是序列对比的权重表</font>。</p><p> <strong><font color="#9932CC">打分矩阵</font></strong><br> 即模型打分矩阵函数：</p><p> <img src="https://gitee.com/merlynr/img-store/raw/master/2021710/1625901529848.png" alt="初始化"></p><p> <img src="https://gitee.com/merlynr/img-store/raw/master/2021710/1625901755301.png" alt="计算公式"><br><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>y</mi><mi>j</mi></msub><mo>)</mo></math>是替换矩阵中Xi与Yj的替换分数。<br><font color="#483D8B">TODO</font> 公式中有个别参数读不懂</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021710/1625902300497.png" alt="栗子"></p><p><strong><font color="#FF8C00">案例：</font></strong><br>序列ABCDE与序列EBCAD对应的打分矩阵，根据分数高低来寻找最佳片段，然后沿着对角线从最高点到左上角，直至分数为0，来确定匹配序列，如图栗子中为BC。</p><h2 id="预测模型"><a href="#预测模型" class="headerlink" title="预测模型"></a>预测模型</h2><p><strong><font color="#9932CC">前提：</font></strong><br>本模型目的是在流程实例中预测<math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mi>s</mi><mrow><mi>i</mi></mrow><mrow><mo>(</mo><mi>N</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msubsup></math>下一事件<math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mi>s</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow><mrow><mo>(</mo><mi>N</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msubsup></math>。其中<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>S</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub></math>业务流程中的事件的预测是基于<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>S</mi><mo>=</mo><mo>{</mo><msub><mi>S</mi><mn>1</mn></msub><mo>,</mo><msub><mi>S</mi><mn>2</mn></msub><mo>&#x22EF;</mo><msub><mi>S</mi><mi>N</mi></msub><mo>}</mo></math></p><p>其中一个业务流程实例（Sj）是按时间顺序排列的离散事件(或任务)的组合Sj=<img src="https://gitee.com/merlynr/img-store/raw/master/2021710/1625906179169.png" alt="enter description here">，而单个事件是来自于事件类型的有限集合<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>E</mi><mo>=</mo><mo>{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mo>&#x22EF;</mo><mo>,</mo><msub><mi>e</mi><mi>L</mi></msub><mo>}</mo></math></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021710/1625907751234.png" alt="predict model"></p><h3 id="MMs"><a href="#MMs" class="headerlink" title="MMs"></a>MMs</h3><p><a href="https://blog.zuishuailcq.xyz/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/">Markov Model（马尔可夫模型） | 吾辈之人，自当自强不息！</a></p><p>同时文中为了保障预测模型准确性，提出构建 <strong><font color="#006400">动态MMs</font></strong> ，通过存储单个事件在数据集中的次数、紧跟事件发生的下一个事件在数据集中的次数（事件A的下一个事件为B，这里指B的次数）和转换矩阵。还可以通过将折扣因子与事件数量结合，这样就可以在加入新数据时更新折扣因子来提供更多权重。</p><blockquote><p><strong><font color="#9400D3">知识补充</font></strong> 折扣因子<br><a href="https://www.zhihu.com/question/61389929">(95 封私信 / 79 条消息) 马尔可夫决策过程中为什么需要discount factor ，也就是问为啥时间近的状态影响越大？ - 知乎</a><br><a href="https://www.jianshu.com/p/678f57342d0b">#David Silver Reinforcement Learning # 笔记2-MDP - 简书</a><br><a href="https://www.cnblogs.com/wacc/p/5391209.html">强化学习笔记1 - Hiroki - 博客园</a></p></blockquote><h3 id="HMM"><a href="#HMM" class="headerlink" title="HMM"></a>HMM</h3><h3 id="混合模型"><a href="#混合模型" class="headerlink" title="混合模型"></a>混合模型</h3><h2 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h2><h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2>]]></content>
       
       
       <categories>
@@ -69,6 +164,41 @@
             <tag> paper </tag>
             
             <tag> machine learning </tag>
+            
+            <tag> deep learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>KNN（K近邻法 K Nearest Neighbors）</title>
+      <link href="2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/"/>
+      <url>2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/25994179">一文搞懂k近邻（k-NN）算法（一） - 知乎</a></p><p><a href="https://blog.csdn.net/qq_20412595/article/details/82013677">机器学习算法（2）之K近邻算法_不曾走远的博客-CSDN博客</a></p><p><a href="https://blog.csdn.net/pxhdky/article/details/85080980">【机器学习】K近邻法（KNN）与kd树原理详解_齐在的专栏-CSDN博客</a></p><p>TODO 序列KNN</p><h2 id="KNN概述"><a href="#KNN概述" class="headerlink" title="KNN概述"></a>KNN概述</h2><ul><li>常用有监督学习方法</li><li>常用分类方法</li><li>同时也是回归方法</li><li>是懒惰学习</li></ul><blockquote><p><font color="#ff7500">扩展学习</font><br>懒惰学习是一种训练集处理方法，其会<font color="#012C54">在收到测试样本的同时进行训练</font>，与之相对的是急切学习，其会<font color="#8A2BE2">在训练阶段开始对样本进行学习</font>处理。</p></blockquote><p><font color="#FF8C00">基本思路：</font><br>如果一个待分类样本在特征空间中的k个最相似(即特征空间中K近邻)的样本中的大多数属于某一个类别，则该样本也属于这个类别，即近朱者赤，近墨者黑。</p><h2 id="KNN算法介绍"><a href="#KNN算法介绍" class="headerlink" title="KNN算法介绍"></a>KNN算法介绍</h2><h3 id="KNN模型"><a href="#KNN模型" class="headerlink" title="KNN模型"></a>KNN模型</h3><p><strong>kNN使用的模型实际上对应于对特征空间的划分。</strong></p><p><font color="#006400">由三个及基本要素组成：</font></p><ul><li>距离度量</li><li>k值的选择</li><li>决策规划</li></ul><ol><li>距离度量</li></ol><p>KNN中使用的距离度量可以是欧式距离、曼哈顿距离、切比雪夫距离或者一般的闵可夫斯基距离。</p><blockquote><p><font color="#9932CC">知识补充</font><br>设特征空间 $X$ 是 $n$ 维实数向量空间<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>R</mi><mi>n</mi></msup></math>，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>x</mi><mi>j</mi></msub></math>∈ $X$ ，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><mo>(</mo><msubsup><mi>x</mi><mi>i</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>x</mi><mi>i</mi><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msubsup><mo>)</mo><mo>,</mo><mo>&#x22EF;</mo><mo>,</mo><msubsup><mi>x</mi><mi>i</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></msubsup><msup><mo>)</mo><mi>T</mi></msup></math>，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>j</mi></msub><mo>=</mo><mo>(</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msubsup><mo>)</mo><mo>,</mo><mo>&#x22EF;</mo><mo>,</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></msubsup><msup><mo>)</mo><mi>T</mi></msup></math></p><ol><li><p>闵可夫斯基距离（Minkowski distance,<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离）<br><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>x</mi><mi>j</mi></msub></math>的<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离定义为：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491452207.png"><br>其中，p ≥ 1 。 </p></li><li><p>曼哈顿距离（Manhattan distance）<br>当p = 1 时，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离就变成了曼哈顿距离：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491491032.png"></p></li><li><p>欧式距离（Euclidean distance）<br>当p = 2时，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离就变成了欧式距离：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491674920.png"></p></li><li><p>切比雪夫距离（Chebyshev distance）<br>当<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>=</mo><mo>&#x221E;</mo><mo>,</mo><msub><mi>L</mi><mi>p</mi></msub></math>距离就变成了切比雪夫距离，它是各个坐标距离的最大值：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491693716.png"></p></li></ol></blockquote><ol start="2"><li>k值选择（借鉴李航–统计学习方法）</li></ol><p>如果k值较小，则训练误差减少，只有与输入实例相似的训练实例才会对于预测结果起作用,“学习”<font color="#D2691E">近似误差会减小</font>，但泛化误差提高了，预测结果会对近邻实例点非常敏感。k值较小意味着模型变得复杂，容易发生<font color="#0000FF">过拟合</font>。</p><p>如果k值较大，可以减少泛化误差，其优点是可以<font color="#D2691E">减少学习的估计误差</font>，但训练误差会增加，这时与输入实例相差较远的训练实例也会对预测结果起作用。k值较大意味着模型变得简单，容易发生<font color="#0000FF">欠拟合</font>。</p><p>通常情况下，我们需要对 k 经过多种尝试，来决定到底使用多大的 k 来作为最终参数。k通常会在3～10直接取值，或者是k等于训练数据的<font color="#DC143C">平方根</font>。比如15个数据，可能会取k=4。<br>第二种方法，选择能使测试集达到最优的k kk，即能够使得如MAPE等衡量预测准确度的统计量达到最小；<br>第三种方法，同时训练多个函数不同参数k kk的模型，然后取所有模型的预测值的平均值作为最终的预测值。</p><p>当k = 1时，k近邻算法就是最近邻算法。k值一般<font color="#FF1493">采用交叉验证法选取最优值</font>。</p><ol start="3"><li>决策规划</li></ol><p>通常，在分类任务中使用投票法计算最终预测结果，在回归任务中使用平均法，还可基于距离远近进行加权平均或加权投票。</p><h3 id="KNN算法描述"><a href="#KNN算法描述" class="headerlink" title="KNN算法描述"></a>KNN算法描述</h3><p>下面以<font color="#008B8B">分类</font>任务为例，介绍KNN算法，回归任务与此类似，区别不大。</p><p>输入：训练数据集<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>=</mo><mo>{</mo><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>y</mi><mi>i</mi></msub><mo>)</mo><msubsup><mo>}</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup></math>    ，其中，<img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625492364666.png"> 是实例的类别。<br>过程：</p><ul><li>根据给定的距离度量，在训练集D中找出与x最邻近的k个点，涵盖着k 个点的领域记为<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>N</mi><mi>k</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo></math>；</li><li>在<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>N</mi><mi>k</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo></math>中根据分类决策规则决定x的类别y： <img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625492543638.png" alt="所属类别"><br>输出：测试样本x xx所属的类别y yy。</li></ul><h2 id="KNN算法实现"><a href="#KNN算法实现" class="headerlink" title="KNN算法实现"></a>KNN算法实现</h2><h3 id="KNN算法蛮力实现"><a href="#KNN算法蛮力实现" class="headerlink" title="KNN算法蛮力实现"></a>KNN算法蛮力实现</h3><p> 首先我们看看最想当然的方式。</p><pre><code> 既然我们要找到k个最近的邻居来做预测，那么我们只需要计算预测样本和所有训练集中的样本的距离，然后计算出最小的k个距离即可，接着多数表决，很容易做出预测。这个方法的确简单直接，在样本量少，样本特征少的时候有效。但是在实际运用中很多时候用不上，为什么呢？因为我们经常碰到样本的特征数有上千以上，样本量有几十万以上，如果我们这要去预测少量的测试集样本，算法的时间效率很成问题。因此，这个方法我们一般称之为蛮力实现。&lt;font color=&quot;#1E90FF&quot;&gt;比较适合于少量样本的简单模型的时候用&lt;/font&gt;。</code></pre><h3 id="KD树实现原理"><a href="#KD树实现原理" class="headerlink" title="KD树实现原理"></a>KD树实现原理</h3><pre><code>KD树算法没有一开始就尝试对测试样本分类，而是先对训练集建模，建立的模型就是KD树，建好了模型再对测试集做预测。所谓的KD树就是K个特征维度的树，注意这里的K和KNN中的K的意思不同。KNN中的K代表特征输出类别，KD树中的K代表样本特征的维数。为了防止混淆，后面我们称特征维数为n。</code></pre><p>KD树算法包括三步，第一步是建树，第二部是搜索最近邻，最后一步是预测。</p><h4 id="KD树的建立"><a href="#KD树的建立" class="headerlink" title="KD树的建立"></a>KD树的建立</h4><p>我们首先来看建树的方法。KD树建树采用的是从m个样本的n维特征中，分别计算n个特征的取值的方差，用<font color="#DC143C">方差最大</font>的第k维特征<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mi>k</mi></msub></math>来作为<font color="#B22222">根节点</font>。对于这个特征，我们选择特征<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mi>k</mi></msub></math>的取值的中位数<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mi>kv</mi></msub></math>对应的样本作为划分点，对于所有第k维特征的取值小于<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mi>kv</mi></msub></math>的样本，我们划入左子树，对于第k维特征的取值大于等于<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mi>kv</mi></msub></math>的样本，我们划入右子树，对于左子树和右子树，我们采用和刚才同样的办法来找方差最大的特征来做<font color="#B22222">根节点，递归</font>的生成KD树。</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625494718364.png" alt="构建KD树"></p><p>比如我们有二维样本6个，{(2,3)，(5,4)，(9,6)，(4,7)，(8,1)，(7,2)}，构建kd树的具体步骤为：</p><ol><li>找到划分的特征。6个数据点在x，y维度上的数据方差分别为6.97，5.37，所以在x轴上方差更大，用第1维特征建树。</li><li>确定划分点（7,2）。根据x维上的值将数据排序，6个数据的中值(所谓中值，即中间大小的值)为7，所以划分点的数据是（7,2）。这样，该节点的分割超平面就是通过（7,2）并垂直于：划分点维度的直线x=7；（很显然，中位数为6 ，这里选择（5,4）或者(7,2)都是可以的。这种情况任选一个即可）</li><li>确定左子空间和右子空间。 分割超平面x=7将整个空间分为两部分：x&lt;=7的部分为左子空间，包含3个节点={(2,3),(5,4),(4,7)}；另一部分为右子空间，包含2个节点={(9,6)，(8,1)}。</li><li>用同样的办法划分左子树的节点{(2,3),(5,4),(4,7)}和右子树的节点{(9,6)，(8,1)}。最终得到KD树。</li><li>后续步骤反复上面的，<font color="#8FBC8F">直到两个子区域没有实例存在时停止（这意味着最后所有训练实例都对应一个叶结点或内部结点），从而形成kd树的区域划分</font>。</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625495422262.png" alt="KD树"></p><p><font color="#DC143C">标准kNN算法的切分特征选择是按顺序的，后来对kd树的一个重大改进是选择方差最大的特征，方差越大，不同实例点区分越明显，更方便进行划分。</font></p><h4 id="KD树搜索最近邻"><a href="#KD树搜索最近邻" class="headerlink" title="KD树搜索最近邻"></a>KD树搜索最近邻</h4><p>当我们生成KD树以后，就可以去预测测试集里面的样本目标点了。对于一个目标点，我们<font color="#9932CC">首先在KD树里面找到包含目标点的叶子节点</font>。<font color="#0000FF">以目标点为圆心，以目标点到叶子节点样本实例的距离为半径，得到一个超球体</font>，<font color="#B22222">最近邻的点一定在这个超球体内部</font>。然后返回叶子节点的父节点，检查另一个子节点包含的超矩形体是否和超球体相交，如果相交就到这个子节点寻找是否有更加近的近邻,有的话就更新最近邻。如果不相交那就简单了，我们直接返回父节点的父节点，在另一个子树继续搜索最近邻。当回溯到根节点时，算法结束，此时保存的最近邻节点就是最终的最近邻。</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625496230689.png" alt="目标点为（2，4.5）"></p><p>从上面的描述可以看出，KD树划分后可以大大减少无效的最近邻搜索，很多<font color="#8A2BE2">样本点由于所在的超矩形体和超球体不相交，根本不需要计算距离。大大节省了计算时间。</font></p><p>先进行二叉查找，先从（7,2）查找到（5,4）节点，在进行查找时是由y = 4为分割超平面的，由于查找点为y值为4.5，因此进入右子空间查找到（4,7），形成搜索路径&lt;(7,2)，(5,4)，(4,7)&gt;，但 （4,7）与目标查找点的距离为3.202，而（5,4）与查找点之间的距离为3.041，所以（5,4）为查询点的最近点； 以（2，4.5）为圆心，以3.041为半径作圆，如下图所示。可见该圆和y = 4超平面交割，所以需要进入（5,4）左子空间进行查找，也就是将（2,3）节点加入搜索路径中得&lt;(7,2)，(2,3)&gt;；于是接着搜索至（2,3）叶子节点，（2,3）距离（2,4.5）比（5,4）要近，所以最近邻点更新为（2，3），最近距离更新为1.5；回溯查找至（5,4），直到最后回溯到根结点（7,2）的时候，以（2,4.5）为圆心1.5为半径作圆，并不和x = 7分割超平面交割，如下图所示。至此，搜索路径回溯完，返回最近邻点（2,3），最近距离1.5。</p><h3 id="球树实现原理"><a href="#球树实现原理" class="headerlink" title="球树实现原理"></a>球树实现原理</h3><p>KD树算法虽然提高了KNN搜索的效率，但是在某些时候效率并不高，比如当处理不均匀分布的数据集时,不管是近似方形，还是矩形，甚至正方形，都不是最好的使用形状，因为他们都有角。一个例子如下图：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625496491462.png" alt="enter description here"></p><p>　　如果黑色的实例点离目标点星点再远一点，那么虚线圆会如红线所示那样扩大，导致与左上方矩形的右下角相交，既然相 交了，那么就要检查这个左上方矩形，而实际上，最近的点离星点的距离很近，检查左上方矩形区域已是多余。于此我们看见，KD树把二维平面划分成一个一个矩形，但矩形区域的角却是个难以处理的问题。</p><p>　　为了优化超矩形体导致的搜索效率的问题，有人引入了球树，这种结构可以优化上面的这种问题。</p><p><strong><font color="#7FFF00">球树的建立</font></strong></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625496601030.png" alt="球树"></p><ol><li>先构建一个超球体，这个超球体是可以包含所有样本的最小球体。</li><li>从球中选择一个离球的中心最远的点，然后选择第二个点离第一个点最远，将球中所有的点分配到离这两个聚类中心最近的一个上，然后计算每个聚类的中心，以及聚类能够包含它所有数据点所需的最小半径。这样我们得到了两个子超球体，和KD树里面的左右子树对应。（PS:<font color="#B22222">这里选择两个点后，就以这两个点来聚类，所以先确定的是以这两个点为中心来计算其他点到该中心的距离。当所有点都确定自己的中心后，再重新计算一次该超球体的半径和球心</font>。）</li><li>对于这两个子超球体，递归执行步骤2，最终得到了一个球树。</li></ol><p>　　可以看出KD树和球树类似，主要区别在于球树得到的是节点样本组成的最小超球体，而KD得到的是节点样本组成的超矩形体，这个超球体要与对应的KD树的超矩形体小，这样在做最近邻搜索的时候，可以避免一些无谓的搜索。</p><h2 id="KNN优缺点"><a href="#KNN优缺点" class="headerlink" title="KNN优缺点"></a>KNN优缺点</h2><p>优点：</p><ol><li>结构简单；</li><li>无数据输入假定，准确度高，对异常点不敏感。</li><li> 训练时间复杂度比支持向量机之类的算法低，仅为O(n)</li><li> 由于KNN方法主要靠周围有限的邻近的样本，而不是靠判别类域的方法来确定所属类别的，因此对于类域的交叉或重叠较多的待分样本集来说，KNN方法较其他方法更为适合</li></ol><p>缺点：</p><ol><li>计算复杂度高、空间复杂度高；</li><li>样本不平衡时，对稀有类别预测准确度低；</li><li>使用懒惰学习，预测速度慢。</li><li>KD树，球树之类的模型建立需要大量的内存</li><li>相比决策树模型，KNN模型可解释性不强<h2 id="什么情况下选择KNN"><a href="#什么情况下选择KNN" class="headerlink" title="什么情况下选择KNN"></a>什么情况下选择KNN</h2></li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/202177/1625667539256.png" alt="choose"></p><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p><a href="https://www.cnblogs.com/ybjourney/p/4702562.html">机器学习（一）——K-近邻（KNN）算法 - Yabea - 博客园</a></p><h2 id="序列KNN"><a href="#序列KNN" class="headerlink" title="序列KNN"></a>序列KNN</h2><p><a href="https://antkillerfarm.github.io/ml/2017/10/19/Machine_Learning_28.html">机器学习（二十八）——KNN, AutoML, 数据不平衡问题</a></p><p><a href="https://blog.csdn.net/qq_41196612/article/details/107265167">R语言实战——基于KNN聚类的时间序列分析预测_三只佩奇不结义的博客-CSDN博客_r语言knn回归及预测</a></p><p><a href="https://www.coder.work/article/383913">python - 如何使用 KNN/K-means 对数据帧中的时间序列进行聚类 - IT工具网</a></p><p><a href="https://github.com/iwuqing/Time-Series-Classification-based-on-KNN">iwuqing/Time-Series-Classification-based-on-KNN: 基于KNN聚类算法结合Dynamic Time Warping（动态时间调整）的时间序列分类</a></p><p><a href="https://github.com/vvanggeng/TSC-KNN">vvanggeng/TSC-KNN: 基于KNN和DTW的时间序列分类</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> graduate student </tag>
+            
+            <tag> study </tag>
+            
+            <tag> paper </tag>
+            
+            <tag> algorithm </tag>
+            
+            <tag> machine leaning </tag>
             
             <tag> deep learning </tag>
             
@@ -103,44 +233,9 @@
             
             <tag> algorithm </tag>
             
-            <tag> deep learning </tag>
-            
             <tag> machine leaning </tag>
             
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>KNN（K近邻法 K Nearest Neighbors）</title>
-      <link href="2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/"/>
-      <url>2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/</url>
-      
-        <content type="html"><![CDATA[<p><a href="https://zhuanlan.zhihu.com/p/25994179">一文搞懂k近邻（k-NN）算法（一） - 知乎</a></p><p><a href="https://blog.csdn.net/qq_20412595/article/details/82013677">机器学习算法（2）之K近邻算法_不曾走远的博客-CSDN博客</a></p><p><a href="https://blog.csdn.net/pxhdky/article/details/85080980">【机器学习】K近邻法（KNN）与kd树原理详解_齐在的专栏-CSDN博客</a></p><p>TODO 序列KNN</p><h2 id="KNN概述"><a href="#KNN概述" class="headerlink" title="KNN概述"></a>KNN概述</h2><ul><li>常用有监督学习方法</li><li>常用分类方法</li><li>同时也是回归方法</li><li>是懒惰学习</li></ul><blockquote><p><font color="#ff7500">扩展学习</font><br>懒惰学习是一种训练集处理方法，其会<font color="#012C54">在收到测试样本的同时进行训练</font>，与之相对的是急切学习，其会<font color="#8A2BE2">在训练阶段开始对样本进行学习</font>处理。</p></blockquote><p><font color="#FF8C00">基本思路：</font><br>如果一个待分类样本在特征空间中的k个最相似(即特征空间中K近邻)的样本中的大多数属于某一个类别，则该样本也属于这个类别，即近朱者赤，近墨者黑。</p><h2 id="KNN算法介绍"><a href="#KNN算法介绍" class="headerlink" title="KNN算法介绍"></a>KNN算法介绍</h2><h3 id="KNN模型"><a href="#KNN模型" class="headerlink" title="KNN模型"></a>KNN模型</h3><p><strong>kNN使用的模型实际上对应于对特征空间的划分。</strong></p><p><font color="#006400">由三个及基本要素组成：</font></p><ul><li>距离度量</li><li>k值的选择</li><li>决策规划</li></ul><ol><li>距离度量</li></ol><p>KNN中使用的距离度量可以是欧式距离、曼哈顿距离、切比雪夫距离或者一般的闵可夫斯基距离。</p><blockquote><p><font color="#9932CC">知识补充</font><br>设特征空间 $X$ 是 $n$ 维实数向量空间<math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>R</mi><mi>n</mi></msup></math>，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>x</mi><mi>j</mi></msub></math>∈ $X$ ，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub><mo>=</mo><mo>(</mo><msubsup><mi>x</mi><mi>i</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>x</mi><mi>i</mi><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msubsup><mo>)</mo><mo>,</mo><mo>&#x22EF;</mo><mo>,</mo><msubsup><mi>x</mi><mi>i</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></msubsup><msup><mo>)</mo><mi>T</mi></msup></math>，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>j</mi></msub><mo>=</mo><mo>(</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo>(</mo><mn>1</mn><mo>)</mo></mrow></msubsup><mo>,</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo>(</mo><mn>2</mn><mo>)</mo></mrow></msubsup><mo>)</mo><mo>,</mo><mo>&#x22EF;</mo><mo>,</mo><msubsup><mi>x</mi><mi>j</mi><mrow><mo>(</mo><mi>n</mi><mo>)</mo></mrow></msubsup><msup><mo>)</mo><mi>T</mi></msup></math></p><ol><li><p>闵可夫斯基距离（Minkowski distance,<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离）<br><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>x</mi><mi>j</mi></msub></math>的<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离定义为：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491452207.png"><br>其中，p ≥ 1 。 </p></li><li><p>曼哈顿距离（Manhattan distance）<br>当p = 1 时，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离就变成了曼哈顿距离：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491491032.png"></p></li><li><p>欧式距离（Euclidean distance）<br>当p = 2时，<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>L</mi><mi>p</mi></msub></math>距离就变成了欧式距离：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491674920.png"></p></li><li><p>切比雪夫距离（Chebyshev distance）<br>当<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>p</mi><mo>=</mo><mo>&#x221E;</mo><mo>,</mo><msub><mi>L</mi><mi>p</mi></msub></math>距离就变成了切比雪夫距离，它是各个坐标距离的最大值：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625491693716.png"></p></li></ol></blockquote><ol start="2"><li>k值选择（借鉴李航–统计学习方法）</li></ol><p>如果k值较小，则训练误差减少，只有与输入实例相似的训练实例才会对于预测结果起作用,“学习”<font color="#D2691E">近似误差会减小</font>，但泛化误差提高了，预测结果会对近邻实例点非常敏感。k值较小意味着模型变得复杂，容易发生<font color="#0000FF">过拟合</font>。</p><p>如果k值较大，可以减少泛化误差，其优点是可以<font color="#D2691E">减少学习的估计误差</font>，但训练误差会增加，这时与输入实例相差较远的训练实例也会对预测结果起作用。k值较大意味着模型变得简单，容易发生<font color="#0000FF">欠拟合</font>。</p><p>通常情况下，我们需要对 k 经过多种尝试，来决定到底使用多大的 k 来作为最终参数。k通常会在3～10直接取值，或者是k等于训练数据的<font color="#DC143C">平方根</font>。比如15个数据，可能会取k=4。</p><p>当k = 1时，k近邻算法就是最近邻算法。k值一般<font color="#FF1493">采用交叉验证法选取最优值</font>。</p><ol start="3"><li>决策规划</li></ol><p>通常，在分类任务中使用投票法计算最终预测结果，在回归任务中使用平均法，还可基于距离远近进行加权平均或加权投票。</p><h3 id="KNN算法描述"><a href="#KNN算法描述" class="headerlink" title="KNN算法描述"></a>KNN算法描述</h3><p>下面以<font color="#008B8B">分类</font>任务为例，介绍KNN算法，回归任务与此类似，区别不大。</p><p>输入：训练数据集<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>D</mi><mo>=</mo><mo>{</mo><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>y</mi><mi>i</mi></msub><mo>)</mo><msubsup><mo>}</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>m</mi></msubsup></math>    ，其中，<img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625492364666.png"> 是实例的类别。<br>过程：</p><ul><li>根据给定的距离度量，在训练集D中找出与x最邻近的k个点，涵盖着k 个点的领域记为<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>N</mi><mi>k</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo></math>；</li><li>在<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>N</mi><mi>k</mi></msub><mo>(</mo><mi>x</mi><mo>)</mo></math>中根据分类决策规则决定x的类别y： <img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625492543638.png" alt="所属类别"><br>输出：测试样本x xx所属的类别y yy。</li></ul><h2 id="KNN算法实现"><a href="#KNN算法实现" class="headerlink" title="KNN算法实现"></a>KNN算法实现</h2><h3 id="KNN算法蛮力实现"><a href="#KNN算法蛮力实现" class="headerlink" title="KNN算法蛮力实现"></a>KNN算法蛮力实现</h3><p> 首先我们看看最想当然的方式。</p><pre><code> 既然我们要找到k个最近的邻居来做预测，那么我们只需要计算预测样本和所有训练集中的样本的距离，然后计算出最小的k个距离即可，接着多数表决，很容易做出预测。这个方法的确简单直接，在样本量少，样本特征少的时候有效。但是在实际运用中很多时候用不上，为什么呢？因为我们经常碰到样本的特征数有上千以上，样本量有几十万以上，如果我们这要去预测少量的测试集样本，算法的时间效率很成问题。因此，这个方法我们一般称之为蛮力实现。&lt;font color=&quot;#1E90FF&quot;&gt;比较适合于少量样本的简单模型的时候用&lt;/font&gt;。</code></pre><h3 id="KD树实现原理"><a href="#KD树实现原理" class="headerlink" title="KD树实现原理"></a>KD树实现原理</h3><pre><code>KD树算法没有一开始就尝试对测试样本分类，而是先对训练集建模，建立的模型就是KD树，建好了模型再对测试集做预测。所谓的KD树就是K个特征维度的树，注意这里的K和KNN中的K的意思不同。KNN中的K代表特征输出类别，KD树中的K代表样本特征的维数。为了防止混淆，后面我们称特征维数为n。</code></pre><p>KD树算法包括三步，第一步是建树，第二部是搜索最近邻，最后一步是预测。</p><h4 id="KD树的建立"><a href="#KD树的建立" class="headerlink" title="KD树的建立"></a>KD树的建立</h4><p>我们首先来看建树的方法。KD树建树采用的是从m个样本的n维特征中，分别计算n个特征的取值的方差，用<font color="#DC143C">方差最大</font>的第k维特征<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mi>k</mi></msub></math>来作为<font color="#B22222">根节点</font>。对于这个特征，我们选择特征<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mi>k</mi></msub></math>的取值的中位数<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mi>kv</mi></msub></math>对应的样本作为划分点，对于所有第k维特征的取值小于<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mi>kv</mi></msub></math>的样本，我们划入左子树，对于第k维特征的取值大于等于<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>n</mi><mi>kv</mi></msub></math>的样本，我们划入右子树，对于左子树和右子树，我们采用和刚才同样的办法来找方差最大的特征来做<font color="#B22222">根节点，递归</font>的生成KD树。</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625494718364.png" alt="构建KD树"></p><p>比如我们有二维样本6个，{(2,3)，(5,4)，(9,6)，(4,7)，(8,1)，(7,2)}，构建kd树的具体步骤为：</p><ol><li>找到划分的特征。6个数据点在x，y维度上的数据方差分别为6.97，5.37，所以在x轴上方差更大，用第1维特征建树。</li><li>确定划分点（7,2）。根据x维上的值将数据排序，6个数据的中值(所谓中值，即中间大小的值)为7，所以划分点的数据是（7,2）。这样，该节点的分割超平面就是通过（7,2）并垂直于：划分点维度的直线x=7；（很显然，中位数为6 ，这里选择（5,4）或者(7,2)都是可以的。这种情况任选一个即可）</li><li>确定左子空间和右子空间。 分割超平面x=7将整个空间分为两部分：x&lt;=7的部分为左子空间，包含3个节点={(2,3),(5,4),(4,7)}；另一部分为右子空间，包含2个节点={(9,6)，(8,1)}。</li><li>用同样的办法划分左子树的节点{(2,3),(5,4),(4,7)}和右子树的节点{(9,6)，(8,1)}。最终得到KD树。</li><li>后续步骤反复上面的，<font color="#8FBC8F">直到两个子区域没有实例存在时停止（这意味着最后所有训练实例都对应一个叶结点或内部结点），从而形成kd树的区域划分</font>。</li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625495422262.png" alt="KD树"></p><p><font color="#DC143C">标准kNN算法的切分特征选择是按顺序的，后来对kd树的一个重大改进是选择方差最大的特征，方差越大，不同实例点区分越明显，更方便进行划分。</font></p><h4 id="KD树搜索最近邻"><a href="#KD树搜索最近邻" class="headerlink" title="KD树搜索最近邻"></a>KD树搜索最近邻</h4><p>当我们生成KD树以后，就可以去预测测试集里面的样本目标点了。对于一个目标点，我们<font color="#9932CC">首先在KD树里面找到包含目标点的叶子节点</font>。<font color="#0000FF">以目标点为圆心，以目标点到叶子节点样本实例的距离为半径，得到一个超球体</font>，<font color="#B22222">最近邻的点一定在这个超球体内部</font>。然后返回叶子节点的父节点，检查另一个子节点包含的超矩形体是否和超球体相交，如果相交就到这个子节点寻找是否有更加近的近邻,有的话就更新最近邻。如果不相交那就简单了，我们直接返回父节点的父节点，在另一个子树继续搜索最近邻。当回溯到根节点时，算法结束，此时保存的最近邻节点就是最终的最近邻。</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625496230689.png" alt="目标点为（2，4.5）"></p><p>从上面的描述可以看出，KD树划分后可以大大减少无效的最近邻搜索，很多<font color="#8A2BE2">样本点由于所在的超矩形体和超球体不相交，根本不需要计算距离。大大节省了计算时间。</font></p><p>先进行二叉查找，先从（7,2）查找到（5,4）节点，在进行查找时是由y = 4为分割超平面的，由于查找点为y值为4.5，因此进入右子空间查找到（4,7），形成搜索路径&lt;(7,2)，(5,4)，(4,7)&gt;，但 （4,7）与目标查找点的距离为3.202，而（5,4）与查找点之间的距离为3.041，所以（5,4）为查询点的最近点； 以（2，4.5）为圆心，以3.041为半径作圆，如下图所示。可见该圆和y = 4超平面交割，所以需要进入（5,4）左子空间进行查找，也就是将（2,3）节点加入搜索路径中得&lt;(7,2)，(2,3)&gt;；于是接着搜索至（2,3）叶子节点，（2,3）距离（2,4.5）比（5,4）要近，所以最近邻点更新为（2，3），最近距离更新为1.5；回溯查找至（5,4），直到最后回溯到根结点（7,2）的时候，以（2,4.5）为圆心1.5为半径作圆，并不和x = 7分割超平面交割，如下图所示。至此，搜索路径回溯完，返回最近邻点（2,3），最近距离1.5。</p><h3 id="球树实现原理"><a href="#球树实现原理" class="headerlink" title="球树实现原理"></a>球树实现原理</h3><p>KD树算法虽然提高了KNN搜索的效率，但是在某些时候效率并不高，比如当处理不均匀分布的数据集时,不管是近似方形，还是矩形，甚至正方形，都不是最好的使用形状，因为他们都有角。一个例子如下图：<br><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625496491462.png" alt="enter description here"></p><p>　　如果黑色的实例点离目标点星点再远一点，那么虚线圆会如红线所示那样扩大，导致与左上方矩形的右下角相交，既然相 交了，那么就要检查这个左上方矩形，而实际上，最近的点离星点的距离很近，检查左上方矩形区域已是多余。于此我们看见，KD树把二维平面划分成一个一个矩形，但矩形区域的角却是个难以处理的问题。</p><p>　　为了优化超矩形体导致的搜索效率的问题，有人引入了球树，这种结构可以优化上面的这种问题。</p><p><strong><font color="#7FFF00">球树的建立</font></strong></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202175/1625496601030.png" alt="球树"></p><ol><li>先构建一个超球体，这个超球体是可以包含所有样本的最小球体。</li><li>从球中选择一个离球的中心最远的点，然后选择第二个点离第一个点最远，将球中所有的点分配到离这两个聚类中心最近的一个上，然后计算每个聚类的中心，以及聚类能够包含它所有数据点所需的最小半径。这样我们得到了两个子超球体，和KD树里面的左右子树对应。（PS:<font color="#B22222">这里选择两个点后，就以这两个点来聚类，所以先确定的是以这两个点为中心来计算其他点到该中心的距离。当所有点都确定自己的中心后，再重新计算一次该超球体的半径和球心</font>。）</li><li>对于这两个子超球体，递归执行步骤2，最终得到了一个球树。</li></ol><p>　　可以看出KD树和球树类似，主要区别在于球树得到的是节点样本组成的最小超球体，而KD得到的是节点样本组成的超矩形体，这个超球体要与对应的KD树的超矩形体小，这样在做最近邻搜索的时候，可以避免一些无谓的搜索。</p><h2 id="KNN优缺点"><a href="#KNN优缺点" class="headerlink" title="KNN优缺点"></a>KNN优缺点</h2><p>优点：</p><ol><li>结构简单；</li><li>无数据输入假定，准确度高，对异常点不敏感。</li><li> 训练时间复杂度比支持向量机之类的算法低，仅为O(n)</li><li> 由于KNN方法主要靠周围有限的邻近的样本，而不是靠判别类域的方法来确定所属类别的，因此对于类域的交叉或重叠较多的待分样本集来说，KNN方法较其他方法更为适合</li></ol><p>缺点：</p><ol><li>计算复杂度高、空间复杂度高；</li><li>样本不平衡时，对稀有类别预测准确度低；</li><li>使用懒惰学习，预测速度慢。</li><li>KD树，球树之类的模型建立需要大量的内存</li><li>相比决策树模型，KNN模型可解释性不强<h2 id="什么情况下选择KNN"><a href="#什么情况下选择KNN" class="headerlink" title="什么情况下选择KNN"></a>什么情况下选择KNN</h2></li></ol><p><img src="https://gitee.com/merlynr/img-store/raw/master/202177/1625667539256.png" alt="choose"></p><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p><a href="https://www.cnblogs.com/ybjourney/p/4702562.html">机器学习（一）——K-近邻（KNN）算法 - Yabea - 博客园</a></p><h2 id="序列KNN"><a href="#序列KNN" class="headerlink" title="序列KNN"></a>序列KNN</h2><p><a href="https://antkillerfarm.github.io/ml/2017/10/19/Machine_Learning_28.html">机器学习（二十八）——KNN, AutoML, 数据不平衡问题</a></p><p><a href="https://blog.csdn.net/qq_41196612/article/details/107265167">R语言实战——基于KNN聚类的时间序列分析预测_三只佩奇不结义的博客-CSDN博客_r语言knn回归及预测</a></p><p><a href="https://www.coder.work/article/383913">python - 如何使用 KNN/K-means 对数据帧中的时间序列进行聚类 - IT工具网</a></p><p><a href="https://github.com/iwuqing/Time-Series-Classification-based-on-KNN">iwuqing/Time-Series-Classification-based-on-KNN: 基于KNN聚类算法结合Dynamic Time Warping（动态时间调整）的时间序列分类</a></p><p><a href="https://github.com/vvanggeng/TSC-KNN">vvanggeng/TSC-KNN: 基于KNN和DTW的时间序列分类</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> algorithm </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> graduate student </tag>
-            
-            <tag> study </tag>
-            
-            <tag> paper </tag>
-            
-            <tag> algorithm </tag>
-            
             <tag> deep learning </tag>
-            
-            <tag> machine leaning </tag>
             
         </tags>
       
@@ -222,28 +317,26 @@
       
       <categories>
           
-          <category> plan </category>
-          
-          <category> graduate student </category>
-          
-          <category> summarize </category>
-          
           <category> paper </category>
-          
-          <category> machine learning </category>
-          
-          <category> algorithm </category>
-          
-          <category> process mining </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> study </tag>
+            <tag> graduate student </tag>
+            
+            <tag> summarize </tag>
             
             <tag> plan </tag>
+            
+            <tag> paper </tag>
+            
+            <tag> machine learning </tag>
+            
+            <tag> algorithm </tag>
+            
+            <tag> process mining </tag>
             
         </tags>
       
@@ -694,7 +787,7 @@
       <link href="2021/05/06/Nicholas%20Burns/"/>
       <url>2021/05/06/Nicholas%20Burns/</url>
       
-        <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：<a href="mailto:&#110;&#x69;&#x63;&#x68;&#111;&#108;&#x61;&#115;&#95;&#x62;&#117;&#x72;&#x6e;&#x73;&#x40;&#104;&#107;&#115;&#46;&#x68;&#97;&#114;&#x76;&#97;&#x72;&#x64;&#x2e;&#101;&#100;&#x75;">&#110;&#x69;&#x63;&#x68;&#111;&#108;&#x61;&#115;&#95;&#x62;&#117;&#x72;&#x6e;&#x73;&#x40;&#104;&#107;&#115;&#46;&#x68;&#97;&#114;&#x76;&#97;&#x72;&#x64;&#x2e;&#101;&#100;&#x75;</a></li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：<a href="mailto:&#97;&#108;&#x69;&#x73;&#x6f;&#x6e;&#95;&#x68;&#x69;&#x6c;&#x6c;&#101;&#103;&#101;&#105;&#115;&#x74;&#64;&#x68;&#107;&#115;&#x2e;&#104;&#x61;&#114;&#118;&#x61;&#114;&#100;&#x2e;&#x65;&#x64;&#x75;">&#97;&#108;&#x69;&#x73;&#x6f;&#x6e;&#95;&#x68;&#x69;&#x6c;&#x6c;&#101;&#103;&#101;&#105;&#115;&#x74;&#64;&#x68;&#107;&#115;&#x2e;&#104;&#x61;&#114;&#118;&#x61;&#114;&#100;&#x2e;&#x65;&#x64;&#x75;</a></li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  –棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<p><strong>身份：</strong><br>•    罗伊和芭芭拉·古德曼（Roy and Barbara Goodman）哈佛大学肯尼迪学校外交与国际关系实践家庭教授<br>•    Belfer Center董事会成员<br>•    外交项目的未来教席<br>•    欧洲与跨大西洋关系项目教席<br>•    中东倡议联盟会员<br>•    美国国务秘书项目主任</p><p><strong>个人履历见附件</strong></p><p><img src="./attachments/RNB_Bio_Full_1.pdf" alt="RNB_Bio_Full_1"></p><p><strong>联系方式：</strong></p><ul><li>twitter： @rnicholasburns</li><li>phone： 617-495-2495</li><li>邮箱：<a href="mailto:&#110;&#x69;&#99;&#x68;&#111;&#108;&#97;&#115;&#95;&#x62;&#117;&#x72;&#x6e;&#x73;&#x40;&#104;&#107;&#115;&#46;&#104;&#x61;&#x72;&#x76;&#97;&#x72;&#x64;&#x2e;&#101;&#100;&#117;">&#110;&#x69;&#99;&#x68;&#111;&#108;&#97;&#115;&#95;&#x62;&#117;&#x72;&#x6e;&#x73;&#x40;&#104;&#107;&#115;&#46;&#104;&#x61;&#x72;&#x76;&#97;&#x72;&#x64;&#x2e;&#101;&#100;&#117;</a></li></ul><p><strong>助理信息：</strong></p><ul><li>艾莉森·希格斯（Alison Hillegeist）</li><li>电邮：<a href="mailto:&#97;&#x6c;&#105;&#x73;&#x6f;&#110;&#x5f;&#104;&#x69;&#x6c;&#x6c;&#101;&#x67;&#101;&#x69;&#115;&#x74;&#64;&#104;&#x6b;&#x73;&#46;&#104;&#x61;&#x72;&#118;&#97;&#114;&#100;&#x2e;&#x65;&#100;&#117;">&#97;&#x6c;&#105;&#x73;&#x6f;&#110;&#x5f;&#104;&#x69;&#x6c;&#x6c;&#101;&#x67;&#101;&#x69;&#115;&#x74;&#64;&#104;&#x6b;&#x73;&#46;&#104;&#x61;&#x72;&#118;&#97;&#114;&#100;&#x2e;&#x65;&#100;&#117;</a></li><li>电话：617-495-2495</li><li>Mailing Address: John F. Kennedy School of Government、79 JFK St.、Cambridge, Massachusetts</li></ul><p><strong>家庭：</strong><br>妻子伊丽莎白·贝利（Elizabeth A. Baylies）育有三个女儿：莎拉（Sarah），伊丽莎白（Elizabeth）和卡罗琳（Caroline）</p><p><a href="https://www.youtube.com/watch?v=BloYsnYLxhM&t=42s">信息来源-1</a></p><ul><li>Nicholas Burns与妻子贝利在巴黎美国大学（American University of Paris）在1982年相识并相爱 </li><li>莎拉（Sarah）: 2017.05 毕业于巴黎美国大学（AUP）</li></ul><p><strong>官方个人网站：</strong> <a href="https://www.belfercenter.org/person/nicholas-burns">https://www.belfercenter.org/person/nicholas-burns</a></p><blockquote><p>亲属</p></blockquote><p>侄子：  Ben Hutchins【 command of Marine Air Group 13 in Yuma,2019.08】（侄子本·哈钦斯上校（Ben Hutchins上校）为亚利桑那州尤马市的第13航空集团负责，现在指挥F-35和“ rier”式战斗机）</p><p>堂兄： 鲍勃·肯尼迪【Bob Kennedy  led the historic Mechanics Hall in Worcester for 12 years,2006-2018】<br><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dn-k1W_XoAEdMqu.jfif" alt="Dn-k1W_XoAEdMqu"></p><blockquote><p>哈佛</p></blockquote><p>助教： Philip Balson【哈佛大学，2019毕业】<br>菲利普·巴尔森</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/D1vTtnUWsAYtUFT.jfif" alt="菲利普·巴尔森"></p><p>Vince Lowney【研究助理文斯·洛尼2018.05毕业于哈佛，并于<strong>7月就任美国外交部</strong>】</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd_uNA6W4AAsCyp.jfif" alt="Dd_uNA6W4AAsCyp"></p><p>Aditi Kumar 和 Chris Mirasola 2018.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/Dd-jdveXkAAu3TU.jfif" alt="Dd-jdveXkAAu3TU"></p><p>泰莎·亨利（Tessa Henry）和但丁·托波（Dante Toppo）2017.05毕业于哈佛</p><p><img src="https://gitee.com/merlynr/img-store/raw/master/202156/DAsbrBBXUAQoJcb.jfif" alt="DAsbrBBXUAQoJcb"></p><blockquote><p>组织@RedSox  –棒球俱乐部，没找到与之有关的报道</p></blockquote>]]></content>
       
       
       <categories>
