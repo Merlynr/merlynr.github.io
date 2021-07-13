@@ -23,7 +23,7 @@
     <published>2021-07-12T16:00:00.000Z</published>
     <updated>2021-07-12T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>监督学习在机器学习中取得了重大的成功，然而在<strong>顺序决策制定</strong>和<strong>控制问题</strong>中，比如无人直升机、无人汽车等，难以给出显式的监督信息，因此这类问题中<strong>监督模型无法学习</strong>。<br>强化学习就是为了解决这类问题而产生的。在强化学习框架中，学习算法被称为一个agent，假设这个agent处于一个环境中，两者之间存在交互。<font color="#9400D3">agent通过与环境交互不断增强对环境的适应力，故得名强化学习。</font></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626145210759.png" alt="强化学习"></p><p>在每个时间步 $t$ ，agent：</p><ul><li>接受状态$s _ { t }$</li><li>接受标量回报$r _ { t }$</li><li>执行行动$a _ { t }$</li></ul><p>环境：</p><ul><li>接受动作at</li><li>产生状态st</li><li>产生标量回报rt</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>监督学习在机器学习中取得了重大的成功，然而在<strong>顺序决策制定</strong>和<strong>控制问题</strong>中，比如无人直升机、无人汽车等，难以给出显式的监督信息，因此这类问题中<strong>监督模型无法学习</strong>。<br>强化学习就是为了解决这类问题而产生的。在强化学习框架中，学习算法被称为一个agent，假设这个agent处于一个环境中，两者之间存在交互。<font color="#9400D3">agent通过与环境交互不断增强对环境的适应力，故得名强化学习。</font></p><p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626145210759.png" alt="强化学习"></p><p>在每个时间步 $t$ ，agent：</p><ul><li>接受状态 $s _ { t }$</li><li>接受标量回报 $r _ { t }$</li><li>执行行动 $a _ { t }$</li></ul><p>环境：</p><ul><li>接受动作 $a _ { t }$</li><li>产生状态 $s _ { t }$</li><li>产生标量回报 $r _ { t }$</li></ul>]]></content>
     
     
     <summary type="html">【可選】文章描述</summary>
