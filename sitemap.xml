@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/10/12/2020-10-12daiily/</loc>
+    <loc>https://merlynr.github.io/2020/10/09/2020-10-09/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/10/09/2020-10-09/</loc>
+    <loc>https://merlynr.github.io/2020/10/12/2020-10-12daiily/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -247,14 +247,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/03/19/2021-3-19%E3%80%90%E5%91%A8%E6%80%BB%E7%BB%93%E3%80%91/</loc>
+    <loc>https://merlynr.github.io/2021/05/19/2021-05-15%E3%80%90Week%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/05/19/2021-05-15%E3%80%90Week%E3%80%91/</loc>
+    <loc>https://merlynr.github.io/2021/03/19/2021-3-19%E3%80%90%E5%91%A8%E6%80%BB%E7%BB%93%E3%80%91/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -303,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2020/06/19/xiang-ji-http-yu-https-zhi-jian-de-qu-bie/</loc>
+    <loc>https://merlynr.github.io/2021/03/28/what%E2%80%98s%20the%20mean%20of%20RPA/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/2021/03/28/what%E2%80%98s%20the%20mean%20of%20RPA/</loc>
+    <loc>https://merlynr.github.io/2020/06/19/xiang-ji-http-yu-https-zhi-jian-de-qu-bie/</loc>
     
     <lastmod>2021-05-24</lastmod>
     
@@ -417,14 +417,7 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/tags/summarize/</loc>
-    <lastmod>2021-07-17</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://merlynr.github.io/tags/Java/</loc>
+    <loc>https://merlynr.github.io/tags/security/</loc>
     <lastmod>2021-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -438,7 +431,14 @@
   </url>
   
   <url>
-    <loc>https://merlynr.github.io/tags/security/</loc>
+    <loc>https://merlynr.github.io/tags/Java/</loc>
+    <lastmod>2021-07-17</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://merlynr.github.io/tags/summarize/</loc>
     <lastmod>2021-07-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
