@@ -1,11 +1,11 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>用于业务流程事件和结果预测的混合模型 | 吾辈之人，自当自强不息！</title><meta name="keywords" content="业务流程预测"><meta name="author" content="Merlynr"><meta name="copyright" content="Merlynr"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="摘要目的对于多样性流程进行异常预测 解决 序列k近邻法（KNN） 基于序列比对的马尔科夫模型扩展法  思路：利用数据的时间分类特征，利用高阶马尔可夫模型预测过程的下一步，并利用序列对比技术预测过程的结果。通过考虑基于k个最近邻的相似过程序列的子集，增加了数据的多样性方面。 结果已经证明，通过一组实验，序列k最近邻提法比原始提供更好的结果;我们的扩展马尔可夫模型优于随机猜测、马尔可夫模型和隐马尔可夫">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>用于业务流程事件和结果预测的混合模型 | 吾辈之人，自当自强不息！</title><meta name="keywords" content="业务流程预测"><meta name="author" content="Merlynr"><meta name="copyright" content="Merlynr"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="摘要目的对于多样性流程进行异常预测 解决 序列k近邻法（KNN） 基于序列比对的马尔科夫模型扩展法  思路： 利用数据的时间分类特征，利用高阶马尔可夫模型预测过程的下一步，并利用序列对比技术预测过程的结果。通过考虑基于k个最近邻的相似过程序列的子集，增加了数据的多样性方面。  ### 结果 已经证明，通过一组实验，序列k最近邻提法比原始提供更好的结果;我们的扩展马尔可夫模型优于随机猜测、马尔可夫模">
 <meta property="og:type" content="article">
 <meta property="og:title" content="用于业务流程事件和结果预测的混合模型">
 <meta property="og:url" content="https://merlynr.github.io/2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="吾辈之人，自当自强不息！">
-<meta property="og:description" content="摘要目的对于多样性流程进行异常预测 解决 序列k近邻法（KNN） 基于序列比对的马尔科夫模型扩展法  思路：利用数据的时间分类特征，利用高阶马尔可夫模型预测过程的下一步，并利用序列对比技术预测过程的结果。通过考虑基于k个最近邻的相似过程序列的子集，增加了数据的多样性方面。 结果已经证明，通过一组实验，序列k最近邻提法比原始提供更好的结果;我们的扩展马尔可夫模型优于随机猜测、马尔可夫模型和隐马尔可夫">
+<meta property="og:description" content="摘要目的对于多样性流程进行异常预测 解决 序列k近邻法（KNN） 基于序列比对的马尔科夫模型扩展法  思路： 利用数据的时间分类特征，利用高阶马尔可夫模型预测过程的下一步，并利用序列对比技术预测过程的结果。通过考虑基于k个最近邻的相似过程序列的子集，增加了数据的多样性方面。  ### 结果 已经证明，通过一组实验，序列k最近邻提法比原始提供更好的结果;我们的扩展马尔可夫模型优于随机猜测、马尔可夫模">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg">
+<meta property="og:image" content="https://cdn.pixabay.com/photo/2021/06/07/22/10/woman-6319170__340.jpg">
 <meta property="article:published_time" content="2021-07-04T16:00:00.000Z">
 <meta property="article:modified_time" content="2021-07-14T16:00:00.000Z">
 <meta property="article:author" content="Merlynr">
@@ -16,7 +16,7 @@
 <meta property="article:tag" content="machine learning">
 <meta property="article:tag" content="deep learning">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://merlynr.github.io/2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://cdn.pixabay.com/photo/2021/06/07/22/10/woman-6319170__340.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://merlynr.github.io/2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -146,106 +146,172 @@
         }
       }
     })(window)</script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="吾辈之人，自当自强不息！" type="application/atom+xml">
-</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTIOLIx_oLVIxQABZpYSdtZBrLTpc1jMt2XQ&amp;usqp=CAU" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">吾辈之人，自当自强不息！</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">用于业务流程事件和结果预测的混合模型</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-07-04T16:00:00.000Z" title="发表于 2021-07-05 00:00:00">2021-07-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-14T16:00:00.000Z" title="更新于 2021-07-15 00:00:00">2021-07-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/paper/">paper</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="用于业务流程事件和结果预测的混合模型"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>对于多样性流程进行异常预测</p>
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTIOLIx_oLVIxQABZpYSdtZBrLTpc1jMt2XQ&amp;usqp=CAU" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.pixabay.com/photo/2021/06/07/22/10/woman-6319170__340.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">吾辈之人，自当自强不息！</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">用于业务流程事件和结果预测的混合模型</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-07-04T16:00:00.000Z" title="发表于 2021-07-05 00:00:00">2021-07-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2021-07-14T16:00:00.000Z" title="更新于 2021-07-15 00:00:00">2021-07-15</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/paper/">paper</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">5.3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>17分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="用于业务流程事件和结果预测的混合模型"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>对于多样性流程进行异常预测</p>
 <h3 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h3><ol>
 <li>序列k近邻法（KNN）</li>
 <li>基于序列比对的马尔科夫模型扩展法</li>
 </ol>
-<p><font color="#1E90FF">思路：</font><br>利用数据的时间分类特征，利用高阶马尔可夫模型预测过程的下一步，并利用序列对比技术预测过程的结果。通过考虑基于k个最近邻的相似过程序列的子集，增加了数据的多样性方面。</p>
-<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>已经证明，通过一组实验，序列k最近邻提法比原始提供更好的结果;我们的扩展马尔可夫模型优于随机猜测、马尔可夫模型和隐马尔可夫模型。</p>
-<blockquote>
-<p><font color="#2e4e7e">知识补充</font><br><a target="_blank" rel="noopener" href="https://blog.zuishuailcq.xyz/2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/">KNN（K近邻法 K Nearest Neighbors） | 吾辈之人，自当自强不息！</a><br><a target="_blank" rel="noopener" href="https://blog.zuishuailcq.xyz/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/">Markov Model（马尔可夫模型） | 吾辈之人，自当自强不息！</a></p>
-</blockquote>
-<h2 id="阐述"><a href="#阐述" class="headerlink" title="阐述"></a>阐述</h2><p>在进行流程预测的前，我们需要从日志中挖掘流程。通过分析数据，可以得知数据为带有<strong>时间序列</strong>的数据。1999年已经有人证明MMs适用于研究用户网上浏览行为。同时事件序列也可用于训练已经<strong>编码后续事件之间的转换概率</strong>的马尔可夫模型，<br>类似其它机器学习模型，越是高阶的模型越是拟合数据，预测结果也更加准确。</p>
-<blockquote>
-<p><font color="#FF1493">知识补充</font><br>在马尔可夫链的每一步，系统根据概率分布，可以从一个状态变到另一个状态,也可以保持当前状态。状态的改变叫做过渡，与不同的状态改变相关的概率叫做<strong>过渡概率</strong><br><font color="#006400">TODO </font>默认预测的提出没有仔细研究<br>当给定数据集很少时，导致无法机器学习和准确预测，所以为了解决这个问题，提出了几个为了解决特征和默认事件之间的非线性依赖关系的模型，通过补充特征默认值来补充数据，进行预测。<strong>默认预测</strong></p>
-</blockquote>
-<p>但是当数据多样化同时不聚集的时候，会导致高阶模型弱覆盖，对于未被覆盖的序列，就需要默认预测。但是默认预测会降低模型的准确度。<br><em>在马尔可夫模型中</em>，为了平衡覆盖与准确性，一般解决思想是合并多个不同阶的MMs的转换状态，然后在预测的时候遵循“冗余”状态。例如可选择马尔可夫模型（selective Markov model）</p>
-<blockquote>
-<p>TODO<br>遵循“冗余”状态的实际意义是什么？它的实际表现是什么<br>an extension of All Kth order Markov models (Deshpande &amp; Karypis, 2004)</p>
-</blockquote>
-<blockquote>
-<p><font color="#2F4F4F">知识补充</font><br>个人理解<strong>弱覆盖</strong>是由于特征广而弱，无法高效学习，导致有一些特征被丢弃没有学习到。</p>
-</blockquote>
-<p>第二部部分讲述的是采用kNN算法来预测过程结果，即通过比对给定领域内的序列，找到最相似的序列。06年有研究者发表“预测使用电信公司的数据流失”，用欧几里德距离来计算给定序列与样本之间的距离。</p>
-<blockquote>
-<p>TODO 生物顺序结合没懂</p>
-</blockquote>
-<p>在本文中作者将KNN与生物学的序列对齐组合形成顺序kNN。</p>
-<blockquote>
-<p><font color="#bf242a">知识补充</font><br><strong>编辑距离</strong>是针对二个字符串（例如英文字）的差异程度的量化量测，量测方式是看至少需要多少次的处理才能将一个字符串变成另一个字符串。</p>
-</blockquote>
-<h3 id="creation"><a href="#creation" class="headerlink" title="creation"></a>creation</h3><blockquote>
-<p>TODO 不理解下面的匹配机制</p>
-</blockquote>
-<p>首先是为了解决高阶MMs弱覆盖，提出了MMs和序列对准融合的技术。当预测模型无法找到预测实例对应的序列时，<strong>应用匹配过程</strong>以便从与给定序列中最相似的转换矩阵中提取那些序列（图案）。</p>
-<p>其次是提出一种预测结果的序列kNN方法，即通过比对序列局部结果，然后比对相似程度，获得预测结果</p>
-<h2 id="序列比对"><a href="#序列比对" class="headerlink" title="序列比对"></a>序列比对</h2><p><font color="#FF1493">为了确定序列相似性</font><br>序列比对主要类似于生物学中的新的DNA序列与DNA数据库进行比较。将DNA序列的事务与蛋白质数据库进行比较，以验证它们之间的关系是否可能发生在发生概率之间。</p>
-<blockquote>
-<p>序列比对<br>包括全局比对和局部比对<br>全局比对是提供了全局优化解决方案，遍历所有查询序列的整个长度。<br>局部比对旨在从两个查询序列中找到最相似的段</p>
-</blockquote>
-<p>我们在MMs中并不是使用当前的序列比对算法，而是使用序列比对的思想；同时作者提出<strong>局部序列比对与kNNs的结合</strong>使用方法：【替换矩阵】</p>
-<blockquote>
-<p><font color="#006400">知识补充</font><br>在序列比对算法中的<strong>替换矩阵</strong>又称为打分矩阵，其数学本质是统计权重。<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/150582377">替换矩阵（计分矩阵）| 原理和作用 - 知乎</a><br>在序列比对中，我们一般需要给出一个定量的数值来描述两者的一致性和相似性。在此过程中，替换矩阵用来评价碱基或残基之间的相似性，在长期实践中，人们发现一些特定的碱基替换或者残基替换的频率是要高于另一些替换的，因此人们可以通过统计方法或者基于进化的突变模型来给每一种替换定义不同的分值，来体现出不同碱基或残基之间发生替换的可能性。其可以分成核酸序列替换矩阵和蛋白质序列替换矩阵。</p>
-</blockquote>
-<p> <strong><font color="#9932CC">替换矩阵：</font></strong><br> <em>生物学中用于描述单位时间内，一个氨基酸转换为另一个氨基酸的速率</em>。本文中替换矩阵作为单位矩阵，主对角线的元素是1，其他元素都是0。为了呈现突变，使用了更复杂形式的替代矩阵。上边<font color="#1E90FF">知识补充</font>中提到不同的矩阵不同值可以更好表现序列单元之间转换的可能性与频率。<font color="#FF00FF">我的理解是序列对比的权重表</font>。</p>
-<p> <strong><font color="#9932CC">打分矩阵</font></strong><br> 即模型打分矩阵函数：</p>
-<p> <img src="https://gitee.com/merlynr/img-store/raw/master/2021710/1625901529848.png" alt="初始化"></p>
-<p> <img src="https://gitee.com/merlynr/img-store/raw/master/2021710/1625901755301.png" alt="计算公式"><br><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>y</mi><mi>j</mi></msub><mo>)</mo></math>是替换矩阵中Xi与Yj的替换分数。<br><font color="#483D8B">TODO</font> 公式中有个别参数读不懂</p>
-<p><img src="https://gitee.com/merlynr/img-store/raw/master/2021710/1625902300497.png" alt="栗子"></p>
-<p><strong><font color="#FF8C00">案例：</font></strong><br>序列ABCDE与序列EBCAD对应的打分矩阵，根据分数高低来寻找最佳片段，然后沿着对角线从最高点到左上角，直至分数为0，来确定匹配序列，如图栗子中为BC。</p>
-<h2 id="预测模型"><a href="#预测模型" class="headerlink" title="预测模型"></a>预测模型</h2><p><strong><font color="#9932CC">前提：</font></strong><br>本模型目的是在流程实例中预测<math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mi>s</mi><mrow><mi>i</mi></mrow><mrow><mo>(</mo><mi>N</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msubsup></math>下一事件<math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mi>s</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow><mrow><mo>(</mo><mi>N</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msubsup></math>。其中<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>S</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub></math>业务流程中的事件的预测是基于<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>S</mi><mo>=</mo><mo>{</mo><msub><mi>S</mi><mn>1</mn></msub><mo>,</mo><msub><mi>S</mi><mn>2</mn></msub><mo>&#x22EF;</mo><msub><mi>S</mi><mi>N</mi></msub><mo>}</mo></math></p>
-<p>其中一个业务流程实例（Sj）是按时间顺序排列的离散事件(或任务)的组合Sj=<img src="https://gitee.com/merlynr/img-store/raw/master/2021710/1625906179169.png" alt="enter description here">，而单个事件是来自于事件类型的有限集合<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>E</mi><mo>=</mo><mo>{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mo>&#x22EF;</mo><mo>,</mo><msub><mi>e</mi><mi>L</mi></msub><mo>}</mo></math></p>
-<p><img src="https://gitee.com/merlynr/img-store/raw/master/2021710/1625907751234.png" alt="predict model"></p>
-<h3 id="MMs"><a href="#MMs" class="headerlink" title="MMs"></a>MMs</h3><p><a target="_blank" rel="noopener" href="https://blog.zuishuailcq.xyz/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/">Markov Model（马尔可夫模型） | 吾辈之人，自当自强不息！</a></p>
-<p>同时文中为了保障预测模型准确性，提出构建 <strong><font color="#006400">动态MMs</font></strong> ，通过存储单个事件在数据集中的次数、紧跟事件发生的下一个事件在数据集中的次数（事件A的下一个事件为B，这里指B的次数）和转换矩阵。还可以通过将折扣因子与事件数量结合，这样就可以在加入新数据时更新折扣因子来提供更多权重。</p>
-<blockquote>
-<p><strong><font color="#9400D3">知识补充</font></strong> 折扣因子<br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/61389929">(95 封私信 / 79 条消息) 马尔可夫决策过程中为什么需要discount factor ，也就是问为啥时间近的状态影响越大？ - 知乎</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/678f57342d0b">#David Silver Reinforcement Learning # 笔记2-MDP - 简书</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/wacc/p/5391209.html">强化学习笔记1 - Hiroki - 博客园</a></p>
-</blockquote>
-<h3 id="HMM"><a href="#HMM" class="headerlink" title="HMM"></a>HMM</h3><p><a target="_blank" rel="noopener" href="https://blog.zuishuailcq.xyz/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/">Markov Model（马尔可夫模型） | 吾辈之人，自当自强不息！</a></p>
-<h3 id="混合模型"><a href="#混合模型" class="headerlink" title="混合模型"></a>混合模型</h3><blockquote>
-<p>主要是平衡准确性和覆盖</p>
-</blockquote>
-<p>结合高阶MMs与序列比对技术（Waterman 1994），以保持高阶马尔可夫模型的高精度，同时弥补缺乏覆盖面积【个人感觉是通过通过增加区别序列对比消除过拟合】，提出了MSA（Markov sequence alignment 马尔可夫序列比对）【一种基于相似序列可能产生相同结果的假设，<font color="#E9967A">指处理没有遇到过的新的序列，然后在转换矩阵中找最类似的</font>】</p>
-<p>通过构建矩阵比较两个序列的重量，最小则最为接近。<br>规则：<br>节点事件相同，则重量为0<br>如果事件不同则为1或者 $δ$</p>
-<p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626182437859.png" alt="栗子"></p>
-<ol>
-<li>从两个序列中删除的第一事件A和E导致重量为1</li>
-<li>两个序列中的第二个事件是B并且具有重量0</li>
-<li>第四个事件A从EBCAD中删除，以便将两个D事件匹配在两个序列中的第四和第五位置，重量加 $δ$</li>
-<li>最后，我们从ABCDE序列中删除最后一个事件E，增加重量 $δ$</li>
-<li>匹配两个序列的总重量是 $w = 1 + 0 + 0 + δ + δ = 1 + 2δ$</li>
-</ol>
-<p><font color="#8B0000">以下示例将说明我们的方法</font>，通过一个三阶MMs的转换矩阵和序列BCC。此序列尚未发生在矩阵之前并未存储在矩阵中。<font color="#FF8C00">目的是从矩阵找到最相似的序列，并使用它们的预测来为给定序列BCC生成预测。</font></p>
+<font color="#1E90FF">思路：</font>
+利用数据的时间分类特征，利用高阶马尔可夫模型预测过程的下一步，并利用序列对比技术预测过程的结果。通过考虑基于k个最近邻的相似过程序列的子集，增加了数据的多样性方面。
+
+### 结果
+已经证明，通过一组实验，序列k最近邻提法比原始提供更好的结果;我们的扩展马尔可夫模型优于随机猜测、马尔可夫模型和隐马尔可夫模型。
+
+> <font color="#2e4e7e">知识补充</font>
+> [KNN（K近邻法 K Nearest Neighbors） | 吾辈之人，自当自强不息！](https://blog.zuishuailcq.xyz/2021/07/05/KNN%EF%BC%88K%E8%BF%91%E9%82%BB%E6%B3%95%20K%20Nearest%20Neighbors%EF%BC%89/)
+> [Markov Model（马尔可夫模型） | 吾辈之人，自当自强不息！](https://blog.zuishuailcq.xyz/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/)
+
+## 阐述
+
+在进行流程预测的前，我们需要从日志中挖掘流程。通过分析数据，可以得知数据为带有**时间序列**的数据。1999年已经有人证明MMs适用于研究用户网上浏览行为。同时事件序列也可用于训练已经**编码后续事件之间的转换概率**的马尔可夫模型，
+类似其它机器学习模型，越是高阶的模型越是拟合数据，预测结果也更加准确。
+
+> <font color="#FF1493">知识补充</font>
+> 在马尔可夫链的每一步，系统根据概率分布，可以从一个状态变到另一个状态,也可以保持当前状态。状态的改变叫做过渡，与不同的状态改变相关的概率叫做**过渡概率**
+> <font color="#006400">TODO </font>默认预测的提出没有仔细研究
+> 当给定数据集很少时，导致无法机器学习和准确预测，所以为了解决这个问题，提出了几个为了解决特征和默认事件之间的非线性依赖关系的模型，通过补充特征默认值来补充数据，进行预测。**默认预测**
+
+但是当数据多样化同时不聚集的时候，会导致高阶模型弱覆盖，对于未被覆盖的序列，就需要默认预测。但是默认预测会降低模型的准确度。
+*在马尔可夫模型中*，为了平衡覆盖与准确性，一般解决思想是合并多个不同阶的MMs的转换状态，然后在预测的时候遵循“冗余”状态。例如可选择马尔可夫模型（selective Markov model）
+
+> TODO
+> 遵循“冗余”状态的实际意义是什么？它的实际表现是什么
+> an extension of All Kth order Markov models (Deshpande & Karypis, 2004)
+
+
+> <font color="#2F4F4F">知识补充</font>
+> 个人理解**弱覆盖**是由于特征广而弱，无法高效学习，导致有一些特征被丢弃没有学习到。
+
+
+第二部部分讲述的是采用kNN算法来预测过程结果，即通过比对给定领域内的序列，找到最相似的序列。06年有研究者发表“预测使用电信公司的数据流失”，用欧几里德距离来计算给定序列与样本之间的距离。
+
+> TODO 生物顺序结合没懂
+
+在本文中作者将KNN与生物学的序列对齐组合形成顺序kNN。
+
+> <font color="#bf242a">知识补充</font>
+> **编辑距离**是针对二个字符串（例如英文字）的差异程度的量化量测，量测方式是看至少需要多少次的处理才能将一个字符串变成另一个字符串。
+
+### creation
+
+> TODO 不理解下面的匹配机制
+
+首先是为了解决高阶MMs弱覆盖，提出了MMs和序列对准融合的技术。当预测模型无法找到预测实例对应的序列时，**应用匹配过程**以便从与给定序列中最相似的转换矩阵中提取那些序列（图案）。
+
+其次是提出一种预测结果的序列kNN方法，即通过比对序列局部结果，然后比对相似程度，获得预测结果
+
+## 序列比对
+
+<font color="#FF1493">为了确定序列相似性</font>
+序列比对主要类似于生物学中的新的DNA序列与DNA数据库进行比较。将DNA序列的事务与蛋白质数据库进行比较，以验证它们之间的关系是否可能发生在发生概率之间。
+
+> 序列比对
+> 包括全局比对和局部比对
+> 全局比对是提供了全局优化解决方案，遍历所有查询序列的整个长度。
+> 局部比对旨在从两个查询序列中找到最相似的段
+
+我们在MMs中并不是使用当前的序列比对算法，而是使用序列比对的思想；同时作者提出**局部序列比对与kNNs的结合**使用方法：【替换矩阵】
+
+
+> <font color="#006400">知识补充</font>
+> 在序列比对算法中的**替换矩阵**又称为打分矩阵，其数学本质是统计权重。
+> [替换矩阵（计分矩阵）| 原理和作用 - 知乎](https://zhuanlan.zhihu.com/p/150582377)
+> 在序列比对中，我们一般需要给出一个定量的数值来描述两者的一致性和相似性。在此过程中，替换矩阵用来评价碱基或残基之间的相似性，在长期实践中，人们发现一些特定的碱基替换或者残基替换的频率是要高于另一些替换的，因此人们可以通过统计方法或者基于进化的突变模型来给每一种替换定义不同的分值，来体现出不同碱基或残基之间发生替换的可能性。其可以分成核酸序列替换矩阵和蛋白质序列替换矩阵。
+
+ **<font color="#9932CC">替换矩阵：</font>**
+ *生物学中用于描述单位时间内，一个氨基酸转换为另一个氨基酸的速率*。本文中替换矩阵作为单位矩阵，主对角线的元素是1，其他元素都是0。为了呈现突变，使用了更复杂形式的替代矩阵。上边<font color="#1E90FF">知识补充</font>中提到不同的矩阵不同值可以更好表现序列单元之间转换的可能性与频率。<font color="#FF00FF">我的理解是序列对比的权重表</font>。
+
+ **<font color="#9932CC">打分矩阵</font>**
+ 即模型打分矩阵函数：
+
+ ![初始化](https://gitee.com/merlynr/img-store/raw/master/2021710/1625901529848.png)
+
+ ![计算公式](https://gitee.com/merlynr/img-store/raw/master/2021710/1625901755301.png)
+<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>s</mi><mo>(</mo><msub><mi>x</mi><mi>i</mi></msub><mo>,</mo><msub><mi>y</mi><mi>j</mi></msub><mo>)</mo></math>是替换矩阵中Xi与Yj的替换分数。
+<font color="#483D8B">TODO</font> 公式中有个别参数读不懂
+
+![栗子](https://gitee.com/merlynr/img-store/raw/master/2021710/1625902300497.png)
+
+**<font color="#FF8C00">案例：</font>**
+序列ABCDE与序列EBCAD对应的打分矩阵，根据分数高低来寻找最佳片段，然后沿着对角线从最高点到左上角，直至分数为0，来确定匹配序列，如图栗子中为BC。
+
+
+## 预测模型
+
+**<font color="#9932CC">前提：</font>**
+本模型目的是在流程实例中预测<math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mi>s</mi><mrow><mi>i</mi></mrow><mrow><mo>(</mo><mi>N</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msubsup></math>下一事件<math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mi>s</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow><mrow><mo>(</mo><mi>N</mi><mo>+</mo><mn>1</mn><mo>)</mo></mrow></msubsup></math>。其中<math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>S</mi><mrow><mi>N</mi><mo>+</mo><mn>1</mn></mrow></msub></math>业务流程中的事件的预测是基于<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>S</mi><mo>=</mo><mo>{</mo><msub><mi>S</mi><mn>1</mn></msub><mo>,</mo><msub><mi>S</mi><mn>2</mn></msub><mo>&#x22EF;</mo><msub><mi>S</mi><mi>N</mi></msub><mo>}</mo></math>
+
+其中一个业务流程实例（Sj）是按时间顺序排列的离散事件(或任务)的组合Sj=![enter description here](https://gitee.com/merlynr/img-store/raw/master/2021710/1625906179169.png)，而单个事件是来自于事件类型的有限集合<math xmlns="http://www.w3.org/1998/Math/MathML"><mi>E</mi><mo>=</mo><mo>{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mo>&#x22EF;</mo><mo>,</mo><msub><mi>e</mi><mi>L</mi></msub><mo>}</mo></math>
+
+![predict model](https://gitee.com/merlynr/img-store/raw/master/2021710/1625907751234.png)
+
+### MMs
+
+[Markov Model（马尔可夫模型） | 吾辈之人，自当自强不息！](https://blog.zuishuailcq.xyz/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/)
+
+同时文中为了保障预测模型准确性，提出构建 **<font color="#006400">动态MMs</font>** ，通过存储单个事件在数据集中的次数、紧跟事件发生的下一个事件在数据集中的次数（事件A的下一个事件为B，这里指B的次数）和转换矩阵。还可以通过将折扣因子与事件数量结合，这样就可以在加入新数据时更新折扣因子来提供更多权重。
+
+> **<font color="#9400D3">知识补充</font>** 折扣因子
+> [(95 封私信 / 79 条消息) 马尔可夫决策过程中为什么需要discount factor ，也就是问为啥时间近的状态影响越大？ - 知乎](https://www.zhihu.com/question/61389929)
+> [#David Silver Reinforcement Learning # 笔记2-MDP - 简书](https://www.jianshu.com/p/678f57342d0b)
+> [强化学习笔记1 - Hiroki - 博客园](https://www.cnblogs.com/wacc/p/5391209.html)
+
+### HMM
+
+[Markov Model（马尔可夫模型） | 吾辈之人，自当自强不息！](https://blog.zuishuailcq.xyz/2021/07/05/Markov%20Model%EF%BC%88%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%EF%BC%89/)
+
+### 混合模型
+
+> 主要是平衡准确性和覆盖
+
+结合高阶MMs与序列比对技术（Waterman 1994），以保持高阶马尔可夫模型的高精度，同时弥补缺乏覆盖面积【个人感觉是通过通过增加区别序列对比消除过拟合】，提出了MSA（Markov sequence alignment 马尔可夫序列比对）【一种基于相似序列可能产生相同结果的假设，<font color="#E9967A">指处理没有遇到过的新的序列，然后在转换矩阵中找最类似的</font>】
+
+通过构建矩阵比较两个序列的重量，最小则最为接近。
+规则：
+节点事件相同，则重量为0
+如果事件不同则为1或者 $δ$
+
+![栗子](https://gitee.com/merlynr/img-store/raw/master/2021713/1626182437859.png)
+
+1. 从两个序列中删除的第一事件A和E导致重量为1
+2. 两个序列中的第二个事件是B并且具有重量0
+3. 第四个事件A从EBCAD中删除，以便将两个D事件匹配在两个序列中的第四和第五位置，重量加 $δ$
+4. 最后，我们从ABCDE序列中删除最后一个事件E，增加重量 $δ$
+5. 匹配两个序列的总重量是 $w = 1 + 0 + 0 + δ + δ = 1 + 2δ$
+
+<font color="#8B0000">以下示例将说明我们的方法</font>，通过一个三阶MMs的转换矩阵和序列BCC。此序列尚未发生在矩阵之前并未存储在矩阵中。<font color="#FF8C00">目的是从矩阵找到最相似的序列，并使用它们的预测来为给定序列BCC生成预测。</font>
+
 <p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626183826410.png" alt="替换矩阵"></p>
 <ol>
 <li>我们首先将BCC与ABC相匹配</li>
 </ol>
 <p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626183855711.png" alt="BCC to ABC"></p>
 <p>weight： $w=δ+0+δ=2δ$</p>
-<ol start="2">
+<ol>
 <li>类似地，匹配CBC和BCC的得到的重量</li>
 </ol>
 <p>weight: $w=2δ$</p>
-<ol start="3">
+<ol>
 <li>BAA和BCC</li>
 </ol>
 <p>weight: $w=2$</p>
-<p>这一块理解的是当无法通过删除操作达到序列匹配的时候则加重为1，否则通过删除和插入惩罚达 $δ$ 到序列匹配，文中提到的是0.4。<br>通过比重，ABC与CBC一样小，所以<font color="#9400D3">ABC与CBC都和BCC最相似</font>，但是它们的预测载体分别是（0.1,0.2,0.7）和（0.1,0.5,0.4），基于这些向量，就是预测{B，C}的下一步。<br>这两个事件的发生的权重和频率是相等的;因此，由于两个序列中较高的转换概率分别是 $m _ { 13 }=0.7$ 和  $m _ { 22 }=0.5$ ，因此给定的序列预测的下一步是具有更高的转移概率C。</p>
+<p>这一块理解的是当无法通过删除操作达到序列匹配的时候则加重为1，否则通过删除和插入惩罚达 $δ$ 到序列匹配，文中提到的是0.4。<br>通过比重，ABC与CBC一样小，所以<font color="#9400D3">ABC与CBC都和BCC最相似</font>，但是它们的预测载体分别是（0.1,0.2,0.7）和（0.1,0.5,0.4），基于这些向量，就是预测{B，C}的下一步。<br>这两个事件的发生的权重和频率是相等的;因此，由于两个序列中较高的转换概率分别是 $m <em> { 13 }=0.7$ 和  $m </em> { 22 }=0.5$ ，因此给定的序列预测的下一步是具有更高的转移概率C。</p>
 <p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626185939137.png" alt="算法一"></p>
 <ol>
 <li>比对序列，识别通过删除/插入符号匹配两个序列的最佳编辑过程</li>
 </ol>
-<p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626185957405.png" alt="算法二"><br>2. 计算匹配两个序列的分数</p>
-<p><font color="#D2691E">算法1和2说明了通过删除和插入惩罚来匹配两个序列的过程</font></p>
-<h3 id="KNN结合序列比对"><a href="#KNN结合序列比对" class="headerlink" title="KNN结合序列比对"></a>KNN结合序列比对</h3><p>KNN基本上是一种非参数方法;因此，其中一个优点是不需要训练模型。序列KNN的核心思想是**<font color="#FF1493">找到类似的序列</font>** ，期望这些序列具有共同的行为和结果。<br>业务流程的比对需要加入时间特征，这里采用生物学的序列对准技术结合KNN，通过与序列对准组合，kNN允许我们顺序地比较符号序列，提出了K最近序列比对（KnsSA）。</p>
+<p><img src="https://gitee.com/merlynr/img-store/raw/master/2021713/1626185957405.png" alt="算法二"></p>
+<ol>
+<li>计算匹配两个序列的分数</li>
+</ol>
+<font color="#D2691E">算法1和2说明了通过删除和插入惩罚来匹配两个序列的过程</font>
+
+
+<h3 id="KNN结合序列比对"><a href="#KNN结合序列比对" class="headerlink" title="KNN结合序列比对"></a>KNN结合序列比对</h3><p>KNN基本上是一种非参数方法;因此，其中一个优点是不需要训练模型。序列KNN的核心思想是<strong><font color="#FF1493">找到类似的序列</font></strong> ，期望这些序列具有共同的行为和结果。<br>业务流程的比对需要加入时间特征，这里采用生物学的序列对准技术结合KNN，通过与序列对准组合，kNN允许我们顺序地比较符号序列，提出了K最近序列比对（KnsSA）。</p>
 <p>首先根据给的N个序列，构建了距离矩阵 $( d _ { i j } ) N * N$ ，然后使用距离矩阵的元素对序列进行排序。通过使用局部对齐匹配每对序列来获得距离矩阵的元素</p>
 <h2 id="评估"><a href="#评估" class="headerlink" title="评估"></a>评估</h2><h3 id="过程分析和数据预处理"><a href="#过程分析和数据预处理" class="headerlink" title="过程分析和数据预处理"></a>过程分析和数据预处理</h3><pre><code>确定了MSA（Markov sequence alignment 马尔可夫序列比对）和KnsSA（KNN序列比对）
-</code></pre>
-<blockquote>
+</code></pre><blockquote>
 <p><font color="#00CED1">非对应知识补充</font>：MSA<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_39569389/article/details/111647915">序列两两比对算法_多重序列比对(MSA)分析工具怎么选，看这一篇就够了_weixin_39569389的博客-CSDN博客</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/31fb919f1c91">【陪你学·生信】九、多序列比对-Multiple Sequence Alignment（MSA） - 简书</a></p>
-</blockquote>
-<blockquote>
 <p><font color="#B8860B">非对应知识补充</font>：MSA<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/92254686">替代梯度下降——基于极大值原理的深度学习训练算法 - 知乎</a><br>MSA可以替代梯度下降函数<br>优一：MSA的每次迭代的收敛速度确实比梯度下降方法快一些<br>优二：梯度下降法的一大问题就是如果参数初始化得不好，那么就有可能会遇到一些局部平坦的区域，导致收敛速度变慢，而MSA方法则不会受到这个问题的影响<br>缺点：每轮迭代的时间会比梯度下降慢得多，这是可以理解的，毕竟MSA的每轮迭代都需要去找到一个最大值，而梯度下降只需要计算一次梯度就行了。这就导致了<strong>虽然MSA每次迭代收敛地更快，但是从时间上来看却反而更慢了</strong><br><img src="https://gitee.com/merlynr/img-store/raw/master/2021714/1626226968387.png" alt="总结"></p>
 </blockquote>
 <p>第一个数据集（DS1）由电信线路故障修复记录为9个月。第二（DS2）涵盖1个月的时间，并表示固定宽带断层的过程。第三数据集DS3来自不同的故障修复过程。数据集DS1和DS2用于我们扩展马尔可夫模型的实验中。数据集DS3和DS4用于KNSSA实验。</p>
@@ -258,15 +324,15 @@
 <li>RM - 随机模型</li>
 </ol>
 <p>为了找到当前之后的下一个任务，我们随机从潜在的下一个任务中选择。例如，从历史数据得知事件a来自于序列A属于集合{C，D，E}的任务，我们随机选择从该设置的值作为预测的下一步。【不通，反正就是一个baseline，在有限的范围内进行下一步】</p>
-<ol start="2">
+<ol>
 <li>高阶MMs</li>
 </ol>
 <p>从一阶到kth阶生成许多不同的秩马尔可夫模型。给定序列，我们从最高阶MMs开始。如果在转换矩阵中找不到给定序列，我们通过删除序列中的第一个事件来创建新的较短序列。然后，我们将使用下一个下阶MMs继续过程，直到我们在转换矩阵中找到一个匹配项，或者在尝试第一阶Markov模型之后，需要默认预测。【只通过降阶来预测 <strong><font color="#FF8C00">所有</font></strong> 序列】</p>
-<ol start="3">
+<ol>
 <li>HMM</li>
 </ol>
 <p>我们测试了几个具有不同长度的多个序列HMM，用于输入序列和不同数量的隐藏状态，并选择了最佳状态。</p>
-<p>**<font color="#9932CC">结果分析对比</font>**：<br>90%用于训练，10%做预测。使用十折交叉验证预测结果</p>
+<p><strong><font color="#9932CC">结果分析对比</font></strong>：<br>90%用于训练，10%做预测。使用十折交叉验证预测结果</p>
 <blockquote>
 <p><font color="#006400">知识补充</font>交叉验证<br><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/267910629">8. Sklearn — 交叉验证(Cross-Validation) - 知乎</a></p>
 </blockquote>
@@ -280,15 +346,25 @@
 </blockquote>
 <p><img src="https://gitee.com/merlynr/img-store/raw/master/2021714/1626252630431.png" alt="图一，使用数据集DS1在MMs中应用默认预测模块前后的正确预测百分比"></p>
 <p><img src="https://gitee.com/merlynr/img-store/raw/master/2021714/1626253369803.png" alt="图二，使用数据集DS2在MMs中应用默认预测模块前后的正确预测百分比"></p>
-<p><font color="#9932CC">分析：</font><br>二阶MSAs在一系列不同阶MSAs中表现最好，就DS1而言，正确预测27%；三阶MSAs在DS2中表现最好，可以达到70%的准确率。同时可以分析得到在五阶MSAs预测时，默认预测模块的作用明显增加。</p>
-<p><img src="https://gitee.com/merlynr/img-store/raw/master/2021715/1626314785957.png" alt="四种模型预测比较，第一个为全阶MMs"></p>
-<p>这里选择的是五阶段MSA和全五阶MMs，因为全阶段MMs在高阶时是具有优势的，这里为了验证默认预测的作用所以使用五阶。该图显示了两个数据集下所有模型的性能。可以看出，RM表现最差，DS2的成功率只有10%左右。当应用于更大的数据集DS1时，结果下降到接近2%（MSAs是其14倍）。同时可以发现选择正确的下一个任务的概率随着集合大小的增加而降低。结果突出了处理复杂数据集的难度。当数据不是太多样化(即DS2)时，MSA(五阶)获得最高数量的正确预测，结果为63%。与其他基准相比，MSA结果优于达到57%的五阶马尔可夫模型、达到60%的全Kth (K=5)马尔可夫模型和达到43%的隐马尔可夫模型。</p>
-<h3 id="连续KNN实验"><a href="#连续KNN实验" class="headerlink" title="连续KNN实验"></a>连续KNN实验</h3><h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h4><p>这块作者提出的预测流程结果，所以需要给数据做标记，用于区分输出结果是成功还是失败。但是不同数据集输出的结果判断标注不同，<font color="#FF8C00">同一个数据集中不同流程的结果判断标注也不同</font>，这就无法统一对预测结果进行判定。</p>
-<p><font color="#9932CC">为了寻找到不同业务流程相统一的结果判断标准，这里采用的是通过设置时间阈值来衡量流程结果的成功与否。</font></p>
+<font color="#9932CC">分析：</font>
+二阶MSAs在一系列不同阶MSAs中表现最好，就DS1而言，正确预测27%；三阶MSAs在DS2中表现最好，可以达到70%的准确率。同时可以分析得到在五阶MSAs预测时，默认预测模块的作用明显增加。
+
+![四种模型预测比较，第一个为全阶MMs](https://gitee.com/merlynr/img-store/raw/master/2021715/1626314785957.png)
+
+这里选择的是五阶段MSA和全五阶MMs，因为全阶段MMs在高阶时是具有优势的，这里为了验证默认预测的作用所以使用五阶。该图显示了两个数据集下所有模型的性能。可以看出，RM表现最差，DS2的成功率只有10%左右。当应用于更大的数据集DS1时，结果下降到接近2%（MSAs是其14倍）。同时可以发现选择正确的下一个任务的概率随着集合大小的增加而降低。结果突出了处理复杂数据集的难度。当数据不是太多样化(即DS2)时，MSA(五阶)获得最高数量的正确预测，结果为63%。与其他基准相比，MSA结果优于达到57%的五阶马尔可夫模型、达到60%的全Kth (K=5)马尔可夫模型和达到43%的隐马尔可夫模型。
+
+### 连续KNN实验
+
+#### 准备
+
+这块作者提出的预测流程结果，所以需要给数据做标记，用于区分输出结果是成功还是失败。但是不同数据集输出的结果判断标注不同，<font color="#FF8C00">同一个数据集中不同流程的结果判断标注也不同</font>，这就无法统一对预测结果进行判定。
+
+<font color="#9932CC">为了寻找到不同业务流程相统一的结果判断标准，这里采用的是通过设置时间阈值来衡量流程结果的成功与否。</font>
+
 <pre><code>然而，在DS4的情况下，实际交付日期和向客户承诺的交付日期之间的差被用作确定成功和失败的标准。特别是，如果实际交付日期在约定日期之前，则该流程实例被归类为成功，否则被归类为失败。
-</code></pre>
-<h3 id="结果-1"><a href="#结果-1" class="headerlink" title="结果"></a>结果</h3><blockquote>
-<p><font color="#7FFF00">通过另外两种baseline来评估KnsSA</font></p>
+</code></pre><h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><blockquote>
+<font color="#7FFF00">通过另外两种baseline来评估KnsSA</font>
+
 </blockquote>
 <ol>
 <li>RM – random model(随机模型)：为了找到过程的结果，我们随机生成一个介于0和1之间的数字；如果生成的数字大于0.5，则结果为成功(1)，反之亦然；如果生成的数字小于0.5，则结果为失败(0)</li>
@@ -296,14 +372,14 @@
 </ol>
 <p>该模型是局部序列比对技术与KNN的结合模型，所以选择KNN的k值，结合实验中标签是0和1，这里作者k值选择为<font color="#FF8C00">奇</font>数；同时考虑数据集的多样性，k值应该<font color="#FF8C00">较小</font>。</p>
 <blockquote>
-<p>**<font color="#B8860B">知识补充</font>**： k值为什么选择奇数<br><img src="https://gitee.com/merlynr/img-store/raw/master/2021715/1626333046633.png" alt="k值为什么选择奇数"></p>
+<p><strong><font color="#B8860B">知识补充</font></strong>： k值为什么选择奇数<br><img src="https://gitee.com/merlynr/img-store/raw/master/2021715/1626333046633.png" alt="k值为什么选择奇数"></p>
 </blockquote>
 <p><img src="https://gitee.com/merlynr/img-store/raw/master/2021715/1626333229424.png" alt="Local KnsSA模型对DS3，DS4预测结果"></p>
 <p><img src="https://gitee.com/merlynr/img-store/raw/master/2021715/1626333425840.png" alt="Local KnsSA，KNN，RM对于数据集预测结果"></p>
 <p><strong>结果表明</strong>，该模型优于原始KNN和随机猜测的基准模型。这也意味着数据的时间特性对于预测过程结果很重要。</p>
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>本文的设计构思，首先通过MMs和HMM生成数据集的替换矩阵，然后作者提出一种序列比对的马尔可夫扩展模型（MSAs）。为了验证该模型的有效性，与MMs和HMMs进行对比，发现其准确率由于其它至少10%。<br>同时表明了高阶马尔可夫模型预测准确率高于一阶【图五】。从五阶以后加入缺省默认预测模块后可以大幅度提高预测准确度。<br>第二个贡献是提出新的序列比对KNN（KnsSA）。该方法优于基准模型，证明了数据的序列特征在预测过程结果中的重要作用。相将相似序列进行分类，然后进行下一步处理。</p>
 <h2 id="下一步构思"><a href="#下一步构思" class="headerlink" title="下一步构思"></a>下一步构思</h2><p>未来的研究将着眼于使用序列比对和K均值聚类将数据聚类成K个组，然后用合适的方法处理每个组</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Merlynr</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://merlynr.github.io/2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/">https://merlynr.github.io/2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://merlynr.github.io" target="_blank">吾辈之人，自当自强不息！</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/graduate-student/">graduate student</a><a class="post-meta__tags" href="/tags/study/">study</a><a class="post-meta__tags" href="/tags/RPA/">RPA</a><a class="post-meta__tags" href="/tags/paper/">paper</a><a class="post-meta__tags" href="/tags/machine-learning/">machine learning</a><a class="post-meta__tags" href="/tags/deep-learning/">deep learning</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/05/25/挖掘业务流程，结合机器学习进行业务预测分析/" title="挖掘业务流程，结合机器学习进行业务预测分析"><img class="cover" src="https://cdn.pixabay.com/photo/2021/06/11/17/39/pine-needles-6329107__340.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-25</div><div class="title">挖掘业务流程，结合机器学习进行业务预测分析</div></div></a></div><div><a href="/2021/06/25/深度学习与循环神经网络在预测下一个过程事件问题上的初步应用/" title="深度学习与循环神经网络在预测下一个过程事件问题上的初步应用"><img class="cover" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=933707708,199407715&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-25</div><div class="title">深度学习与循环神经网络在预测下一个过程事件问题上的初步应用</div></div></a></div><div><a href="/2021/07/17/基于注意力机制的神经网络业务过程预测分析/" title="基于注意力机制的神经网络业务过程预测分析"><img class="cover" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2369094289,3596789848&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-17</div><div class="title">基于注意力机制的神经网络业务过程预测分析</div></div></a></div><div><a href="/2021/07/11/暑假学习安排以及前段学习总结/" title="暑假学习安排以及前段学习总结"><img class="cover" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1374461671,3528964516&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-11</div><div class="title">暑假学习安排以及前段学习总结</div></div></a></div><div><a href="/2021/07/05/KNN（K近邻法 K Nearest Neighbors）/" title="KNN（K近邻法 K Nearest Neighbors）"><img class="cover" src="/%E3%80%90%E4%B8%8D%E8%AE%BE%E7%BD%AE%E5%88%99%E9%9A%8F%E6%9C%BA%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%E3%80%91" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-05</div><div class="title">KNN（K近邻法 K Nearest Neighbors）</div></div></a></div><div><a href="/2021/07/05/Markov Model（马尔可夫模型）/" title="Markov Model（马尔可夫模型）"><img class="cover" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2238470633,1754109234&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-05</div><div class="title">Markov Model（马尔可夫模型）</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTIOLIx_oLVIxQABZpYSdtZBrLTpc1jMt2XQ&amp;usqp=CAU" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Merlynr</div><div class="author-info__description">向前一步</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/merlynr"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/merlynr" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lcq1013962426@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">人的梦想！ 是不会结束的！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%98%E8%A6%81"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E7%9A%84"><span class="toc-number">1.1.</span> <span class="toc-text">目的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3"><span class="toc-number">1.2.</span> <span class="toc-text">解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C"><span class="toc-number">1.3.</span> <span class="toc-text">结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%90%E8%BF%B0"><span class="toc-number">2.</span> <span class="toc-text">阐述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#creation"><span class="toc-number">2.1.</span> <span class="toc-text">creation</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9"><span class="toc-number">3.</span> <span class="toc-text">序列比对</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A2%84%E6%B5%8B%E6%A8%A1%E5%9E%8B"><span class="toc-number">4.</span> <span class="toc-text">预测模型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#MMs"><span class="toc-number">4.1.</span> <span class="toc-text">MMs</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#HMM"><span class="toc-number">4.2.</span> <span class="toc-text">HMM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B"><span class="toc-number">4.3.</span> <span class="toc-text">混合模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#KNN%E7%BB%93%E5%90%88%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9"><span class="toc-number">4.4.</span> <span class="toc-text">KNN结合序列比对</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0"><span class="toc-number">5.</span> <span class="toc-text">评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90%E5%92%8C%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-number">5.1.</span> <span class="toc-text">过程分析和数据预处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%E5%AE%9E%E9%AA%8C"><span class="toc-number">5.2.</span> <span class="toc-text">扩展马尔可夫模型实验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9E%E7%BB%ADKNN%E5%AE%9E%E9%AA%8C"><span class="toc-number">5.3.</span> <span class="toc-text">连续KNN实验</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">5.3.1.</span> <span class="toc-text">准备</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C-1"><span class="toc-number">5.4.</span> <span class="toc-text">结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">6.</span> <span class="toc-text">结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5%E6%9E%84%E6%80%9D"><span class="toc-number">7.</span> <span class="toc-text">下一步构思</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/07/17/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%9A%E5%8A%A1%E8%BF%87%E7%A8%8B%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90/" title="基于注意力机制的神经网络业务过程预测分析"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2369094289,3596789848&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于注意力机制的神经网络业务过程预测分析"/></a><div class="content"><a class="title" href="/2021/07/17/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%9A%E5%8A%A1%E8%BF%87%E7%A8%8B%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90/" title="基于注意力机制的神经网络业务过程预测分析">基于注意力机制的神经网络业务过程预测分析</a><time datetime="2021-07-16T16:00:00.000Z" title="发表于 2021-07-17 00:00:00">2021-07-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/16/%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6/" title="注意力机制"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1374461671,3528964516&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="注意力机制"/></a><div class="content"><a class="title" href="/2021/07/16/%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6/" title="注意力机制">注意力机制</a><time datetime="2021-07-15T16:00:00.000Z" title="发表于 2021-07-16 00:00:00">2021-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/13/attachments/1626158803254.table/" title="无题"><img src="https://cdn.pixabay.com/photo/2021/01/28/08/51/girl-5957398_960_720.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/07/13/attachments/1626158803254.table/" title="无题">无题</a><time datetime="2021-07-13T06:46:43.362Z" title="发表于 2021-07-13 14:46:43">2021-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/13/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" title="强化学习"><img src="/%E3%80%90%E4%B8%8D%E8%AE%BE%E7%BD%AE%E5%88%99%E9%9A%8F%E6%9C%BA%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%E3%80%91" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="强化学习"/></a><div class="content"><a class="title" href="/2021/07/13/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" title="强化学习">强化学习</a><time datetime="2021-07-12T16:00:00.000Z" title="发表于 2021-07-13 00:00:00">2021-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/11/%E6%9A%91%E5%81%87%E5%AD%A6%E4%B9%A0%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E5%89%8D%E6%AE%B5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" title="暑假学习安排以及前段学习总结"><img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1374461671,3528964516&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="暑假学习安排以及前段学习总结"/></a><div class="content"><a class="title" href="/2021/07/11/%E6%9A%91%E5%81%87%E5%AD%A6%E4%B9%A0%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E5%89%8D%E6%AE%B5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" title="暑假学习安排以及前段学习总结">暑假学习安排以及前段学习总结</a><time datetime="2021-07-10T16:00:00.000Z" title="发表于 2021-07-11 00:00:00">2021-07-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Merlynr</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Merlynr</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://merlynr.github.io/2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/">https://merlynr.github.io/2021/07/05/%E7%94%A8%E4%BA%8E%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B%E4%BA%8B%E4%BB%B6%E5%92%8C%E7%BB%93%E6%9E%9C%E9%A2%84%E6%B5%8B%E7%9A%84%E6%B7%B7%E5%90%88%E6%A8%A1%E5%9E%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://merlynr.github.io" target="_blank">吾辈之人，自当自强不息！</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/graduate-student/">graduate student</a><a class="post-meta__tags" href="/tags/study/">study</a><a class="post-meta__tags" href="/tags/RPA/">RPA</a><a class="post-meta__tags" href="/tags/paper/">paper</a><a class="post-meta__tags" href="/tags/machine-learning/">machine learning</a><a class="post-meta__tags" href="/tags/deep-learning/">deep learning</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.pixabay.com/photo/2021/06/07/22/10/woman-6319170__340.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/05/25/挖掘业务流程，结合机器学习进行业务预测分析/" title="挖掘业务流程，结合机器学习进行业务预测分析"><img class="cover" src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=933707708,199407715&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-05-25</div><div class="title">挖掘业务流程，结合机器学习进行业务预测分析</div></div></a></div><div><a href="/2021/06/25/深度学习与循环神经网络在预测下一个过程事件问题上的初步应用/" title="深度学习与循环神经网络在预测下一个过程事件问题上的初步应用"><img class="cover" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1493871492,3248006649&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-06-25</div><div class="title">深度学习与循环神经网络在预测下一个过程事件问题上的初步应用</div></div></a></div><div><a href="/2021/07/17/基于注意力机制的神经网络业务过程预测分析/" title="基于注意力机制的神经网络业务过程预测分析"><img class="cover" src="https://cdn.pixabay.com/photo/2017/11/22/22/55/glasses-2971680_960_720.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-17</div><div class="title">基于注意力机制的神经网络业务过程预测分析</div></div></a></div><div><a href="/2021/07/11/暑假学习安排以及前段学习总结/" title="暑假学习安排以及前段学习总结"><img class="cover" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2855099986,2032192148&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-11</div><div class="title">暑假学习安排以及前段学习总结</div></div></a></div><div><a href="/2021/07/05/KNN（K近邻法 K Nearest Neighbors）/" title="KNN（K近邻法 K Nearest Neighbors）"><img class="cover" src="/%E3%80%90%E4%B8%8D%E8%AE%BE%E7%BD%AE%E5%88%99%E9%9A%8F%E6%9C%BA%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%E3%80%91" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-05</div><div class="title">KNN（K近邻法 K Nearest Neighbors）</div></div></a></div><div><a href="/2021/07/05/Markov Model（马尔可夫模型）/" title="Markov Model（马尔可夫模型）"><img class="cover" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1493871492,3248006649&fm=26&gp=0.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-07-05</div><div class="title">Markov Model（马尔可夫模型）</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-info-avatar is-center"><img class="avatar-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTIOLIx_oLVIxQABZpYSdtZBrLTpc1jMt2XQ&amp;usqp=CAU" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Merlynr</div><div class="author-info__description">向前一步</div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">52</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">28</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/merlynr"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/merlynr" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:lcq1013962426@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">人的梦想！ 是不会结束的！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%98%E8%A6%81"><span class="toc-number">1.</span> <span class="toc-text">摘要</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E7%9A%84"><span class="toc-number">1.1.</span> <span class="toc-text">目的</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3"><span class="toc-number">1.2.</span> <span class="toc-text">解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#KNN%E7%BB%93%E5%90%88%E5%BA%8F%E5%88%97%E6%AF%94%E5%AF%B9"><span class="toc-number">1.3.</span> <span class="toc-text">KNN结合序列比对</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%84%E4%BC%B0"><span class="toc-number">2.</span> <span class="toc-text">评估</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90%E5%92%8C%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86"><span class="toc-number">2.1.</span> <span class="toc-text">过程分析和数据预处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%A9%E5%B1%95%E9%A9%AC%E5%B0%94%E5%8F%AF%E5%A4%AB%E6%A8%A1%E5%9E%8B%E5%AE%9E%E9%AA%8C"><span class="toc-number">2.2.</span> <span class="toc-text">扩展马尔可夫模型实验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E6%9E%9C"><span class="toc-number">2.3.</span> <span class="toc-text">结果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">3.</span> <span class="toc-text">结论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8B%E4%B8%80%E6%AD%A5%E6%9E%84%E6%80%9D"><span class="toc-number">4.</span> <span class="toc-text">下一步构思</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/07/17/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%9A%E5%8A%A1%E8%BF%87%E7%A8%8B%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90/" title="基于注意力机制的神经网络业务过程预测分析"><img src="https://cdn.pixabay.com/photo/2017/11/22/22/55/glasses-2971680_960_720.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="基于注意力机制的神经网络业务过程预测分析"/></a><div class="content"><a class="title" href="/2021/07/17/%E5%9F%BA%E4%BA%8E%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6%E7%9A%84%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E4%B8%9A%E5%8A%A1%E8%BF%87%E7%A8%8B%E9%A2%84%E6%B5%8B%E5%88%86%E6%9E%90/" title="基于注意力机制的神经网络业务过程预测分析">基于注意力机制的神经网络业务过程预测分析</a><time datetime="2021-07-16T16:00:00.000Z" title="发表于 2021-07-17 00:00:00">2021-07-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/16/%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6/" title="注意力机制"><img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1493871492,3248006649&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="注意力机制"/></a><div class="content"><a class="title" href="/2021/07/16/%E6%B3%A8%E6%84%8F%E5%8A%9B%E6%9C%BA%E5%88%B6/" title="注意力机制">注意力机制</a><time datetime="2021-07-15T16:00:00.000Z" title="发表于 2021-07-16 00:00:00">2021-07-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/13/attachments/1626158803254.table/" title="无题"><img src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=933707708,199407715&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2021/07/13/attachments/1626158803254.table/" title="无题">无题</a><time datetime="2021-07-13T06:46:43.362Z" title="发表于 2021-07-13 14:46:43">2021-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/13/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" title="强化学习"><img src="/%E3%80%90%E4%B8%8D%E8%AE%BE%E7%BD%AE%E5%88%99%E9%9A%8F%E6%9C%BA%E4%B8%80%E5%BC%A0%E5%9B%BE%E7%89%87%E3%80%91" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="强化学习"/></a><div class="content"><a class="title" href="/2021/07/13/%E5%BC%BA%E5%8C%96%E5%AD%A6%E4%B9%A0/" title="强化学习">强化学习</a><time datetime="2021-07-12T16:00:00.000Z" title="发表于 2021-07-13 00:00:00">2021-07-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2021/07/11/%E6%9A%91%E5%81%87%E5%AD%A6%E4%B9%A0%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E5%89%8D%E6%AE%B5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" title="暑假学习安排以及前段学习总结"><img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2855099986,2032192148&amp;fm=26&amp;gp=0.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="暑假学习安排以及前段学习总结"/></a><div class="content"><a class="title" href="/2021/07/11/%E6%9A%91%E5%81%87%E5%AD%A6%E4%B9%A0%E5%AE%89%E6%8E%92%E4%BB%A5%E5%8F%8A%E5%89%8D%E6%AE%B5%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" title="暑假学习安排以及前段学习总结">暑假学习安排以及前段学习总结</a><time datetime="2021-07-10T16:00:00.000Z" title="发表于 2021-07-11 00:00:00">2021-07-11</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Merlynr</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
